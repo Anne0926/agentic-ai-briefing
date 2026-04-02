@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Intelligence Consulting Daily Briefing | 2026.04.02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif;
+            background-color: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #0d1117;
+            border-bottom: 1px solid #30363d;
+            padding: 16px 20px;
+        }
+
+        header-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: #58a6ff;
+        }
+
+        .date-badge {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #8b949e;
+        }
+
+        /* Section Navigation */
+        .section-nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .section-nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .section-nav a:hover {
+            border-bottom-color: #58a6ff;
+        }
+
+        /* Archive Navigation */
+        .archive-nav {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+        }
+
+        .archive-date {
+            color: #8b949e;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .archive-date:hover {
+            background-color: #161b22;
+        }
+
+        .archive-date.today {
+            color: #58a6ff;
+            background-color: #0d419f;
+            font-weight: 600;
+        }
+
+        /* Stats Row */
+        .stats-row {
+            display: flex;
+            gap: 24px;
+            font-size: 13px;
+            color: #8b949e;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #30363d;
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 60px;
+        }
+
+        section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #e6edf3;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section h2 .section-count {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background-color: #58a6ff;
+            color: #0d1117;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Card */
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #58a6ff;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .card:hover {
+            border-color: #58a6ff;
+            box-shadow: 0 0 0 1px #58a6ff;
+        }
+
+        /* Card Meta */
+        .card-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .card-source {
+            color: #8b949e;
+            font-weight: 500;
+        }
+
+        .card-date {
+            color: #8b949e;
+        }
+
+        .freshness-tag {
+            display: inline-block;
+            background-color: #0d419f;
+            color: #58a6ff;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .freshness-tag.fresh-recent {
+            background-color: #0d419f;
+            color: #58a6ff;
+        }
+
+        .freshness-tag.fresh-yesterday {
+            background-color: #1f3a4a;
+            color: #79c0ff;
+        }
+
+        /* Card Title */
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #e6edf3;
+            line-height: 1.4;
+        }
+
+        /* Summary Block */
+        .summary-block {
+            margin-bottom: 20px;
+        }
+
+        .block-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #58a6ff;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .exec-summary {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #c9d1d9;
+        }
+
+        .exec-summary strong {
+            color: #58a6ff;
+            font-weight: 600;
+        }
+
+        /* Implication Grid */
+        .implication-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .implication-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .impl-card {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        .impl-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: #58a6ff;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            letter-spacing: 0.4px;
+        }
+
+        .impl-content {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #c9d1d9;
+        }
+
+        .impl-content strong {
+            color: #58a6ff;
+            font-weight: 600;
+        }
+
+        /* Card Footer */
+        .card-footer {
+            padding-top: 16px;
+            border-top: 1px solid #30363d;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .source-link {
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .source-link:hover {
+            background-color: #0d419f;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #161b22;
+            border-top: 1px solid #30363d;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-section h3 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #58a6ff;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #58a6ff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+            font-size: 12px;
+            color: #8b949e;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            header {
+                padding: 12px 16px;
+            }
+
+            .header-top {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .section-nav {
+                gap: 12px;
+                font-size: 13px;
+            }
+
+            main {
+                padding: 24px 16px;
+            }
+
+            section h2 {
+                font-size: 20px;
+            }
+
+            .card {
+                padding: 16px;
+            }
+
+            .stats-row {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <header-wrapper>
+            <div class="header-top">
+                <div class="logo">📊 SK Intelligence | Consulting</div>
+                <div class="date-badge">2026.04.02</div>
+            </div>
+            <nav class="section-nav">
+                <a href="#section-aidc">⚡ AI DC · 전력</a>
+                <a href="#section-semi">🔬 반도체</a>
+                <a href="#section-ai">🤖 AI · Agentic</a>
+                <a href="#section-space">🚀 우주 · 신기술</a>
+            </nav>
+            <div class="archive-nav">
+                <span class="archive-date today">2026.04.02</span>
+            </div>
+            <div class="stats-row">
+                <span>📅 2026.04.02 기준</span>
+                <span>📄 총 11건 분석</span>
+                <span>⏱ 수집 범위: 최근 3일</span>
+                <span>🏢 관점: SK그룹 C-Suite</span>
+            </div>
+        </header-wrapper>
+    </header>
+
+    <main>
+        <!-- SECTION 1: AI DC · 전력 -->
+        <section id="section-aidc">
+            <h2>
+                ⚡ AI DC · 전력
+                <span class="section-count">3</span>
+            </h2>
+
+            <div class="cards-grid">
+                <!-- Card 1.1 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">Gartner</span>
+                        <span class="card-date">2026.03.18</span>
+                        <span class="freshness-tag fresh-recent">FRESH</span>
+                    </div>
+                    <h3 class="card-title">[Report] AI Transforms Data Center Power From Backup to Control</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            Gartner 분석에 따르면, 향후 5년 내 UPS(무정전전원장치)와 BESS(배터리에너지저장시스템)가 융합되어 데이터센터 전력 제어 시스템으로 통합될 전망이다. AI 워크로드로 인해 기존 10~25MW급 시설이 <strong>100MW 이상 다중 GW급 캠퍼스</strong>로 확장되면서, 전력 공급의 품질·안정성이 최대 병목으로 부상했다. Gartner는 <strong>2030년까지 데이터센터 전력 분배의 70%가 AI 기반으로 관리</strong>될 것으로 예측하며, 이는 현재 15% 수준에서의 급격한 전환을 의미한다. AI 기반 BESS는 예측적 개입(predictive intervention)을 통해 자체 유발 트립을 방지하고 수요 요금을 절감하며, 고밀도 환경으로의 확장 경로를 제공한다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SK텔레콤/SK이노베이션:</strong> SKT의 AI 데이터센터 인프라 투자에서 AI-BESS 융합 전력 아키텍처를 조기 도입해야 한다. SK이노베이션/SK온의 배터리 기술력을 데이터센터 전력 솔루션으로 확장하면, 글로벌 DC 전력시장(<strong>2030년 $7조 규모</strong>) 진입이 가능하다. 삼성SDI·CATL 대비 SK온의 BESS 기술을 DC 특화 솔루션으로 차별화하는 것이 관건이다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SK그룹 Cross-BU:</strong> UPS+BESS 융합은 SK그룹 내 에너지(SK이노베이션)×통신(SKT)×반도체(SK하이닉스) 간 시너지 창출의 핵심 접점이다. <strong>100MW급 AI 캠퍼스</strong>에 SK온 BESS + SKT AI 관제 플랫폼을 패키지로 제공하는 통합 솔루션 모델을 검토해야 한다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://drive.google.com/drive/folders/1HvvDrRJZqXPfNLpljc4IGcGS0c-ItsE-" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+
+                <!-- Card 1.2 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">Gartner</span>
+                        <span class="card-date">2026.02.21</span>
+                        <span class="freshness-tag fresh-recent">FRESH</span>
+                    </div>
+                    <h3 class="card-title">[Report] The Global Megatrends That Will Change Your Data Center Strategy</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            Gartner가 식별한 4대 글로벌 메가트렌드(기술가속, 규제리스크, 사회경제적 변화, 환경규제)가 데이터센터 전략을 근본적으로 재편하고 있다. <strong>2031년까지 AI 관련 기술이 현재 DC 디자인의 50% 이상을 영구 변환</strong>할 것이며, 액체냉각·모듈식 배치·자동화 운영이 표준이 된다. <strong>2029년까지 커뮤니티 저항과 규제로 계획된 DC 건설 프로젝트의 20% 이상이 취소</strong>될 전망이다. 전력 가용성이 최우선 제약 조건으로 부상하며, 지정학적 데이터 주권 요구가 워크로드 배치 전략의 <strong>40% 이상을 변경</strong>시킬 것으로 예상된다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SKT/SK스퀘어:</strong> SKT는 국내외 AI DC 확장 시 전력 확보와 규제 리스크를 최우선으로 고려해야 한다. <strong>2029년 DC 건설 취소율 20%</strong>를 감안하면, 전력 계통 연계가 확정된 부지를 선점 확보하는 것이 경쟁 우위의 핵심이다. SK스퀘어 포트폴리오사 중 DC 관련 투자 대상의 전력 인프라 확보 상태를 재점검해야 한다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SK이노베이션/SKC:</strong> 환경 규제 강화(탄소 배출, 수자원 사용, 재생에너지 조달)가 DC 인허가와 투자 결정에 직접 영향을 미치므로, SK이노베이션의 재생에너지 사업과 DC 전력 공급을 연계하는 Green DC 패키지 사업 모델을 구축해야 한다. <strong>30% 이상의 글로벌 DC 프로젝트</strong>가 지속가능성 성과에 좌우될 전망이다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://drive.google.com/drive/folders/1HvvDrRJZqXPfNLpljc4IGcGS0c-ItsE-" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+
+                <!-- Card 1.3 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">McKinsey</span>
+                        <span class="card-date">2026.03</span>
+                        <span class="freshness-tag fresh-recent">FRESH</span>
+                    </div>
+                    <h3 class="card-title">McKinsey — AI Infrastructure $7T Investment Race</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            McKinsey에 따르면, <strong>2030년까지 AI 인프라에 총 $6.7조(약 9,000조원)</strong>의 투자가 필요하며, 이 중 AI 처리 전용 DC에 <strong>$5.2조</strong>, 전통 IT용에 <strong>$1.5조</strong>가 배분될 전망이다. 글로벌 DC 수요는 <strong>CAGR 22%로 성장, 2030년 220GW</strong>(2020년 대비 6배)에 도달하며, 성장의 75%가 AI에 의해 주도된다. 미국 DC의 전력 소비는 <strong>2030년 606TWh로 전체 전력의 11.7%</strong>를 차지할 전망이다. 빅테크 4사(MS·구글·아마존·메타)의 2026년 합산 AI DC 투자 계획은 전년 대비 15% 이상 확대되었다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SKT/SK스퀘어:</strong> SKT의 GPUaaS(GPU-as-a-Service) 전략은 $7조 인프라 투자 물결에서 한국 시장의 포지셔닝을 결정짓는 핵심 사업이다. 한국 정부의 <strong>2조원 규모 GPU 확충 사업</strong>과 연계하여, SKT가 민간 파트너로서 선도적 역할을 확보해야 한다. 글로벌 하이퍼스케일러 대비 한국형 DC의 차별화 전략이 필요하다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SK이노베이션/SK온:</strong> <strong>220GW DC 수요</strong> 시대에 전력 인프라가 최대 병목이므로, SK이노베이션의 에너지 포트폴리오(배터리·재생에너지·수소)를 DC 전력 솔루션으로 전환하는 것이 새로운 성장동력이 될 수 있다. 현재 DC 점유율 95% 이상인 주요 미국 시장의 전력 부족 상황은 SK에게 에너지 사업 확장의 기회를 제공한다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-cost-of-compute-a-7-trillion-dollar-race-to-scale-data-centers" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 2: 반도체 -->
+        <section id="section-semi">
+            <h2>
+                🔬 반도체
+                <span class="section-count">3</span>
+            </h2>
+
+            <div class="cards-grid">
+                <!-- Card 2.1 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">Gartner</span>
+                        <span class="card-date">2026.01.13</span>
+                        <span class="freshness-tag fresh-recent">FRESH</span>
+                    </div>
+                    <h3 class="card-title">[Report] Forecast Analysis: Automotive Semiconductors, Worldwide, 2026</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            Gartner 전망에 따르면, 자율주행과 전동화 수요로 차량당 반도체 탑재 금액이 <strong>2024년 $860에서 2034년 $1,902로 2배 이상 증가</strong>할 전망이다. 차량 생산 대수가 <strong>9,040만대에서 7,710만대로 15% 감소</strong>함에도 불구하고, 차량용 반도체 시장은 <strong>$81B(2024)에서 $150B(2034)</strong>으로 성장한다. ADAS가 <strong>$39B의 추가 반도체 수요</strong>를 창출하며 가장 빠르게 성장하는 세그먼트로 부상하고, <strong>2034년 완전자율주행 차량 생산이 현재의 10배인 1,610만대</strong>에 도달할 전망이다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SK하이닉스/SKC:</strong> 차량용 반도체 시장 $150B은 SK하이닉스의 DRAM·NAND 포트폴리오 확장 기회이다. 특히 ADAS용 고성능 메모리 수요(<strong>$39B 추가 시장</strong>)에서 삼성전자 대비 차량용 인증(AEC-Q100) 획득 속도를 높여야 한다. SK실트론의 웨이퍼 공급과 연계한 수직 통합 전략도 검토 대상이다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SK그룹 모빌리티:</strong> 차량 생산 감소(-15%)에도 반도체 탑재량 2배 증가는 '양(대수)'보다 '질(반도체 콘텐츠)'의 시대 전환을 의미한다. SK그룹의 배터리(SK온)·반도체(SK하이닉스)·소재(SKC) 역량을 결합한 EV+ADAS 통합 솔루션 패키지가 자동차 OEM과의 전략적 파트너십 확대에 핵심 레버가 된다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://drive.google.com/drive/folders/1HvvDrRJZqXPfNLpljc4IGcGS0c-ItsE-" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+
+                <!-- Card 2.2 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">TechCrunch / TrendForce</span>
+                        <span class="card-date">2026.03.27</span>
+                        <span class="freshness-tag fresh-yesterday">YESTERDAY</span>
+                    </div>
+                    <h3 class="card-title">SK hynix HBM4 세계 최초 개발 완료 및 미국 IPO 추진</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            SK하이닉스가 세계 최초로 <strong>HBM4 개발을 완료하고 양산 체제에 돌입</strong>했으며, <strong>16층 48GB HBM4</strong>를 CES 2026에서 공개했다. 동시에 미국 SEC에 <strong>Form F-1을 비밀 제출</strong>하여 2026년 하반기 ADR 상장을 목표로 하고 있으며, 예상 조달 규모는 <strong>$96억~$144억</strong>으로 쿠팡 IPO($46억)의 2~3배 규모가 될 전망이다. 조달 자금은 용인 신규 팹, 인디애나 첨단패키징 공장, <strong>ASML EUV 장비 $79억 계약</strong>에 투입될 예정이다. UBS는 2026년 엔비디아 Rubin 플랫폼에서 SK하이닉스의 <strong>HBM4 점유율 약 70%</strong>를 예상한다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SK하이닉스/SK스퀘어:</strong> 미국 IPO는 SK하이닉스의 글로벌 AI 반도체 생태계에서의 입지를 강화하는 전략적 결정이다. <strong>$144억 조달</strong>은 삼성전자와의 HBM 격차를 유지·확대하는 데 결정적이며, Rubin 플랫폼 <strong>70% 점유율</strong> 확보가 2027년까지의 수익성을 좌우한다. SK스퀘어의 지분가치 변동에 대한 선제적 커뮤니케이션 전략이 필요하다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SK그룹 전략:</strong> HBM4 양산과 미국 IPO의 동시 추진은 SK그룹의 글로벌 반도체 리더십을 강화하는 쌍두마차 전략이다. 삼성전자의 HBM 점유율이 <strong>17%→35%로 급등</strong>한 추격 상황에서, 선행 기술(HBM4E, HBM5) 투자와 ASML EUV 확보를 통한 기술 격차 유지가 최우선 과제이다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://techcrunch.com/2026/03/27/memory-chip-giant-sk-hynix-could-help-end-rammageddon-with-blockbuster-us-ipo/" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+
+                <!-- Card 2.3 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">Deloitte</span>
+                        <span class="card-date">2026.Q1</span>
+                        <span class="freshness-tag fresh-recent">FRESH</span>
+                    </div>
+                    <h3 class="card-title">Deloitte — 2026 반도체 산업 전망</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            Deloitte에 따르면, <strong>2026년 글로벌 반도체 시장은 전년 대비 25% 이상 성장하여 약 $975B(약 1,300조원)</strong>에 도달할 전망이다. 메모리 부문이 <strong>30% 성장률</strong>로 가장 빠르게 확대되며, 메모리 매출은 전체 반도체의 <strong>25%인 약 $200B</strong>을 차지할 것으로 예상된다. <strong>HBM 시장은 $54.6B</strong>(전년 대비 58% 증가)으로 급성장하며, AI가 글로벌 DRAM 웨이퍼 용량의 <strong>약 20%를 소비</strong>할 전망이다. HBM3E가 2026년 HBM 출하량의 약 2/3를 차지하며, HBM4가 점진적으로 점유율을 확대한다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SK하이닉스:</strong> HBM 시장 <strong>$54.6B</strong>에서 SK하이닉스의 <strong>점유율 50%+</strong>를 유지하면 약 <strong>$27B(36조원) 이상의 매출</strong>이 가능하다. HBM3E→HBM4 전환기에서 삼성전자(점유율 35%까지 급등)의 추격을 차단하려면, NVIDIA Rubin 외 AMD MI400, 구글 TPU v7 등 다변화된 고객 포트폴리오 확보가 필수적이다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SK스퀘어/SK그룹:</strong> 반도체 시장 $975B 시대에 SK하이닉스의 기업가치 재평가가 예상되며, 미국 IPO와 맞물려 SK스퀘어의 NAV 할인 해소 기회가 될 수 있다. DRAM 웨이퍼 용량의 <strong>20%가 AI용</strong>으로 전환됨에 따라, 범용 DRAM(DDR5) 공급 부족→가격 상승 사이클이 예상되므로, 전체 메모리 포트폴리오의 수익성 관리 전략이 중요하다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 3: AI · Agentic -->
+        <section id="section-ai">
+            <h2>
+                🤖 AI · Agentic
+                <span class="section-count">3</span>
+            </h2>
+
+            <div class="cards-grid">
+                <!-- Card 3.1 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">Gartner</span>
+                        <span class="card-date">2026.03.20</span>
+                        <span class="freshness-tag fresh-recent">FRESH</span>
+                    </div>
+                    <h3 class="card-title">[Report] Trillions in AI Investments and Slow Enterprise Adoption Are Widening an Already Large Value Chasm</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            Gartner에 따르면, AI 소프트웨어·하드웨어·서비스 지출이 <strong>2030년까지 $5조를 돌파</strong>할 전망이며, 2026년 전체 IT 지출 <strong>$6조의 1/3 이상</strong>이 AI 관련 제품·서비스에 투입된다. 그러나 하이퍼스케일러의 투자와 최종 사용자 수익 간 '지출 격차(Spending Gap)'가 <strong>2025년 $100B을 초과하여 2030년 $300B 이상</strong>으로 확대될 전망이다. 동시에 벤더의 AI 혁신 속도가 기업의 도입 속도를 크게 앞서는 '도입 격차(Adoption Gap)'가 심화되고 있으며, AI는 IT 스택의 모든 레이어에 영향을 미치는 고도로 파편화된 시장을 형성하고 있다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SKT/SK스퀘어:</strong> <strong>$300B 지출 격차</strong>는 AI 인프라 투자의 수익화가 지연됨을 의미하며, SKT의 AI 사업(AI 에이전트, AI 인프라) 수익 모델 검증이 시급하다. '도입 격차' 해소를 위한 B2B AI 솔루션(배포 용이성, 비즈니스 가치 입증)에 집중해야 하며, 파편화된 AI 시장에서 수직 특화(통신, 에너지, 헬스케어) 전략이 유효하다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SK그룹 전략:</strong> Gartner가 식별한 다중 AI 경쟁(AI solutions, industries, services, cybersecurity, models, platforms, engineering, data, infrastructure)에서 SK그룹은 인프라(SK하이닉스 HBM) + 플랫폼(SKT AI) + 산업(SK이노베이션 에너지)의 3축 전략으로 포지셔닝해야 한다. <strong>IT 지출 $6조의 1/3</strong>이 AI로 이동하는 구조적 전환에서 각 계열사별 AI 전환 로드맵의 일관성 확보가 필요하다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://drive.google.com/drive/folders/1HvvDrRJZqXPfNLpljc4IGcGS0c-ItsE-" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+
+                <!-- Card 3.2 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">Gartner</span>
+                        <span class="card-date">2026.03.23</span>
+                        <span class="freshness-tag fresh-recent">FRESH</span>
+                    </div>
+                    <h3 class="card-title">[Report] Agentic AI in Action: Industry-Specific Use Cases</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            Gartner가 <strong>8개 산업, 90개 이상 실제 사례</strong>를 분석한 결과, Agentic AI가 기업의 초점을 '업무 보조 AI'에서 '워크플로 실행 AI'로 전환시키고 있다. <strong>2026 Gartner CIO 서베이에서 17%의 CIO가 AI 에이전트를 이미 배포</strong>했으며, <strong>40% 이상이 12개월 내 배포 계획</strong>을 갖고 있다. 그러나 <strong>2029년까지 레거시 자동화 도구의 50%가 에이전틱 프레임워크로 대체</strong>될 것이며, 대규모 자율 운영은 데이터 준비도·프로세스 재설계·보안 과제로 <strong>2030년 이전 실현이 어려울 전망</strong>이다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SKT:</strong> SKT의 B2B AI 에이전트 사업에서 '금융·보험·헬스케어·통신' 등 규제 산업 특화 에이전트가 차별화 포인트이다. <strong>17% CIO 배포, 40%+ 계획</strong> 데이터는 시장 진입 적기를 시사하며, Gartner의 '에이전트는 나쁜 데이터를 노출하는 것이 아니라 그에 따라 행동한다'는 경고를 감안해, 데이터 거버넌스 솔루션과 번들링한 에이전트 패키지가 필요하다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SK그룹 DX:</strong> <strong>2029년 레거시 자동화 50% 대체</strong> 전망은 SK그룹 전 계열사의 기존 RPA·자동화 시스템을 에이전틱 AI로 전환하는 DX 로드맵 수립이 시급함을 의미한다. 조기 전환 기업이 3배 높은 스케일링 성공률을 보이는 만큼, SK그룹 내부 DX에서 pilot→scale 가속화가 필요하다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://drive.google.com/drive/folders/1HvvDrRJZqXPfNLpljc4IGcGS0c-ItsE-" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+
+                <!-- Card 3.3 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">Fortune / SiliconANGLE</span>
+                        <span class="card-date">2026.02.23</span>
+                        <span class="freshness-tag fresh-recent">FRESH</span>
+                    </div>
+                    <h3 class="card-title">OpenAI Frontier Alliances — 4대 컨설팅사와 에이전틱 AI 파트너십</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            OpenAI가 <strong>Accenture, BCG, Capgemini, McKinsey 4대 컨설팅사</strong>와 'Frontier Alliances'를 결성하여 기업 고객 대상 에이전틱 AI 플랫폼 확산에 나섰다. McKinsey는 이미 <strong>4만 인력 대비 2만 개 AI 에이전트</strong>를 운영 중이며, 내부 플랫폼 'Lilli'를 직원 72%가 활용하여 <strong>2025년 약 150만 시간을 절감</strong>했다. Accenture는 <strong>FY2025 AI 예약 $36B, Q1 FY2026 AI 매출 $11B(전년 대비 120% 증가)</strong>을 기록했다. Harvard/BCG 연구에서 AI 활용 컨설턴트는 <strong>업무 25.1% 빠르게 완료, 품질 40% 이상 향상</strong>된 것으로 나타났다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SKT:</strong> OpenAI-컨설팅사 동맹은 에이전틱 AI의 기업 시장 침투가 가속화됨을 의미한다. SKT가 한국 시장에서 이에 대응하려면, 자체 AI 에이전트 플랫폼과 국내 SI(삼성SDS, LG CNS 등)·컨설팅사와의 파트너십을 조기에 구축해야 한다. <strong>McKinsey 2만 에이전트 운영</strong> 사례는 SK그룹 내부 적용의 벤치마크가 된다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SK그룹 전략:</strong> <strong>Accenture AI 매출 120% 성장</strong>은 AI 서비스 시장의 폭발적 확대를 입증한다. SK그룹은 그룹사 대상 AI 에이전트 구축 경험을 외부 B2B 사업으로 확장하는 전략을 검토해야 하며, Gartner 예측대로 <strong>2026년 말까지 기업 앱의 40%가 AI 에이전트를 내장</strong>할 경우, 시장 선점 시간은 제한적이다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://fortune.com/2026/02/23/openai-partners-with-mckinsey-bcg-accenture-and-capgemini-to-push-its-frontier-ai-agent-platform/" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 4: 우주 · 신기술 -->
+        <section id="section-space">
+            <h2>
+                🚀 우주 · 신기술
+                <span class="section-count">2</span>
+            </h2>
+
+            <div class="cards-grid">
+                <!-- Card 4.1 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">ResearchAndMarkets</span>
+                        <span class="card-date">2025.11</span>
+                        <span class="freshness-tag fresh-recent">FRESH</span>
+                    </div>
+                    <h3 class="card-title">Advanced Nuclear Technologies Market 2026-2045 — SMR·핵융합·우주원전</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            ResearchAndMarkets 보고서에 따르면, SMR·핵융합·우주원전을 포함한 첨단 원자력 기술 시장의 <strong>누적 규모가 2060년까지 $15조를 초과</strong>할 전망이다. SMR은 <strong>2025~2030년 배포 예정</strong>으로 가장 상업적으로 성숙한 세그먼트이며, 전통적 원전(건설 8~12년)과 달리 <strong>공장 제조 후 12~24개월 내 배치</strong>가 가능하다. NuScale, Oklo, Kairos Power 등이 빅테크 기업과 DC 전용 전력 공급 파트너십을 추진 중이다. 영국은 <strong>양자컴퓨팅에 £20억, 핵융합에 £25억</strong>을 투자하는 국가 과학기술 전략을 발표했다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SK이노베이션/SK E&S:</strong> AI DC 전력 수요 폭증에 대응하여, SMR 기반 전력 공급 사업 진출을 검토해야 한다. 한국 정부의 <strong>K-ARDP 프로그램 2.5조원</strong>, <strong>원전산업성장펀드 1,000억원</strong> 지원과 연계하여, SK E&S의 발전 사업 포트폴리오에 SMR을 추가하는 전략이 유효하다. 글로벌 빅테크의 DC 전용 SMR 수요는 에너지 사업의 새로운 고객 세그먼트를 의미한다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SK스퀘어/SK텔레콤:</strong> <strong>양자컴퓨팅 시장</strong>은 아직 초기 단계이나, 영국(£20억), 미국(DoE 로드맵) 등 주요국의 대규모 투자가 진행 중이다. SK스퀘어의 미래 기술 포트폴리오에 양자컴퓨팅 스타트업 투자를 포함시키고, SKT는 양자암호통신(QKD) 역량을 확장하여 차세대 보안 시장에서의 포지셔닝을 강화해야 한다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.businesswire.com/news/home/20251121803787/en/Global-Advanced-Nuclear-Technologies-Market-2026-2045-Focus-on-Small-Modular-Reactors-SMRs-Nuclear-Fusion-and-Emerging-Advanced-Technologies---ResearchAndMarkets.com" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+
+                <!-- Card 4.2 -->
+                <article class="card">
+                    <div class="card-meta">
+                        <span class="card-source">Motley Fool / NVIDIA</span>
+                        <span class="card-date">2026.03.29</span>
+                        <span class="freshness-tag fresh-yesterday">YESTERDAY</span>
+                    </div>
+                    <h3 class="card-title">NVIDIA 우주 AI 데이터센터 하드웨어 발표 + OpenAI 10GW 파트너십</h3>
+                    <div class="summary-block">
+                        <div class="block-label">Executive Summary</div>
+                        <div class="exec-summary">
+                            NVIDIA가 <strong>우주 AI 데이터센터용 하드웨어</strong>를 발표하며 AI 인프라의 물리적 경계를 확장하고 있다. 동시에 OpenAI와 <strong>최소 10GW 규모의 AI 데이터센터 배포 전략적 파트너십</strong>을 체결했으며, 1단계는 2026년 하반기 가동을 목표로 한다. NVIDIA Rubin 플랫폼은 Hopper 대비 <strong>동일 전력에서 토큰 처리량 35배 향상</strong>을 달성하며, <strong>800VDC 아키텍처</strong>로 2027년 <strong>1MW 랙</strong> 지원을 예고했다. Data Center World 2026에서 NVIDIA, Google, Oracle이 AI DC 인프라 확장과 전력 확보를 핵심 의제로 논의했다.
+                        </div>
+                    </div>
+                    <div class="implication-grid">
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 01</div>
+                            <div class="impl-content">
+                                <strong>SK하이닉스:</strong> NVIDIA Rubin의 <strong>35배 효율 개선</strong>은 HBM4 수요 가속화를 의미하며, SK하이닉스의 HBM4 양산 타이밍과 정확히 부합한다. <strong>OpenAI 10GW</strong> 파트너십은 대규모 HBM 수주 기회이므로, NVIDIA 외 OpenAI와의 직접 공급 계약 가능성도 탐색해야 한다.
+                            </div>
+                        </div>
+                        <div class="impl-card">
+                            <div class="impl-label">IMPL 02</div>
+                            <div class="impl-content">
+                                <strong>SKT/SK이노베이션:</strong> 우주 AI DC 하드웨어 발표는 중장기적으로 위성통신(SKT)과 우주 전력(SK이노베이션 배터리)의 새로운 시장 기회를 시사한다. 단기적으로는 <strong>800VDC 아키텍처</strong>와 <strong>1MW 랙</strong> 시대에 대비한 국내 DC 전력 인프라 업그레이드에서 SK E&S의 역할을 명확히 해야 한다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://nvidianews.nvidia.com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-10gw-of-nvidia-systems" class="source-link">📎 View Report</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <footer-wrapper>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <div class="footer-links">
+                        <a href="https://anne0926.github.io/agentic-ai-briefing/index.html">📍 홈</a>
+                        <a href="https://anne0926.github.io/agentic-ai-briefing/news.html">📰 뉴스 스크랩</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>About This Briefing</h3>
+                    <div class="footer-links">
+                        <p style="color: #8b949e; font-size: 13px; line-height: 1.6;">
+                            SK Intelligence Consulting Daily Briefing은 SK그룹 임원진을 위한 일일 정보 요약 서비스입니다. 세계 주요 컨설팅사 및 산업 리서치 보고서를 분석하여 SK그룹 전략에 미치는 함의를 제공합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 SK Intelligence Consulting | 최근 업데이트: 2026.04.02 | <a href="https://anne0926.github.io/agentic-ai-briefing" style="color: #58a6ff; text-decoration: none;">View All Briefings</a>
+            </div>
+        </footer-wrapper>
+    </footer>
+</body>
+</html>
