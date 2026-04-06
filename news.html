@@ -5,129 +5,245 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>News Briefing — 2026-04-06</title>
 <style>
-  :root {
-    --bg: #0d1117; --surface: #161b22; --border: #30363d;
-    --text: #c9d1d9; --heading: #f0f6fc; --accent: #3fb950;
-    --accent-blue: #58a6ff; --muted: #8b949e; --tag-bg: #1f2937;
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-         background: var(--bg); color: var(--text); line-height:1.6; padding:24px; max-width:1200px; margin:auto; }
-  h1 { color:var(--heading); font-size:1.6rem; margin-bottom:4px; }
-  .subtitle { color:var(--muted); font-size:0.9rem; margin-bottom:32px; }
-  .section-title { color:var(--accent); font-size:1.2rem; font-weight:700;
-                   border-bottom:2px solid var(--accent); padding-bottom:6px; margin:32px 0 16px; }
-  .card { background:var(--surface); border:1px solid var(--border); border-radius:10px;
-          padding:20px; margin-bottom:14px; transition:border-color .2s; }
-  .card:hover { border-color:var(--accent); }
-  .card-title { color:var(--heading); font-size:1.05rem; font-weight:600; margin-bottom:6px; }
-  .card-title a { color:var(--heading); text-decoration:none; }
-  .card-title a:hover { color:var(--accent-blue); text-decoration:underline; }
-  .card-meta { color:var(--muted); font-size:0.8rem; margin-bottom:10px; }
-  .card-body { font-size:0.92rem; }
-  .card-body ul { padding-left:18px; margin-top:6px; }
-  .card-body li { margin-bottom:4px; }
-  .tag { display:inline-block; background:var(--tag-bg); color:var(--accent); font-size:0.75rem;
-         padding:2px 8px; border-radius:12px; margin-right:6px; margin-top:8px; }
-  .empty-notice { background:var(--surface); border:1px dashed var(--border); border-radius:10px;
-                  padding:20px; text-align:center; color:var(--muted); font-size:0.9rem; margin-bottom:14px; }
-  a { color:var(--accent-blue); text-decoration:none; }
-  a:hover { text-decoration:underline; }
-  .nav { display:flex; gap:12px; margin-bottom:20px; }
-  .nav a { background:var(--surface); border:1px solid var(--border); padding:6px 14px;
-           border-radius:8px; font-size:0.85rem; }
-  .footer { text-align:center; color:var(--muted); font-size:0.8rem; margin-top:40px; padding-top:20px;
-            border-top:1px solid var(--border); }
-  .date-badge { display:inline-block; background:#1a3a2a; color:var(--accent); font-size:0.75rem;
-                padding:2px 8px; border-radius:10px; margin-left:8px; }
-  .weekend-note { background:var(--surface); border:1px solid #d29922; border-radius:10px;
-                  padding:14px 20px; margin-bottom:24px; font-size:0.88rem; color:#d29922; }
+:root {
+  --bg-primary:#0d1117;--bg-secondary:#161b22;--bg-card:#1c2128;--bg-card-hover:#21262d;
+  --border:#30363d;--accent:#3fb950;--accent-dim:rgba(63,185,80,0.12);
+  --accent-blue:#58a6ff;--text-primary:#e6edf3;--text-secondary:#8b949e;--text-muted:#656d76;
+  --tag-aidc:#1f6feb;--tag-ai:#388bfd;--tag-semi:#7c3aed;--tag-space:#da3633;
+  --success:#3fb950;--warning:#d29922;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.7;padding:0;}
+.hero{background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:32px 24px 24px;border-bottom:1px solid var(--border);max-width:1200px;margin:0 auto;}
+.hero h1{font-size:1.6rem;margin-bottom:4px;}
+.hero-sub{color:var(--text-secondary);font-size:0.85rem;margin-bottom:12px;}
+.stats-row{display:flex;gap:16px;flex-wrap:wrap;}
+.stat{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:0.82rem;color:var(--accent);}
+.container{max-width:1200px;margin:0 auto;padding:24px;}
+.date-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
+.date-btn{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:4px 12px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;transition:all .2s;}
+.date-btn:hover,.date-btn.active{border-color:var(--accent);color:var(--accent);background:var(--accent-dim);}
+.section-title{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:700;color:var(--text-primary);margin:32px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--border);}
+.section-tag{font-size:0.7rem;font-weight:600;padding:3px 10px;border-radius:12px;text-transform:uppercase;letter-spacing:.5px;}
+.tag-aidc{background:rgba(31,111,235,0.15);color:var(--tag-aidc);}
+.tag-semi{background:rgba(124,58,237,0.15);color:var(--tag-semi);}
+.tag-ai{background:rgba(56,139,253,0.15);color:var(--tag-ai);}
+.tag-space{background:rgba(218,54,51,0.15);color:var(--tag-space);}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:20px;transition:border-color .2s,background .2s;}
+.card:hover{border-color:var(--accent);background:var(--bg-card-hover);}
+.card-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px;font-size:0.8rem;}
+.meta-source{color:var(--accent);font-weight:600;}
+.meta-date{color:var(--text-muted);}
+.fresh-today{font-size:0.65rem;padding:2px 6px;border-radius:8px;background:rgba(63,185,80,0.2);color:var(--success);font-weight:700;}
+.fresh-yesterday{font-size:0.65rem;padding:2px 6px;border-radius:8px;background:rgba(210,153,34,0.2);color:var(--warning);font-weight:700;}
+.card-title{font-size:1.05rem;font-weight:700;color:var(--text-primary);margin-bottom:14px;}
+.card-title a{color:var(--text-primary);text-decoration:none;}
+.card-title a:hover{color:var(--accent-blue);text-decoration:underline;}
+.summary-block{margin-bottom:16px;}
+.block-label{font-size:0.75rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--border);}
+.exec-summary{font-size:0.9rem;color:var(--text-secondary);line-height:1.8;}
+.implication-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:768px){.implication-grid{grid-template-columns:1fr;}}
+.impl-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;padding:14px;}
+.impl-number{font-size:0.72rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;}
+.impl-text{font-size:0.85rem;color:var(--text-secondary);line-height:1.7;}
+.card-footer{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);}
+.source-link{color:var(--accent-blue);font-size:0.85rem;text-decoration:none;font-weight:600;}
+.source-link:hover{text-decoration:underline;}
+.empty-notice{background:var(--bg-card);border:1px dashed var(--border);border-radius:12px;padding:24px;text-align:center;color:var(--text-muted);font-size:0.9rem;margin-bottom:20px;}
+.weekend-note{background:var(--bg-card);border:1px solid var(--warning);border-radius:10px;padding:14px 20px;margin-bottom:24px;font-size:0.88rem;color:var(--warning);}
+.footer{text-align:center;color:var(--text-muted);font-size:0.78rem;margin-top:40px;padding:20px;border-top:1px solid var(--border);}
+.nav-top{display:flex;gap:12px;padding:12px 24px;max-width:1200px;margin:0 auto;}
+.nav-top a{background:var(--bg-card);border:1px solid var(--border);padding:6px 14px;border-radius:8px;font-size:0.83rem;color:var(--text-secondary);text-decoration:none;}
+.nav-top a:hover{border-color:var(--accent);color:var(--accent);}
 </style>
 </head>
 <body>
 
-<div class="nav">
+<div class="nav-top">
   <a href="index.html">← Hub</a>
   <a href="consulting.html">← Consulting Briefing</a>
 </div>
 
-<h1>📰 News Intelligence Briefing</h1>
-<p class="subtitle">2026-04-06 (월) · 기준: 당일/전일(4/5~4/6) 발행 기사만 수록 · 총 3건</p>
+<div class="hero">
+  <h1>📰 SK Intelligence | News</h1>
+  <div class="hero-sub">TechCrunch · VentureBeat · ZDNet · 한국경제 · 전자신문 등 주요 매체 — 당일·전일 뉴스만</div>
+  <div class="stats-row">
+    <span class="stat">총 3건</span>
+    <span class="stat">당일·전일 뉴스만</span>
+  </div>
+</div>
+
+<div class="container">
+
+<nav class="date-nav">
+  <a href="news-20260406.html" class="date-btn active">04.06 (오늘)</a>
+  <a href="news-20260405.html" class="date-btn">04.05</a>
+  <a href="news-20260404.html" class="date-btn">04.04</a>
+  <a href="news-20260403.html" class="date-btn">04.03</a>
+  <a href="news-20260402.html" class="date-btn">04.02</a>
+</nav>
 
 <div class="weekend-note">
-  ⚠️ 4/4(토)~4/5(일) 주말 기간으로 뉴스 발행량이 평소 대비 제한적입니다.
+  ⚠️ 4/5(토)~4/6(일) 주말 기간으로 뉴스 발행량이 평소 대비 제한적입니다.
 </div>
 
-<!-- ── Section 1: AI DC · 전력 ── -->
-<div class="section-title">⚡ AI DC · 전력</div>
-
+<!-- ═══════ SEC-AIDC ═══════ -->
+<section id="sec-aidc">
+<h2 class="section-title">
+  <span class="section-tag tag-aidc">AI DC</span>
+  AI DC · 전력 · 쿨링 · GPU
+</h2>
 <div class="empty-notice">
-  해당 기간 내 신규 기사 없음 — 4/5~4/6 주말 기간 중 AI 데이터센터·전력 관련 신규 보도가 확인되지 않았습니다.
+  해당 기간 내 신규 뉴스 없음 — 4/5~4/6 주말 기간 중 AI 데이터센터·전력 관련 신규 보도가 확인되지 않았습니다.
 </div>
+</section>
 
-<!-- ── Section 2: 반도체 ── -->
-<div class="section-title">🔬 반도체</div>
+<!-- ═══════ SEC-SEMI ═══════ -->
+<section id="sec-semi">
+<h2 class="section-title">
+  <span class="section-tag tag-semi">반도체</span>
+  반도체 · 차세대 메모리 · 파운드리
+</h2>
 
-<div class="card">
-  <div class="card-title">
+<article class="card">
+  <div class="card-meta">
+    <span class="meta-source">한국경제</span>
+    <span class="meta-date">2026-04-05</span>
+    <span class="fresh-yesterday">YESTERDAY</span>
+  </div>
+  <h3 class="card-title">
     <a href="https://www.hankyung.com/article/2026040597911" target="_blank">삼성전자, 1분기 영업이익 50조 넘을까</a>
+  </h3>
+  <div class="summary-block">
+    <div class="block-label">Key Takeaway</div>
+    <div class="exec-summary">
+      삼성전자가 4월 7일 발표할 1분기 잠정 실적에서 영업이익 50조원 돌파가 유력시되고 있다. 메리츠증권은 매출 122조원·영업이익 54조원을 전망하고 있으며, 이는 역대 최대였던 직전 분기(20.1조원)의 2배 이상을 넘어서는 수치다. 전년 동기(매출 79.1조·영업이익 6.7조) 대비 매출 54%, 영업이익 706% 증가라는 폭발적 성장이 예상된다. 이 같은 성과의 핵심 동인은 글로벌 AI 인프라 투자 열풍으로, 전체 영업이익의 약 90%(48~49조원)가 반도체 부문에서 발생할 것으로 추정된다. HBM·AI 메모리 수요 급증이 수익성을 견인하고 있으며, 이는 AI 반도체 슈퍼사이클이 본격 진행 중임을 확인시켜 주는 실적이다.
+    </div>
   </div>
-  <div class="card-meta">한국경제 · 2026-04-05 <span class="date-badge">✓ 당일/전일</span></div>
-  <div class="card-body">
-    삼성전자가 4/7 발표할 1분기 잠정 실적에서 영업이익 50조원 돌파가 예상됨. 메리츠증권은 매출 122조원·영업이익 54조원으로 전망. 전년 동기(매출 79.1조·영업이익 6.7조) 대비 매출 54%↑, 영업이익 706%↑의 폭발적 성장. 전체 영업이익의 약 90%(48~49조원)가 반도체에서 발생할 것으로 추정.
-    <ul>
-      <li>AI 인프라 투자 열풍이 반도체 실적 폭발의 핵심 동인</li>
-      <li>역대 최대였던 전 분기(20.1조) 대비 2배 이상 점프 예상</li>
-      <li>HBM·AI 메모리 수요 급증이 수익성을 견인</li>
-    </ul>
-    <span class="tag">Samsung</span><span class="tag">Earnings</span><span class="tag">HBM</span><span class="tag">AI Memory</span>
+  <div class="summary-block">
+    <div class="block-label">So What — 전략기획 관점</div>
+    <div class="implication-grid">
+      <div class="impl-card">
+        <div class="impl-number">시장·경쟁 관점 · AI 반도체 슈퍼사이클</div>
+        <div class="impl-text">
+          영업이익의 90%가 반도체에서 발생한다는 것은 삼성전자가 사실상 'AI 반도체 기업'으로 전환되고 있음을 의미한다. 분기 영업이익 50조원은 글로벌 반도체 기업 중 최대급이며, TSMC·SK하이닉스와의 AI 메모리 삼파전에서 수익성 우위를 확보한 셈이다. 이는 한국 반도체 산업의 글로벌 경쟁력이 AI 시대에도 유효함을 입증한다.
+        </div>
+      </div>
+      <div class="impl-card">
+        <div class="impl-number">기술·전략 관점 · HBM 투자 지속성</div>
+        <div class="impl-text">
+          706% YoY 영업이익 성장은 AI 인프라 투자의 규모와 속도를 반영하나, 이 수준의 성장률이 지속 가능한지 면밀한 모니터링이 필요하다. 2026년 하반기 HBM 공급 확대와 가격 변동이 핵심 변수이며, AI 추론 워크로드 확산이 차기 수요 동력이 될 전망이다.
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+  <div class="card-footer">
+    <a href="https://www.hankyung.com/article/2026040597911" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+  </div>
+</article>
 
-<div class="card">
-  <div class="card-title">
-    <a href="https://www.hankyung.com/article/2026040378111" target="_blank">삼성전자, 1분기 사상 첫 영업익 50조원 예고</a>
-  </div>
-  <div class="card-meta">한국경제 · 2026-04-03 <span class="date-badge">✓ 최근 3일</span></div>
-  <div class="card-body">
-    증권가에서 삼성전자의 1분기 영업이익이 사상 첫 50조원을 돌파할 것이라는 전망이 잇따르고 있음. AI 반도체 수요 폭증과 메모리 가격 상승이 배경. KB증권은 목표가 32만원을 제시하며 추가 상승 여력을 전망.
-    <ul>
-      <li>반도체 슈퍼사이클 지속에 따른 실적 가시성 확보</li>
-      <li>HBM4 양산 본격화와 범용 DRAM 가격 반등의 이중 수혜</li>
-    </ul>
-    <span class="tag">Samsung</span><span class="tag">Semiconductor Cycle</span><span class="tag">Analyst</span>
-  </div>
-</div>
+</section>
 
-<!-- ── Section 3: AI · Agentic ── -->
-<div class="section-title">🤖 AI · Agentic</div>
+<!-- ═══════ SEC-AI ═══════ -->
+<section id="sec-ai">
+<h2 class="section-title">
+  <span class="section-tag tag-ai">AI</span>
+  AI · Agentic AI · LLM
+</h2>
 
-<div class="card">
-  <div class="card-title">
+<article class="card">
+  <div class="card-meta">
+    <span class="meta-source">VentureBeat</span>
+    <span class="meta-date">2026-04 (RSAC 2026)</span>
+    <span class="fresh-yesterday">RECENT</span>
+  </div>
+  <h3 class="card-title">
     <a href="https://venturebeat.com/security/rsac-2026-agentic-soc-agent-telemetry-security-gap" target="_blank">RSAC 2026: CrowdStrike·Cisco·Palo Alto, Agentic SOC 도구 일제히 공개</a>
+  </h3>
+  <div class="summary-block">
+    <div class="block-label">Key Takeaway</div>
+    <div class="exec-summary">
+      RSAC 2026에서 CrowdStrike·Cisco·Palo Alto Networks가 에이전틱 AI 기반 SOC(보안관제센터) 도구를 동시 출시하며 보안 자동화 경쟁이 본격화되었다. CrowdStrike CEO는 평균 공격자 침투 시간(breakout time)이 48분(2024년)에서 29분으로 단축되었다고 경고했으며, 이는 인간 분석가의 대응 속도를 이미 넘어서는 수준이다. Cisco+Splunk는 탐지(Detection Builder)·분류(Triage)·대응(Guided Response) 등 6개 전문 AI 에이전트를 발표했다. 기업의 85%가 AI 에이전트 파일럿을 진행 중이나 프로덕션 전환은 5%에 불과하다. 에이전트 행동 기준선(behavioral baseline) 부재가 새로운 보안 허점으로 지적되며, AI 에이전트를 보호하기 위한 AI 에이전트라는 '메타 보안' 과제가 부상했다.
+    </div>
   </div>
-  <div class="card-meta">VentureBeat · 2026년 4월 초 (RSAC 2026) <span class="date-badge">✓ 최근</span></div>
-  <div class="card-body">
-    RSAC 2026에서 CrowdStrike·Cisco·Palo Alto Networks가 에이전틱 AI 기반 SOC(보안관제센터) 도구를 동시 출시. 평균 공격자 침투 시간이 29분(2024년 48분)으로 단축된 상황에서 AI 에이전트를 활용한 보안 자동화가 핵심 화두로 부상.
-    <ul>
-      <li>Cisco+Splunk: 탐지·분류·대응 등 6개 전문 AI 에이전트 발표</li>
-      <li>기업의 85%가 AI 에이전트 파일럿 진행 중이나 프로덕션 전환은 5%에 불과</li>
-      <li>에이전트 행동 기준선(behavioral baseline) 부재가 보안 허점으로 지적됨</li>
-    </ul>
-    <span class="tag">Agentic AI</span><span class="tag">Cybersecurity</span><span class="tag">RSAC 2026</span><span class="tag">SOC</span>
+  <div class="summary-block">
+    <div class="block-label">So What — 전략기획 관점</div>
+    <div class="implication-grid">
+      <div class="impl-card">
+        <div class="impl-number">시장·경쟁 관점 · 보안 시장 AI 전환</div>
+        <div class="impl-text">
+          3대 보안 벤더의 동시 에이전틱 SOC 출시는 보안 시장의 AI 전환이 'if'가 아닌 'when'의 문제임을 확인시킨다. 프로덕션 전환율 5%는 막대한 미개척 시장을 의미하며, 2026~2027년이 시장 선점의 골든 타임이다. 국내 보안 기업도 AI 에이전트 역량 확보가 시급하다.
+        </div>
+      </div>
+      <div class="impl-card">
+        <div class="impl-number">기술·전략 관점 · 공격 속도 vs 방어 자동화</div>
+        <div class="impl-text">
+          침투 시간 29분 단축은 전통적 SOC 운영 모델의 한계를 극명하게 드러낸다. AI 에이전트 기반 자동 탐지·대응이 유일한 해법이나, 에이전트 자체의 behavioral baseline 부재라는 새로운 리스크가 등장했다. '에이전트를 감시하는 에이전트' 아키텍처가 차세대 보안 표준이 될 전망이다.
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+  <div class="card-footer">
+    <a href="https://venturebeat.com/security/rsac-2026-agentic-soc-agent-telemetry-security-gap" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+  </div>
+</article>
 
-<!-- ── Section 4: 우주 · 신기술 ── -->
-<div class="section-title">🚀 우주 · 신기술</div>
+<article class="card">
+  <div class="card-meta">
+    <span class="meta-source">VentureBeat</span>
+    <span class="meta-date">2026-04 (RSAC 2026)</span>
+    <span class="fresh-yesterday">RECENT</span>
+  </div>
+  <h3 class="card-title">
+    <a href="https://venturebeat.com/security/rsac-2026-agent-identity-frameworks-three-gaps" target="_blank">RSAC 2026: 5개 에이전트 ID 프레임워크 공개, 3개 핵심 갭 미해결</a>
+  </h3>
+  <div class="summary-block">
+    <div class="block-label">Key Takeaway</div>
+    <div class="exec-summary">
+      RSAC 2026에서 AI 에이전트 신원 관리(Agent Identity)를 위한 5개 프레임워크가 동시 발표되었으나, 3가지 핵심 보안 갭이 여전히 미해결 상태다. AI 에이전트가 자율적으로 시스템에 접근·행동하는 환경에서, 에이전트의 신원 확인·권한 관리·행동 추적이 새로운 보안 과제로 부상했다. 기업의 AI 에이전트 도입이 가속되면서 비인간 아이덴티티(Non-Human Identity, NHI) 관리가 CISO의 최우선 과제가 되고 있으며, 에이전트 간 상호작용의 감사(audit) 체계가 아직 표준화되지 않았다. 보안 업계가 에이전틱 AI 시대의 '아이덴티티 위기'에 대응하기 위해 급속히 움직이고 있으나 아직 초기 단계다.
+    </div>
+  </div>
+  <div class="summary-block">
+    <div class="block-label">So What — 전략기획 관점</div>
+    <div class="implication-grid">
+      <div class="impl-card">
+        <div class="impl-number">시장·경쟁 관점 · NHI 시장 기회</div>
+        <div class="impl-text">
+          에이전트 ID 프레임워크 5개 동시 발표는 NHI 관리가 독립 시장으로 성장하고 있음을 시사한다. 기존 IAM(Identity & Access Management) 벤더와 에이전틱 AI 보안 스타트업 간 경쟁이 본격화되며, 2026~2027년이 시장 형성기다.
+        </div>
+      </div>
+      <div class="impl-card">
+        <div class="impl-number">기술·전략 관점 · 에이전트 감사 체계</div>
+        <div class="impl-text">
+          에이전트 간 상호작용 감사의 표준 부재는 규제 리스크를 내포한다. EU AI Act 등 AI 규제 강화와 맞물려, 에이전트 행동의 추적성(traceability)과 설명 가능성(explainability)이 컴플라이언스 필수 요건이 될 전망이다.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="https://venturebeat.com/security/rsac-2026-agent-identity-frameworks-three-gaps" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+  </div>
+</article>
 
+</section>
+
+<!-- ═══════ SEC-SPACE ═══════ -->
+<section id="sec-space">
+<h2 class="section-title">
+  <span class="section-tag tag-space">우주</span>
+  우주 산업 · 양자컴퓨팅 · SMR
+</h2>
 <div class="empty-notice">
-  해당 기간 내 신규 기사 없음 — 4/5~4/6 주말 기간 중 우주·신기술 관련 신규 보도가 확인되지 않았습니다.
+  해당 기간 내 신규 뉴스 없음 — 4/5~4/6 주말 기간 중 우주·신기술 관련 신규 보도가 확인되지 않았습니다.
+</div>
+</section>
+
 </div>
 
 <div class="footer">
-  Generated 2026-04-06 09:25 KST · 수록 기준: 2026-04-05 ~ 2026-04-06 (당일/전일) · 기준 외 기사 일체 제외<br>
-  <a href="news-20260406.html">오늘자 아카이브</a>
+  Generated 2026-04-06 09:50 KST · 수록 기준: 2026-04-05 ~ 2026-04-06 (당일/전일) · 주말 기간 뉴스 제한적<br>
+  <a href="news-20260406.html">오늘자 아카이브</a> · <a href="consulting.html">← Consulting Briefing</a>
 </div>
 
 </body>
