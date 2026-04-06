@@ -3,322 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📊 SK Intelligence | Consulting Briefing</title>
+<title>Consulting Briefing — 2026-04-06</title>
 <style>
-:root {
-  --bg-primary:#0d1117; --bg-secondary:#161b22; --bg-card:#1c2128;
-  --bg-card-hover:#21262d; --border:#30363d; --accent:#58a6ff;
-  --text-primary:#e6edf3; --text-secondary:#8b949e; --text-muted:#656d76;
-  --tag-aidc:#1f6feb; --tag-ai:#388bfd; --tag-semi:#7c3aed; --tag-space:#da3633;
-  --success:#3fb950; --warning:#d29922;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg-primary);color:var(--text-primary);font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.7;}
-.container{max-width:960px;margin:0 auto;padding:0 20px;}
-header{background:var(--bg-secondary);border-bottom:1px solid var(--border);padding:24px 0;}
-.header-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-.logo{font-size:1.4rem;font-weight:700;color:var(--accent);}
-.date-badge{background:var(--bg-card);padding:6px 14px;border-radius:20px;font-size:0.85rem;color:var(--text-secondary);border:1px solid var(--border);}
-.hero{padding:32px 0 16px;text-align:center;}
-.hero h1{font-size:1.6rem;margin-bottom:8px;color:var(--text-primary);}
-.hero p{color:var(--text-secondary);font-size:0.95rem;}
-.stats-row{display:flex;justify-content:center;gap:24px;padding:16px 0;flex-wrap:wrap;}
-.stat-item{font-size:0.85rem;color:var(--text-muted);}
-.stat-item strong{color:var(--accent);font-size:1.1rem;}
-.archive-nav{display:flex;justify-content:center;gap:8px;padding:12px 0 24px;flex-wrap:wrap;}
-.archive-date{padding:6px 12px;border-radius:16px;font-size:0.78rem;background:var(--bg-card);color:var(--text-muted);text-decoration:none;border:1px solid var(--border);transition:all 0.2s;}
-.archive-date:hover{border-color:var(--accent);color:var(--accent);}
-.archive-date.today{background:var(--accent);color:#fff;border-color:var(--accent);}
-.section{padding:24px 0;}
-.section-header{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--border);}
-.section-tag{padding:4px 12px;border-radius:12px;font-size:0.75rem;font-weight:700;color:#fff;}
-.tag-aidc{background:var(--tag-aidc);}
-.tag-semi{background:var(--tag-semi);}
-.tag-ai{background:var(--tag-ai);}
-.tag-space{background:var(--tag-space);}
-.section-title{font-size:1.15rem;font-weight:700;}
-.card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:20px;transition:border-color 0.2s;}
-.card:hover{border-color:var(--accent);}
-.card-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
-.meta-source{font-size:0.8rem;font-weight:600;color:var(--accent);}
-.meta-date{font-size:0.78rem;color:var(--text-muted);}
-.meta-badge{font-size:0.7rem;padding:2px 8px;border-radius:10px;font-weight:600;}
-.badge-gmail{background:#1a3a2a;color:var(--success);}
-.badge-drive{background:#2a2a1a;color:var(--warning);}
-.badge-restricted{background:#3a1a1a;color:#f85149;}
-.fresh-today{font-size:0.7rem;padding:2px 8px;border-radius:10px;background:#0d3520;color:var(--success);font-weight:700;}
-.fresh-yesterday{font-size:0.7rem;padding:2px 8px;border-radius:10px;background:#2a2a1a;color:var(--warning);font-weight:700;}
-.fresh-recent{font-size:0.7rem;padding:2px 8px;border-radius:10px;background:#1a1a2a;color:var(--accent);font-weight:700;}
-.card-title{font-size:1.1rem;font-weight:700;margin-bottom:16px;color:var(--text-primary);line-height:1.4;}
-.summary-block{margin-bottom:16px;}
-.block-label{font-size:0.75rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;}
-.exec-summary{font-size:0.9rem;color:var(--text-secondary);line-height:1.8;}
-.implication-grid{display:grid;grid-template-columns:1fr;gap:12px;}
-@media(min-width:640px){.implication-grid{grid-template-columns:1fr 1fr;}}
-.impl-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;padding:16px;}
-.impl-number{font-size:0.72rem;font-weight:700;color:var(--accent);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;}
-.impl-text{font-size:0.85rem;color:var(--text-secondary);line-height:1.7;}
-.card-footer{padding-top:12px;border-top:1px solid var(--border);}
-.source-link{color:var(--accent);text-decoration:none;font-size:0.85rem;font-weight:600;transition:opacity 0.2s;}
-.source-link:hover{opacity:0.8;}
-footer{text-align:center;padding:32px 0;color:var(--text-muted);font-size:0.8rem;border-top:1px solid var(--border);margin-top:24px;}
-.nav-links{display:flex;justify-content:center;gap:24px;margin-bottom:16px;}
-.nav-links a{color:var(--accent);text-decoration:none;font-size:0.85rem;}
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #c9d1d9; --heading: #f0f6fc; --accent: #58a6ff;
+    --accent2: #7ee787; --muted: #8b949e; --tag-bg: #1f2937;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+         background: var(--bg); color: var(--text); line-height:1.6; padding:24px; max-width:1200px; margin:auto; }
+  h1 { color:var(--heading); font-size:1.6rem; margin-bottom:4px; }
+  .subtitle { color:var(--muted); font-size:0.9rem; margin-bottom:32px; }
+  .section-title { color:var(--accent); font-size:1.2rem; font-weight:700;
+                   border-bottom:2px solid var(--accent); padding-bottom:6px; margin:32px 0 16px; }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:10px;
+          padding:20px; margin-bottom:14px; transition:border-color .2s; }
+  .card:hover { border-color:var(--accent); }
+  .card-title { color:var(--heading); font-size:1.05rem; font-weight:600; margin-bottom:6px; }
+  .card-meta { color:var(--muted); font-size:0.8rem; margin-bottom:10px; }
+  .card-body { font-size:0.92rem; }
+  .card-body ul { padding-left:18px; margin-top:6px; }
+  .card-body li { margin-bottom:4px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--accent); font-size:0.75rem;
+         padding:2px 8px; border-radius:12px; margin-right:6px; margin-top:8px; }
+  .empty-notice { background:var(--surface); border:1px dashed var(--border); border-radius:10px;
+                  padding:20px; text-align:center; color:var(--muted); font-size:0.9rem; margin-bottom:14px; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .nav { display:flex; gap:12px; margin-bottom:20px; }
+  .nav a { background:var(--surface); border:1px solid var(--border); padding:6px 14px;
+           border-radius:8px; font-size:0.85rem; }
+  .footer { text-align:center; color:var(--muted); font-size:0.8rem; margin-top:40px; padding-top:20px;
+            border-top:1px solid var(--border); }
+  .date-badge { display:inline-block; background:#1a3a2a; color:var(--accent2); font-size:0.75rem;
+                padding:2px 8px; border-radius:10px; margin-left:8px; }
 </style>
 </head>
 <body>
-<header>
-<div class="container header-inner">
-<div class="logo">📊 SK Intelligence | Consulting</div>
-<div class="date-badge">🗓 2026.04.06 (월)</div>
-</div>
-</header>
 
-<div class="container">
-<div class="hero">
-<h1>Daily Consulting Briefing</h1>
-<p>글로벌 컨설팅 펌 최신 인사이트 — 전략기획 C-Suite 관점</p>
+<div class="nav">
+  <a href="index.html">← Hub</a>
+  <a href="news.html">News Briefing →</a>
 </div>
 
-<div class="stats-row">
-<div class="stat-item">총 <strong>5</strong>건</div>
-<div class="stat-item">📧 Gmail <strong>0</strong>건</div>
-<div class="stat-item">최근 3일 기준</div>
+<h1>📊 Consulting Intelligence Briefing</h1>
+<p class="subtitle">2026-04-06 (월) · 기준: 최근 3개월 이내 발행 자료만 수록 · 총 5건</p>
+
+<!-- ── Section 1: AI DC · 전력 ── -->
+<div class="section-title">⚡ AI DC · 전력</div>
+
+<div class="card">
+  <div class="card-title">Data Center Trends 2026: Shifting Up a Gear</div>
+  <div class="card-meta">Accenture · 2026년 1월 발행 <span class="date-badge">✓ 3개월 이내</span></div>
+  <div class="card-body">
+    2026년 데이터센터 산업의 10대 트렌드를 정리한 보고서. AI·클라우드·엣지 컴퓨팅 수요 급증으로 전례 없는 성장 모멘텀이 형성된 가운데, 모듈형 건설·차세대 냉각 기술이 빠르게 발전 중. 전력 제약·인력 부족·공급망 압박이 업계의 주요 과제로 지목됨.
+    <ul>
+      <li>에너지: 전력망 제약으로 천연가스 기반 하이브리드 발전 부상</li>
+      <li>건설: 하이퍼스케일러 주도 모듈화·표준 설계, 오프사이트 제조·디지털 트윈 활용 확대</li>
+      <li>냉각: 콜드플레이트·침수냉각·마이크로유체 등 차세대 냉각 기술 상용화 가속</li>
+      <li>엣지: 5G·IoT 기반 엣지 데이터센터 급성장, 모듈형 솔루션으로 빠른 배포</li>
+    </ul>
+    <span class="tag">AI Infra</span><span class="tag">Cooling</span><span class="tag">Power</span><span class="tag">Edge</span>
+  </div>
 </div>
 
-<div class="archive-nav">
-<a href="consulting-20260406.html" class="archive-date today">04.06</a>
-<a href="consulting-20260405.html" class="archive-date">04.05</a>
-<a href="consulting-20260404.html" class="archive-date">04.04</a>
-<a href="consulting-20260403.html" class="archive-date">04.03</a>
-<a href="consulting-20260402.html" class="archive-date">04.02</a>
+<!-- ── Section 2: 반도체 ── -->
+<div class="section-title">🔬 반도체</div>
+
+<div class="card">
+  <div class="card-title">2026 Semiconductor Industry Outlook</div>
+  <div class="card-meta">Deloitte Insights · 2026년 초 발행 <span class="date-badge">✓ 3개월 이내</span></div>
+  <div class="card-body">
+    글로벌 반도체 매출이 2025년 7,720억 달러에서 2026년 9,750억 달러로 약 25% 성장 전망. 메모리 부문은 약 2,000억 달러(전체의 25%)를 차지할 것으로 예상. AI 인프라 시장은 2029년까지 7,580억 달러 도달 전망.
+    <ul>
+      <li>AI 워크로드 확대가 반도체 수요의 핵심 성장 동력</li>
+      <li>메모리 업체들은 과잉 투자에 대한 경계 유지 (cyclical risk)</li>
+      <li>GAA 트랜지스터·EDA·첨단 패키징이 새로운 공급망 병목으로 부상</li>
+      <li>지정학적 긴장 → 각국의 기술 주권 확보 정책 강화</li>
+    </ul>
+    <span class="tag">Semiconductor</span><span class="tag">AI Chip</span><span class="tag">Supply Chain</span>
+  </div>
 </div>
 
-<div class="nav-links">
-<a href="index.html">🏠 홈</a>
-<a href="news.html">📰 News Briefing</a>
+<div class="card">
+  <div class="card-title">Worldwide Semiconductor Revenue Grew 21% in 2025</div>
+  <div class="card-meta">Gartner · 2026년 1월 12일 발행 <span class="date-badge">✓ 3개월 이내</span></div>
+  <div class="card-body">
+    2025년 글로벌 반도체 매출 전년 대비 21% 성장. 2026년에는 9,098억 달러(+14%) 전망. AI 반도체(프로세서·HBM·네트워킹)가 2025년 전체 매출의 약 1/3을 차지, 2026년에도 비중 확대 예상.
+    <ul>
+      <li>GPU·AI 가속기 시장: 2024년 800억 달러 → 2029년 2,800억 달러</li>
+      <li>2026년까지 HBM의 40% 이상이 AI 추론 워크로드에 투입 전망</li>
+      <li>AI 프로세싱이 다년간 두 자릿수 성장의 핵심 동인</li>
+    </ul>
+    <span class="tag">HBM</span><span class="tag">AI Accelerator</span><span class="tag">Revenue Forecast</span>
+  </div>
 </div>
 
-<!-- ==================== SEC-AIDC ==================== -->
-<section class="section" id="sec-aidc">
-<div class="section-header">
-<span class="section-tag tag-aidc">AI DC · 전력</span>
-<span class="section-title">AI 데이터센터 · 전력 · 냉각</span>
+<!-- ── Section 3: AI · Agentic ── -->
+<div class="section-title">🤖 AI · Agentic</div>
+
+<div class="card">
+  <div class="card-title">Agentic AI Strategy — Tech Trends 2026</div>
+  <div class="card-meta">Deloitte Insights · 2026년 초 발행 <span class="date-badge">✓ 3개월 이내</span></div>
+  <div class="card-body">
+    2028년까지 일상 업무 의사결정의 15%가 에이전틱 AI를 통해 자율적으로 이루어질 전망(Gartner). 기업용 소프트웨어의 33%에 에이전틱 AI가 내장될 것으로 예측되나, 현재 생산 환경 도입은 11%에 불과.
+    <ul>
+      <li>42%의 조직이 아직 에이전틱 AI 전략 로드맵 수립 중, 35%는 공식 전략 부재</li>
+      <li>레거시 시스템 비호환으로 2027년까지 에이전틱 AI 프로젝트 40%+ 실패 경고</li>
+      <li>성숙한 거버넌스 모델 보유 기업은 21%에 불과</li>
+      <li>핵심: 기존 프로세스 자동화가 아닌 운영의 근본적 재설계 필요</li>
+    </ul>
+    <span class="tag">Agentic AI</span><span class="tag">Governance</span><span class="tag">Enterprise Strategy</span>
+  </div>
 </div>
 
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">McKinsey</span>
-<span class="meta-date">2025.10.29</span>
-<span class="fresh-recent">RECENT</span>
-</div>
-<h3 class="card-title">Beyond Compute: Infrastructure That Powers and Cools AI Data Centers</h3>
-<div class="summary-block">
-<div class="block-label">Executive Summary</div>
-<div class="exec-summary">AI 확산에 따라 데이터센터 수요는 연평균 22% 성장하여 2030년 220GW에 달할 전망이며, 이는 2020년 대비 약 6배 규모로 AI 도입과 하이퍼스케일러 투자가 핵심 동인이다. McKinsey는 2030년까지 글로벌 데이터센터 누적 자본 지출(Capex)이 6.7조 달러에 이를 것으로 추산하며, 이 중 상당 부분이 전력 공급 및 냉각 시스템에 배분될 것이다. 전력·냉각·IT 컴포넌트는 더 이상 분리된 요소가 아니라 통합 설계(co-design)가 필수적인 단계에 진입했으며, 이는 데이터센터 밸류체인 전반에 새로운 수직 통합 기회를 열고 있다. AI 서버의 랙당 전력 밀도는 2년 만에 8kW에서 17kW로 2배 이상 증가했고, 2027년까지 30kW 이상으로 상승이 예상된다. Nvidia GB200 기반 서버는 랙당 최대 120kW를 요구하여 전통적 공랭 방식(50kW 한계)으로는 대응이 불가능하며, Direct-to-Chip(DTC) 액체 냉각이 60~120kW 밀도를 처리할 수 있는 현실적 대안으로 부상하고 있다. 시장 진입 속도(time to market)가 데이터센터 운영사의 최우선 구매 기준이 되면서, 수리·유지보수·커미셔닝을 포함한 엔드투엔드 솔루션 제공 역량이 핵심 경쟁력으로 대두되고 있다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">Strategic Implication — C-Suite 관점</div>
-<div class="implication-grid">
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 01 · 전력 인프라 투자</div>
-<div class="impl-text">2030년까지 6.7조 달러의 누적 Capex가 투입되는 시장에서, 전력 배전·냉각 장비 분야만 2,500억 달러 이상의 조달·설치 수요가 발생할 전망이다. 전통적 HVAC 업체, 변압기 제조사, 전력 인프라 기업은 AI 데이터센터 특화 솔루션으로 포트폴리오를 전환해야 한다. 하이퍼스케일러와 코로케이션 사업자 간 장기 계약 경쟁이 심화되면서, 선제적 용량 확보 전략이 필수적이다.</div>
-</div>
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 02 · 냉각 기술 전환</div>
-<div class="impl-text">랙당 전력 밀도가 120kW까지 치솟으며 공랭 방식의 물리적 한계(50kW)를 넘어섰고, DTC 액체 냉각이 사실상의 표준으로 자리잡고 있다. 액침 냉각(Immersion Cooling)은 150kW 이상까지 대응 가능하나, PFAS 화학물질 규제 리스크가 상존하여 규제 동향 모니터링이 필수적이다. 냉각 시스템 혁신은 PuE(전력 사용 효율)를 10% 이상 개선하는 동시에 하드웨어 수명을 연장하는 이중 효과를 제공한다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://www.mckinsey.com/industries/industrials/our-insights/beyond-compute-infrastructure-that-powers-and-cools-ai-data-centers" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-</div>
-</article>
-
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">McKinsey</span>
-<span class="meta-date">2024.10.29</span>
-<span class="fresh-recent">RECENT</span>
-</div>
-<h3 class="card-title">AI Power: Expanding Data Center Capacity to Meet Growing Demand</h3>
-<div class="summary-block">
-<div class="block-label">Executive Summary</div>
-<div class="exec-summary">글로벌 데이터센터 수요는 2023~2030년 연평균 19~22% 성장하여 171~219GW에 도달할 전망이며, 현재 60GW 대비 최대 3.6배 확대되는 규모로 2000년 이후 구축된 전체 용량의 2배를 4분의 1의 시간 안에 건설해야 하는 전례 없는 과제를 제시한다. 미국에서만 2030년까지 15GW 이상의 공급 부족이 예상되며, 이 수급 격차의 약 70%가 AI 전용 고밀도 데이터센터 수요에서 비롯된다. AI 워크로드 수요의 핵심인 Gen AI는 전체 데이터센터 수요의 약 40%를 차지할 전망이다. 코로케이션 요금은 2020~2023년 사이 평균 35% 상승했으며, 미국 북부 버지니아의 공실률은 1% 미만으로 공급 부족이 현실화되고 있다. 하이퍼스케일러(AWS, Google Cloud, Microsoft Azure)가 AI 전용 데이터센터 용량의 60~65%를 운영하며 시장을 주도하고 있으나, GPU 클라우드 사업자(CoreWeave 등)도 새로운 공급 주체로 부상하고 있다. 향후 SMR(소형모듈원전)이 장기적 전력 공급 대안으로 검토되고 있으며, 생태계 전반에 1조 달러 이상의 투자가 필요하다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">Strategic Implication — C-Suite 관점</div>
-<div class="implication-grid">
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 01 · 부지·전력 선점 경쟁</div>
-<div class="impl-text">북부 버지니아 공실률 1% 미만이 시사하듯, 전력 접근성이 데이터센터 입지의 최우선 게이팅 요소(gating factor)가 되었다. AI 훈련 워크로드의 저지연 요구가 상대적으로 낮은 특성을 활용해 인디애나·아이오와·와이오밍 등 전력 풍부 지역으로 분산 입지가 확산 중이다. 기업은 유틸리티와의 장기 전력 구매 계약(PPA) 및 behind-the-meter 자가발전(연료전지·배터리·재생에너지) 전략을 선제적으로 수립해야 한다.</div>
-</div>
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 02 · 밸류체인 투자 기회</div>
-<div class="impl-text">2030년까지 기계·전기 장비 조달·설치에만 2,500억 달러 이상이 투입될 전망이며, 대형 OEM의 1~2년 수주 잔고(backlog)가 중소 제조사에 진입 기회를 제공하고 있다. Blackstone-Digital Realty의 70억 달러 JV 사례처럼 대형 투자펀드가 데이터센터 인프라에 대규모 자본을 집중 투입하고 있으며, 모듈형 건설 방식이 공급 속도를 높이는 핵심 솔루션으로 주목받고 있다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/ai-power-expanding-data-center-capacity-to-meet-growing-demand" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-</div>
-</article>
-</section>
-
-<!-- ==================== SEC-SEMI ==================== -->
-<section class="section" id="sec-semi">
-<div class="section-header">
-<span class="section-tag tag-semi">반도체</span>
-<span class="section-title">반도체 · HBM · 파운드리</span>
+<div class="card">
+  <div class="card-title">State of AI in the Enterprise 2026</div>
+  <div class="card-meta">Deloitte Global · 2026년 초 발행 <span class="date-badge">✓ 3개월 이내</span></div>
+  <div class="card-body">
+    기업의 약 75%가 2년 내 에이전틱 AI 도입을 계획하나, 실제 도입 단계별로 비율이 급감하는 '파일럿-프로덕션 갭'이 핵심 이슈. AI 에이전트를 '실리콘 기반 인력'으로 관리하며 운영을 근본적으로 재설계하는 것이 가치 창출의 열쇠.
+    <ul>
+      <li>탐색(30%) → 파일럿(38%) → 배포 준비(14%) → 프로덕션(11%) 격차</li>
+      <li>AI 인프라 투자가 2026년 1.3조 달러 돌파 전망</li>
+      <li>운영 재설계 + 거버넌스 역량 구축이 성공의 선결 조건</li>
+    </ul>
+    <span class="tag">AI Adoption</span><span class="tag">Digital Transformation</span><span class="tag">Workforce</span>
+  </div>
 </div>
 
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">SK hynix Newsroom</span>
-<span class="meta-date">2026.01.05</span>
-<span class="fresh-recent">RECENT</span>
-</div>
-<h3 class="card-title">2026 Market Outlook: Focus on the HBM-Led Memory Supercycle</h3>
-<div class="summary-block">
-<div class="block-label">Executive Summary</div>
-<div class="exec-summary">WSTS 기준 2026년 글로벌 반도체 시장은 전년 대비 25% 이상 성장하여 약 9,750억 달러에 근접할 전망이며, 메모리 부문은 30% 성장으로 핵심 동인 역할을 수행한다. Bank of America는 2026년을 '1990년대에 버금가는 슈퍼사이클'로 정의하며, DRAM 매출 51% 증가·NAND 45% 증가·ASP는 각각 33%·26% 상승을 전망했다. HBM 시장은 2026년 546억 달러(전년 대비 58% 증가)로 추산되며, Goldman Sachs는 ASIC 기반 AI 칩용 HBM 수요가 82% 급증하여 시장의 3분의 1을 차지할 것으로 예측했다. 2026년 HBM3E가 전체 HBM 출하량의 약 3분의 2를 차지하는 주력 제품으로 유지되며, HBM4가 점진적으로 비중을 확대하는 전환기 구도가 형성된다. SK hynix는 Q2 2025 기준 HBM 출하량 62%, Q3 매출 57%의 시장 점유율을 유지하고 있으며, UBS는 Nvidia 차세대 Rubin 플랫폼용 HBM4 시장에서 SK hynix가 약 70% 점유율을 확보할 것으로 전망했다. AI 인프라 투자가 범용 GPU를 넘어 ASIC 기반 특화 칩으로 다변화되면서, HBM 수요 구조 자체가 질적으로 변화하고 있다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">Strategic Implication — C-Suite 관점</div>
-<div class="implication-grid">
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 01 · 메모리 슈퍼사이클 전략</div>
-<div class="impl-text">2026년 HBM 시장 546억 달러(+58% YoY)와 DRAM 매출 51% 증가가 동시에 진행되며, HBM 집중 투자가 범용 DRAM 수급 개선이라는 선순환 구조를 만들고 있다. 서버 DDR5와 HBM이 2026년 DRAM 시장의 양대 축을 형성하면서, AI 인프라 공급망에서 메모리 확보 전략이 하드웨어 조달의 최우선 과제가 되고 있다. 기업은 HBM3E→HBM4 세대 전환에 따른 공급 리드타임 변동성에 대비한 이중 소싱(dual sourcing) 전략을 수립해야 한다.</div>
-</div>
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 02 · AI 칩 다변화와 공급망</div>
-<div class="impl-text">Google TPU, AWS Trainium 등 Big Tech의 자체 ASIC 개발 확대로 HBM 수요처가 Nvidia GPU 중심에서 다원화되고 있으며, ASIC용 HBM 수요가 82% 급증하여 시장의 3분의 1을 차지할 전망이다. SK hynix가 TSMC와 패키징 파트너십을 강화하고 전용 HBM 조직을 신설한 것은 고객 맞춤형 공급 체계 구축의 신호이다. 경쟁 심화와 생산능력 확장에 따른 2026년 이후 가격 조정 리스크도 상존하나, 고성능 HBM 부문의 기술 격차가 단기 급변을 제한하고 있다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://news.skhynix.com/2026-market-outlook-focus-on-the-hbm-led-memory-supercycle/" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-</div>
-</article>
+<!-- ── Section 4: 우주 · 신기술 ── -->
+<div class="section-title">🚀 우주 · 신기술</div>
 
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">Bloomberg Intelligence</span>
-<span class="meta-date">2026.02</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-recent">RECENT</span>
-</div>
-<h3 class="card-title">Memory Chip Squeeze Wreaks Havoc in Markets, With More to Come</h3>
-<div class="summary-block">
-<div class="block-label">Executive Summary</div>
-<div class="exec-summary">데이터센터의 DRAM 수요 비중이 2020년 32%에서 2025년 약 50%로 급등하며, AI 인프라 확장이 메모리 시장 구조를 근본적으로 재편하고 있다. 메모리 업체들이 고수익 HBM 칩 생산에 자본과 신규 생산능력을 집중 투입하면서 범용 DRAM 공급이 위축되어, 스마트폰·PC·자동차 등 전통 수요처에 연쇄적 가격 상승 압력이 가해지고 있다. Bloomberg Intelligence에 따르면 HBM 시장은 2023년 40억 달러에서 2033년까지 1,300억 달러로 성장할 전망이다. 삼성·SK하이닉스의 HBM3E 후속으로 HBF(High Bandwidth Flexible) 차세대 메모리 개발도 가시화되고 있으며, 한국 메모리 업체들이 차세대 표준 선점 경쟁에 돌입했다. Micron은 신규 팹 가동에도 불구하고 고객 수요의 절반~3분의 2만 충족 가능하여 DRAM 공급 부족이 2026년 이후에도 지속될 것으로 경고했다. 이러한 메모리 칩 가격 급등은 주식시장에서 승자와 패자를 극명하게 갈라놓고 있다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">Strategic Implication — C-Suite 관점</div>
-<div class="implication-grid">
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 01 · 메모리 공급 리스크</div>
-<div class="impl-text">Micron이 신규 팹 가동에도 수요의 50~67%만 충족 가능하다고 경고한 것은, AI 인프라 구축 기업에게 메모리 조달이 컴퓨팅 확장의 병목(bottleneck)이 될 수 있음을 시사한다. 범용 DRAM의 공급 위축은 스마트폰·PC·자동차 등 비AI 산업에까지 연쇄적 비용 상승을 유발하는 크로스 섹터 리스크로 확대되고 있다. 기업은 12~18개월 선행 물량 확보와 장기 공급 계약을 통해 가격 변동성을 헤지해야 한다.</div>
-</div>
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 02 · 차세대 메모리 표준</div>
-<div class="impl-text">삼성과 SK하이닉스가 HBF(High Bandwidth Flexible) 등 차세대 메모리 개발에 착수한 것은 HBM4 이후의 기술 패권 경쟁이 이미 시작되었음을 의미한다. HBM 시장이 2033년 1,300억 달러로 성장하는 과정에서, 차세대 표준을 선점하는 기업이 AI 반도체 밸류체인의 핵심 지위를 확보하게 된다. AI 칩 설계사(Nvidia, Google, AWS)와 메모리 업체 간 공동 개발 파트너십이 표준 결정의 핵심 변수로 부상하고 있다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://www.bloomberg.com/news/articles/2026-02-09/memory-chip-squeeze-wreaks-havoc-in-markets-with-more-to-come" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-</div>
-</article>
-</section>
-
-<!-- ==================== SEC-AI ==================== -->
-<section class="section" id="sec-ai">
-<div class="section-header">
-<span class="section-tag tag-ai">AI · Agentic</span>
-<span class="section-title">AI · Agentic AI · 생성형 AI</span>
+<div class="empty-notice">
+  해당 기간 내 신규 자료 없음 — 최근 3개월 이내 주요 컨설팅사 발행 보고서가 확인되지 않았습니다.
 </div>
 
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">Gartner / McKinsey</span>
-<span class="meta-date">2026.Q1</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-recent">RECENT</span>
-</div>
-<h3 class="card-title">Agentic AI Enterprise Adoption: 실험에서 스케일링으로의 전환점</h3>
-<div class="summary-block">
-<div class="block-label">Executive Summary</div>
-<div class="exec-summary">Gartner는 2026년 말까지 기업 애플리케이션의 40%가 AI 에이전트를 내장할 것으로 예측했으며, 이는 2025년 5% 미만에서 8배 증가한 수치이다. 산업 분석가들은 에이전틱 AI 시장이 현재 78억 달러에서 2030년까지 520억 달러 이상으로 급성장할 것으로 전망하고 있다. 그러나 McKinsey 조사에 따르면 39%의 기업이 AI 에이전트를 실험 중이나, 실제로 하나의 비즈니스 기능 내에서 스케일링에 착수한 기업은 23%에 불과하여, 실험과 실제 운영 사이에 상당한 격차가 존재한다. 2026년은 단일 범용 에이전트에서 전문화된 에이전트 팀의 오케스트레이션으로 전환되는 '마이크로서비스 혁명' 단계로 평가되며, 하나의 거대 모델이 아닌 소형 전문 모델 함대(fleet)가 엔지니어드 인텔리전스를 구동하는 패러다임이 부상하고 있다. JPMorgan Chase는 사기 탐지·맞춤형 금융 자문·대출 승인 자동화에, Walmart는 개인화 쇼핑 경험에 LLM 기반 AI 에이전트를 적용하고 있다. Anthropic의 MCP(Model Context Protocol)가 AI 에이전트의 연결 표준으로 빠르게 채택되면서, OpenAI·Microsoft도 이를 공식 수용하는 등 에이전트 인프라의 표준화가 가속되고 있다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">Strategic Implication — C-Suite 관점</div>
-<div class="implication-grid">
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 01 · 에이전트 스케일링 전략</div>
-<div class="impl-text">실험(39%) 대비 스케일링(23%)의 16%p 격차는 대부분의 기업이 POC 단계에 머물러 있음을 의미하며, 이 격차를 먼저 좁히는 기업이 2026년 에이전틱 AI 시장(78억→520억 달러)의 선점 이점을 확보한다. 단일 거대 모델 의존에서 전문화된 소형 모델 오케스트레이션으로의 전환은 AI 인프라 비용 구조를 근본적으로 바꾸며, 모델 운영비(inference cost) 최적화가 ROI의 핵심 변수가 된다. MCP와 같은 연결 표준의 부상은 에이전트 간 상호운용성을 가속시키며, 벤더 락인(lock-in) 없는 멀티 에이전트 아키텍처 수립이 전략적 우선순위이다.</div>
-</div>
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 02 · 산업별 적용과 조직 전환</div>
-<div class="impl-text">JPMorgan(금융), Walmart(유통) 등 선도 기업이 에이전틱 AI를 핵심 비즈니스 프로세스에 적용하기 시작한 것은, 에이전트가 실험적 기술에서 운영 인프라로 전환되고 있음을 보여준다. 기업 애플리케이션의 40%가 AI 에이전트를 내장하는 2026년 말 시점을 기준으로, 이에 대비한 데이터 온톨로지 구축·보안 프레임워크·거버넌스 체계 수립이 시급하다. '에이전트 드리븐 조직'으로의 전환은 인력의 역할을 실무 실행자에서 디렉터(지휘관)로 격상시키며, 이는 인재 전략과 조직 구조의 근본적 재설계를 요구한다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://www.gartner.com/en/articles/agentic-ai" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-</div>
-</article>
-</section>
-
-<!-- ==================== SEC-SPACE ==================== -->
-<section class="section" id="sec-space">
-<div class="section-header">
-<span class="section-tag tag-space">우주 · 신기술</span>
-<span class="section-title">양자컴퓨팅 · 핵융합 · SMR</span>
+<div class="footer">
+  Generated 2026-04-06 09:25 KST · 수록 기준: 2026-01-06 ~ 2026-04-06 (최근 3개월) · 3개월 이상 경과 자료 일체 제외<br>
+  <a href="consulting-20260406.html">오늘자 아카이브</a>
 </div>
 
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">McKinsey</span>
-<span class="meta-date">2025</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-recent">RECENT</span>
-</div>
-<h3 class="card-title">Quantum Computing's Trajectory: Enabling the Next Frontier</h3>
-<div class="summary-block">
-<div class="block-label">Executive Summary</div>
-<div class="exec-summary">McKinsey의 제4차 연례 양자 기술 모니터 보고서에 따르면, 투자 급증과 예상보다 빠른 혁신 속도가 맞물려 양자컴퓨팅 시장이 10년 내 1,000억 달러 규모에 도달할 수 있다. 글로벌 양자컴퓨팅 매출은 2024년 6.5~7.5억 달러에서 2025년 10억 달러를 돌파할 것으로 추산되며, 기술적 돌파·투자 유입·스타트업 증가·2030년까지 실용적 양자 시스템 약속이 가속화되고 있다. IBM은 2026년까지 '양자 우위(quantum advantage)' 달성을 목표로 금융·헬스케어·물류 등 특정 산업에서 검증 사례를 만들겠다고 선언했다. HSBC와 IBM의 양자 기반 트레이딩 시연은 기술 진전과 미래 잠재력을 보여주는 강력한 신호로 Gartner가 평가했다. 한국의 ETRI 노르마는 올해 산업용 양자컴퓨터 '큐리온'을 출시하고 2026년 150큐비트 양자컴퓨터를 가동할 계획이다. EU 위원회는 2030년대 초 유럽 최초 SMR 프로젝트 가동을 목표로 전략을 발표했으며, SMR 용량이 2050년까지 17~53GW에 이를 것으로 전망되는 등 양자·원자력 신기술이 동시에 상업화 단계로 진입하고 있다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">Strategic Implication — C-Suite 관점</div>
-<div class="implication-grid">
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 01 · 양자컴퓨팅 전략 시점</div>
-<div class="impl-text">양자컴퓨팅 시장이 10년 내 1,000억 달러에 도달할 수 있다는 McKinsey 전망과 IBM의 2026년 양자 우위 달성 목표는, 비즈니스 리더들이 양자 전략 수립을 더 이상 미룰 수 없는 시점에 왔음을 시사한다. 금융(HSBC 양자 트레이딩), 제약(신약 시뮬레이션), 물류(최적화)가 초기 상업적 적용 분야로 주목되며, 양자 인재 확보와 하이브리드 양자-클래식 알고리즘 개발이 선점의 핵심이다. 한국의 150큐비트 양자컴퓨터 가동 계획은 동북아 양자 기술 경쟁에서의 포지셔닝을 의미한다.</div>
-</div>
-<div class="impl-card">
-<div class="impl-number">IMPLICATION 02 · 차세대 에너지원 경쟁</div>
-<div class="impl-text">EU가 2030년대 초 SMR 가동 전략을 발표하고 2050년까지 17~53GW 용량을 전망한 것은, SMR이 AI 데이터센터의 장기적 전력 공급원으로서 실질적 투자 대상이 되었음을 보여준다. 핵융합 분야에서도 Commonwealth Fusion Systems의 SPARC 건설이 70% 완료되는 등 실증 단계가 가속되고 있으며, 한국의 K문샷 미션이 2030년대 핵융합 전력 생산 실증을 국가 목표로 설정했다. AI가 요구하는 대규모 청정 전력 수요는 SMR·핵융합 투자의 가장 강력한 상업적 동인이 되고 있다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/tech-forward/enabling-the-next-frontier-of-quantum-computing" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-</div>
-</article>
-</section>
-
-</div>
-
-<footer>
-<div class="container">
-<div class="nav-links">
-<a href="index.html">🏠 홈</a>
-<a href="news.html">📰 News Briefing</a>
-</div>
-<p>© 2026 SK Intelligence | Auto-generated by AI Agent</p>
-<p style="margin-top:4px;">Last updated: 2026-04-06</p>
-</div>
-</footer>
 </body>
 </html>
