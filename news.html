@@ -3,382 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SK Intelligence | News Scrap — 2026.04.08</title>
+<title>News Briefing — 2026-04-08</title>
 <style>
-:root {
-  --bg-primary:#0d1117; --bg-secondary:#161b22; --bg-card:#1c2128;
-  --bg-card-hover:#21262d; --border:#30363d; --accent:#3fb950;
-  --text-primary:#e6edf3; --text-secondary:#8b949e; --text-muted:#656d76;
-  --tag-aidc:#1f6feb; --tag-ai:#388bfd; --tag-semi:#7c3aed; --tag-space:#da3633;
-  --success:#3fb950; --warning:#d29922;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-body { background:var(--bg-primary); color:var(--text-primary); font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; line-height:1.7; }
-.container { max-width:1100px; margin:0 auto; padding:0 20px; }
-header { background:var(--bg-secondary); border-bottom:1px solid var(--border); padding:20px 0; position:sticky; top:0; z-index:100; }
-.header-inner { display:flex; justify-content:space-between; align-items:center; }
-.logo { font-size:1.3rem; font-weight:700; color:var(--accent); }
-.date-badge { color:var(--text-secondary); font-size:0.9rem; }
-.hero { text-align:center; padding:40px 0 20px; }
-.hero h1 { font-size:1.8rem; margin-bottom:8px; }
-.hero .subtitle { color:var(--text-secondary); font-size:1rem; }
-.archive-nav { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:16px 0 30px; }
-.archive-date { padding:6px 14px; border-radius:20px; background:var(--bg-card); color:var(--text-secondary); text-decoration:none; font-size:0.82rem; border:1px solid var(--border); transition:all .2s; }
-.archive-date:hover { background:var(--bg-card-hover); color:var(--text-primary); }
-.archive-date.today { background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600; }
-.stats-row { display:flex; gap:16px; justify-content:center; margin-bottom:30px; flex-wrap:wrap; }
-.stat { background:var(--bg-card); padding:10px 20px; border-radius:10px; border:1px solid var(--border); font-size:0.88rem; }
-.stat strong { color:var(--accent); }
-.section { margin-bottom:40px; }
-.section-header { display:flex; align-items:center; gap:10px; margin-bottom:20px; padding-bottom:10px; border-bottom:2px solid var(--border); }
-.section-tag { padding:4px 12px; border-radius:6px; color:#fff; font-size:0.8rem; font-weight:600; }
-.tag-aidc { background:var(--tag-aidc); }
-.tag-semi { background:var(--tag-semi); }
-.tag-ai { background:var(--tag-ai); }
-.tag-space { background:var(--tag-space); }
-.section-title { font-size:1.2rem; }
-.card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:24px; margin-bottom:20px; transition:all .3s; }
-.card:hover { background:var(--bg-card-hover); border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.3); }
-.card-meta { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
-.meta-source { color:var(--accent); font-weight:600; font-size:0.85rem; }
-.meta-date { color:var(--text-muted); font-size:0.82rem; }
-.meta-badge { padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:600; }
-.badge-restricted { background:rgba(210,153,34,.15); color:var(--warning); }
-.badge-verified { background:rgba(63,185,80,.15); color:var(--success); }
-.fresh-today { background:rgba(63,185,80,.2); color:var(--success); padding:2px 8px; border-radius:4px; font-size:0.72rem; font-weight:700; }
-.fresh-yesterday { background:rgba(88,166,255,.15); color:#58a6ff; padding:2px 8px; border-radius:4px; font-size:0.72rem; font-weight:700; }
-.card-title { font-size:1.1rem; margin-bottom:16px; line-height:1.5; }
-.summary-block { margin-bottom:16px; }
-.block-label { color:var(--accent); font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid var(--border); }
-.key-takeaway { color:var(--text-secondary); font-size:0.92rem; line-height:1.8; }
-.sowhat-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-@media(max-width:768px) { .sowhat-grid { grid-template-columns:1fr; } }
-.sowhat-card { background:var(--bg-secondary); border:1px solid var(--border); border-radius:8px; padding:14px; }
-.sowhat-label { color:var(--accent); font-size:0.78rem; font-weight:700; margin-bottom:6px; letter-spacing:0.5px; }
-.sowhat-text { color:var(--text-secondary); font-size:0.88rem; line-height:1.7; }
-.card-footer { display:flex; gap:12px; padding-top:12px; border-top:1px solid var(--border); flex-wrap:wrap; }
-.source-link { color:var(--accent); text-decoration:none; font-size:0.88rem; font-weight:600; transition:color .2s; }
-.source-link:hover { color:#56d364; text-decoration:underline; }
-.translate-link { color:#58a6ff; text-decoration:none; font-size:0.88rem; font-weight:600; transition:color .2s; }
-.translate-link:hover { color:#79c0ff; text-decoration:underline; }
-footer { text-align:center; padding:40px 0; color:var(--text-muted); font-size:0.82rem; border-top:1px solid var(--border); }
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#c9d1d9;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6;padding:16px;max-width:960px;margin:0 auto}
+h1{font-size:1.5rem;color:#f97316;margin-bottom:4px;text-align:center}
+.date{text-align:center;color:#8b949e;font-size:.85rem;margin-bottom:18px}
+.section{margin-bottom:28px}
+.section-title{font-size:1.1rem;font-weight:700;color:#f0f6fc;padding:8px 14px;background:linear-gradient(90deg,#161b22,#0d1117);border-left:3px solid #f97316;margin-bottom:12px;border-radius:4px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;margin-bottom:10px;transition:border-color .2s}
+.card:hover{border-color:#f97316}
+.card-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.badge{font-size:.65rem;padding:2px 7px;border-radius:10px;font-weight:600;white-space:nowrap}
+.badge-news{background:#f97316;color:#fff}
+.badge-korea{background:#e11d48;color:#fff}
+.badge-tech{background:#6366f1;color:#fff}
+.badge-finance{background:#059669;color:#fff}
+.badge-defense{background:#64748b;color:#fff}
+.badge-science{background:#8b5cf6;color:#fff}
+.card-title{font-size:.95rem;font-weight:600;color:#f0f6fc}
+.card-title a{color:#f0f6fc;text-decoration:none}
+.card-title a:hover{color:#f97316}
+.card-date{font-size:.7rem;color:#8b949e}
+.card-body{font-size:.82rem;color:#b1bac4}
+.card-body ul{margin:6px 0 0 16px}
+.card-body li{margin-bottom:4px}
+.stat{color:#f97316;font-weight:600}
+.translate-link{display:inline-block;margin-top:6px;font-size:.72rem;color:#8b949e;text-decoration:none;border:1px solid #30363d;padding:2px 8px;border-radius:10px}
+.translate-link:hover{color:#f97316;border-color:#f97316}
+.footer{text-align:center;color:#484f58;font-size:.7rem;margin-top:20px;padding-top:12px;border-top:1px solid #21262d}
 </style>
 </head>
 <body>
-<header>
-<div class="container header-inner">
-<div class="logo">📰 SK Intelligence | News</div>
-<div class="date-badge">2026.04.08 Daily Scrap</div>
+<h1>📰 News Briefing</h1>
+<p class="date">2026년 4월 8일 (화) · 글로벌 · 국내 최신 뉴스</p>
+
+<!-- ============ Section 1: AI DC · 전력 ============ -->
+<div class="section">
+<div class="section-title">🏢 AI DC · 전력</div>
+
+<div class="card">
+<div class="card-header">
+<span class="badge badge-news">Hackaday</span>
+<span class="card-date">2026.04.07</span>
 </div>
-</header>
-
-<div class="container">
-<div class="hero">
-<h1>News Intelligence Scrap</h1>
-<p class="subtitle">전략기획 C-Suite를 위한 글로벌·국내 뉴스 인사이트</p>
+<div class="card-title"><a href="https://hackaday.com/2026/04/07/the-heat-island-effect-is-warming-up-the-ai-data-center-controversy/" target="_blank">The Heat Island Effect Is Warming Up The AI Data Center Controversy</a></div>
+<div class="card-body">
+AI 데이터센터의 냉각수 요구와 폐열 처리 문제가 논쟁의 중심에 섰습니다. 열섬 현상 연구에 따르면 DC 주변 기온이 평균 <span class="stat">2°C 상승</span>하며, AI 인프라는 변동성 높은 열 버스트를 생성하여 냉각 시스템을 한계까지 몰아갑니다.
+<a class="translate-link" href="https://translate.google.com/translate?sl=en&tl=ko&u=https://hackaday.com/2026/04/07/the-heat-island-effect-is-warming-up-the-ai-data-center-controversy/" target="_blank">🌐 전체 번역 보기</a>
 </div>
-
-<div class="archive-nav">
-<a href="news.html" class="archive-date today">2026.04.08</a>
-<a href="news-20260407.html" class="archive-date">2026.04.07</a>
-<a href="news-20260406.html" class="archive-date">2026.04.06</a>
-<a href="news-20260405.html" class="archive-date">2026.04.05</a>
-<a href="news-20260404.html" class="archive-date">2026.04.04</a>
-<a href="news-20260403.html" class="archive-date">2026.04.03</a>
-<a href="news-20260402.html" class="archive-date">2026.04.02</a>
-
 </div>
 
-<div class="stats-row">
-<div class="stat">총 <strong>8건</strong></div>
-<div class="stat">당일·전일 기준</div>
+<div class="card">
+<div class="card-header">
+<span class="badge badge-tech">ITIF</span>
+<span class="card-date">2026.04.06</span>
+</div>
+<div class="card-title"><a href="https://itif.org/publications/2026/04/06/five-concerns-about-ai-data-centers-and-what-to-do-about-them/" target="_blank">Five Concerns About AI Data Centers, and What to Do About Them</a></div>
+<div class="card-body">
+AI 워크로드가 근본적으로 새로운 열 관리 과제를 야기하고 있습니다. 펜실베이니아 주립대 연구에 의하면 AI 기반 물리 학습 모델로 DC 냉각 에너지를 <span class="stat">24% 이상 절감</span>할 수 있습니다. 고급 칩 패키징으로 인한 복잡한 핫스팟 문제가 새로운 과제로 부상.
+<a class="translate-link" href="https://translate.google.com/translate?sl=en&tl=ko&u=https://itif.org/publications/2026/04/06/five-concerns-about-ai-data-centers-and-what-to-do-about-them/" target="_blank">🌐 전체 번역 보기</a>
 </div>
-
-<!-- SECTION: AI DC -->
-<div class="section" id="sec-aidc">
-<div class="section-header">
-<span class="section-tag tag-aidc">AI DC · 전력</span>
-<span class="section-title">AI 데이터센터 · 전력 · 냉각</span>
-</div>
-
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">TechCrunch</span>
-<span class="meta-date">2026.04.07</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-yesterday">YESTERDAY</span>
-</div>
-<h3 class="card-title">Firmus, Nvidia 투자 'Southgate' AI 데이터센터 빌더, 기업가치 $5.5B 달성</h3>
-<div class="summary-block">
-<div class="block-label">Key Takeaway</div>
-<div class="key-takeaway">호주·태즈메이니아 기반 AI 데이터센터 전문 빌더 Firmus가 5.05억 달러 신규 투자를 유치하며 기업가치 55억 달러를 달성했다. Nvidia의 레퍼런스 설계를 적용한 에너지 효율 중심의 'AI 팩토리' 네트워크를 구축 중이며, 재생에너지가 풍부한 태즈메이니아를 핵심 거점으로 활용한다. 하이퍼스케일러가 미국·유럽 중심의 전력 경쟁에 직면한 가운데, 남반구의 풍부한 재생에너지와 냉각 유리한 기후를 활용한 대안적 DC 거점 전략이 현실화되고 있다. Nvidia 레퍼런스 아키텍처의 채택은 GPU 공급 우선순위 확보와 직결되며, 글로벌 AI 인프라 경쟁이 전력 접근성을 중심으로 지리적으로 확산되는 추세를 보여준다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">So What — 전략적 시사점</div>
-<div class="sowhat-grid">
-<div class="sowhat-card">
-<div class="sowhat-label">시장·경쟁 관점 · 글로벌 DC 입지</div>
-<div class="sowhat-text">55억 달러 밸류에이션은 AI DC 빌더에 대한 시장의 프리미엄 평가를 반영하며, 미국 외 지역(호주·중동·동남아)으로 AI 인프라 투자가 확산되는 글로벌 트렌드를 확인시켜준다. 재생에너지 접근성과 냉각 효율성이 DC 입지 선정의 핵심 변수로 격상되었다.</div>
-</div>
-<div class="sowhat-card">
-<div class="sowhat-label">기술·전략 관점 · Nvidia 생태계</div>
-<div class="sowhat-text">Nvidia 레퍼런스 설계 채택은 단순 기술 선택이 아닌 GPU 공급 우선순위와 기술 로드맵 정합을 의미한다. Nvidia 생태계 파트너십이 AI DC 사업의 경쟁력을 좌우하는 구조가 고착화되고 있으며, 비Nvidia 경로의 전략적 옵션 확보도 병행 검토가 필요하다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://techcrunch.com/2026/04/07/firmus-the-southgate-ai-datacenter-builder-backed-by-nvidia-hits-5-5b-valuation/" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-<a href="https://translate.google.com/translate?sl=auto&tl=ko&u=https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F07%2Ffirmus-the-southgate-ai-datacenter-builder-backed-by-nvidia-hits-5-5b-valuation%2F" target="_blank" rel="noopener" class="translate-link">🌐 전체 번역 보기</a>
-</div>
-</article>
-
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">디지털데일리</span>
-<span class="meta-date">2026.04.03</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-yesterday">RECENT</span>
-</div>
-<h3 class="card-title">AI 데이터센터 심각한 전력·열 문제 초래…냉각 공조로 무게중심 이동</h3>
-<div class="summary-block">
-<div class="block-label">Key Takeaway</div>
-<div class="key-takeaway">AI 데이터센터의 전력 소비와 발열 문제가 심각해지면서 냉각·공조 인프라가 데이터센터 설계의 핵심으로 부상하고 있다. LS일렉트릭은 AI 기반 자동 냉각 기술 실증을 완료하여 전력 소비를 24.6% 절감하는 성과를 달성했다. 서울 권역 데이터센터의 95%가 고밀도 AI 워크로드에 대응할 냉각 인프라가 미비한 것으로 파악되며, 공랭→액체냉각 패러다임 전환이 본격화되고 있다. NVIDIA가 GTC 2026에서 AI DC용 800V DC 전력 표준을 추진하면서 전력 설계 선점 경쟁도 가속화되고 있다. 한국 배터리 업체들은 AI DC발 전력수요 급증에 따른 ESS 시장 확대 수혜가 예상된다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">So What — 전략적 시사점</div>
-<div class="sowhat-grid">
-<div class="sowhat-card">
-<div class="sowhat-label">시장·경쟁 관점 · 국내 냉각 시장</div>
-<div class="sowhat-text">서울권 DC 95% 냉각 미비는 국내 AI 인프라의 구조적 취약점을 드러내며, 냉각 장비·공사·운영 전반의 대규모 업그레이드 수요가 발생한다. LS일렉트릭의 AI 자동냉각 24.6% 절감 실증은 국내 기술 경쟁력을 보여주는 사례로, K-냉각 밸류체인의 글로벌 경쟁력 확보 가능성을 시사한다.</div>
-</div>
-<div class="sowhat-card">
-<div class="sowhat-label">기술·전략 관점 · 800V 전력 표준</div>
-<div class="sowhat-text">NVIDIA의 800V DC 전력 표준 추진은 데이터센터 전력 아키텍처의 근본적 전환을 의미하며, 전력 설비(배전반·UPS·PDU) 전체의 재설계를 요구한다. 800V 대응 장비 조기 확보 및 표준 선점이 향후 AI DC 수주의 기술적 진입장벽이 될 수 있다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://www.ddaily.co.kr/page/view/2026040318055160843" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-<a href="https://translate.google.com/translate?sl=auto&tl=ko&u=https%3A%2F%2Fwww.ddaily.co.kr%2Fpage%2Fview%2F2026040318055160843" target="_blank" rel="noopener" class="translate-link">🌐 전체 번역 보기</a>
-</div>
-</article>
-</div>
-
-<!-- SECTION: Semiconductor -->
-<div class="section" id="sec-semi">
-<div class="section-header">
-<span class="section-tag tag-semi">반도체</span>
-<span class="section-title">반도체 · HBM · DRAM</span>
-</div>
-
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">Bloomberg</span>
-<span class="meta-date">2026.04</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-today">TODAY</span>
-</div>
-<h3 class="card-title">Why the AI Boom Will Make Phones, Cars and Electronics More Expensive — AI 메모리 쟁탈전</h3>
-<div class="summary-block">
-<div class="block-label">Key Takeaway</div>
-<div class="key-takeaway">AI 수요 폭증으로 HBM·DRAM 가격이 급등하면서 스마트폰·자동차·가전 등 전방 산업의 원가 상승 압력이 가중되고 있다. DRAM 현물가가 지난 1년간 약 700% 상승했으며, 2026년 HBM 시장 규모는 BofA 추정 546억 달러(YoY +58%)에 달한다. Bloomberg Intelligence는 HBM 시장이 2033년까지 1,300억 달러로 성장할 것으로 전망했다. AI가 2026년 글로벌 DRAM 웨이퍼 생산능력의 20%를 소비할 것으로 예상되며, Micron은 CapEx를 200억 달러로 증액했다. 삼성이 Google용 HBM 60% 이상을 납품하며 경쟁 구도가 변화하고 있으며, HBM4는 11Gbps 이상 속도를 10nm 코어+4nm 파운드리로 구현한다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">So What — 전략적 시사점</div>
-<div class="sowhat-grid">
-<div class="sowhat-card">
-<div class="sowhat-label">시장·경쟁 관점 · HBM 가격 파급</div>
-<div class="sowhat-text">DRAM 현물가 700% 상승과 HBM 시장 546억 달러(+58% YoY)는 AI 인프라 비용 전반의 구조적 상승을 의미한다. HBM 생산에 DRAM 웨이퍼의 20%가 집중되면서 범용 DRAM 공급 감소→스마트폰·PC·자동차 부품 가격 상승이라는 연쇄 효과가 전 산업으로 확산된다.</div>
-</div>
-<div class="sowhat-card">
-<div class="sowhat-label">기술·전략 관점 · HBM4 경쟁</div>
-<div class="sowhat-text">삼성의 Google HBM 60%+ 납품과 HBM4(10nm+4nm) 수직통합은 SK하이닉스-Micron 중심 시장 구도에 변화를 예고한다. HBM4가 파운드리 공정과 결합되면서, 메모리·파운드리 통합 역량이 차세대 경쟁의 핵심 변수로 부상한다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://www.bloomberg.com/graphics/2026-ai-boom-memory-chip-shortage/" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-<a href="https://translate.google.com/translate?sl=auto&tl=ko&u=https%3A%2F%2Fwww.bloomberg.com%2Fgraphics%2F2026-ai-boom-memory-chip-shortage%2F" target="_blank" rel="noopener" class="translate-link">🌐 전체 번역 보기</a>
-</div>
-</article>
-
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">한국경제</span>
-<span class="meta-date">2026.04</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-yesterday">RECENT</span>
-</div>
-<h3 class="card-title">삼성, 역전 성공했다…구글용 HBM 60% 이상 납품</h3>
-<div class="summary-block">
-<div class="block-label">Key Takeaway</div>
-<div class="key-takeaway">삼성전자가 Google 向 HBM 납품 점유율 60% 이상을 확보하며 HBM 시장에서 경쟁 구도를 뒤집고 있다. 삼성은 HBM4에서 10nm 코어 다이와 4nm 파운드리 공정을 결합하여 업계 최초 11Gbps 이상 동작 속도를 달성했다. SK하이닉스와 Micron이 파운드리 전문업체와의 파트너십에 의존하는 반면, 삼성은 메모리+파운드리 수직통합이라는 구조적 경쟁우위를 확보했다. 2026년 HBM3E가 주류를 형성하는 가운데 HBM4 램프업이 2분기부터 본격화되며, 고수율 양산이 확인되고 있다. 아바코 등 국내 HBM 장비·소재 업체들의 사업 확장도 가속화되고 있다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">So What — 전략적 시사점</div>
-<div class="sowhat-grid">
-<div class="sowhat-card">
-<div class="sowhat-label">시장·경쟁 관점 · 삼성 HBM 전략</div>
-<div class="sowhat-text">Google 60%+ 납품 확보는 삼성의 HBM 경쟁력이 품질·수율 측면에서 시장 기대를 충족했음을 의미한다. 메모리+파운드리 수직통합이 HBM4 이후 세대에서 더욱 중요해지며, SK하이닉스·Micron 대비 구조적 우위가 확대될 수 있다.</div>
-</div>
-<div class="sowhat-card">
-<div class="sowhat-label">기술·전략 관점 · HBM 밸류체인</div>
-<div class="sowhat-text">HBM4의 파운드리 공정 의존도 증가는 메모리·로직 반도체 경계의 붕괴를 가속화하며, 패키징 소재(삼양NC켐)·장비(아바코) 등 HBM 밸류체인 전반의 투자 확대가 필요하다. 국내 HBM 생태계의 글로벌 경쟁력 강화가 반도체 산업 전략의 핵심 과제이다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://www.hankyung.com/article/202512014684i" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-<a href="https://translate.google.com/translate?sl=auto&tl=ko&u=https%3A%2F%2Fwww.hankyung.com%2Farticle%2F202512014684i" target="_blank" rel="noopener" class="translate-link">🌐 전체 번역 보기</a>
-</div>
-</article>
-</div>
-
-<!-- SECTION: AI · Agentic -->
-<div class="section" id="sec-ai">
-<div class="section-header">
-<span class="section-tag tag-ai">AI · Agentic</span>
-<span class="section-title">AI 에이전트 · 생성형 AI</span>
-</div>
-
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">VentureBeat</span>
-<span class="meta-date">2026.04</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-today">TODAY</span>
-</div>
-<h3 class="card-title">AI Agents are Delivering Real ROI — 1,100명 개발자·CTO 설문 결과</h3>
-<div class="summary-block">
-<div class="block-label">Key Takeaway</div>
-<div class="key-takeaway">1,100명의 개발자·CTO를 대상으로 한 설문에서 46%가 AI 에이전트를 프로덕션에 배포 중이며, 에이전트를 활용하는 조직의 67%가 생산성 향상을 보고했다. 그러나 49%가 '추론 비용의 확장성(scale에서의 높은 inference cost)'을 최대 장벽으로 지목했다. Nvidia는 GTC 2026에서 Adobe·Salesforce·SAP·ServiceNow 등 17개 엔터프라이즈 소프트웨어 기업이 채택한 AI Agent Toolkit을 발표했다. Intuit는 300만 고객 대상으로 85% 재사용률을 달성했으며, 핵심 성공 요인은 완전 자율이 아닌 인간-AI 하이브리드 접근이었다. Amazon은 에이전트 자기 개선 인프라 'A-Evolve'를 발표하여 인간 주도 프롬프트 반복에서 자율적 자기 개선으로의 전환을 시도하고 있다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">So What — 전략적 시사점</div>
-<div class="sowhat-grid">
-<div class="sowhat-card">
-<div class="sowhat-label">시장·경쟁 관점 · 에이전트 ROI</div>
-<div class="sowhat-text">46% 배포율과 67% 생산성 향상은 AI 에이전트가 실험 단계를 넘어 실질적 ROI를 창출하는 단계에 진입했음을 보여준다. 그러나 49%가 추론 비용을 최대 장벽으로 지목한 것은 Gartner의 '추론 비용 역설'을 실증하며, 비용 최적화 없는 에이전트 확장은 지속 불가능하다.</div>
-</div>
-<div class="sowhat-card">
-<div class="sowhat-label">기술·전략 관점 · 플랫폼 경쟁</div>
-<div class="sowhat-text">Nvidia의 17개 기업 Agent Toolkit 채택은 AI 에이전트 플랫폼 표준화 경쟁의 서막이다. Intuit의 85% 재사용률은 Human-in-the-Loop가 에이전트 성공의 핵심임을 입증하며, Amazon A-Evolve의 자율 자기 개선은 에이전트 진화의 다음 단계를 제시한다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://venturebeat.com/orchestration/ai-agents-are-delivering-real-roi-heres-what-1-100-developers-and-ctos" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-<a href="https://translate.google.com/translate?sl=auto&tl=ko&u=https%3A%2F%2Fventurebeat.com%2Forchestration%2Fai-agents-are-delivering-real-roi-heres-what-1-100-developers-and-ctos" target="_blank" rel="noopener" class="translate-link">🌐 전체 번역 보기</a>
-</div>
-</article>
-
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">AITimes</span>
-<span class="meta-date">2026.03.25</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-yesterday">RECENT</span>
-</div>
-<h3 class="card-title">원티드랩, '디자인 에이전트' 공개…작업시간 90% 단축</h3>
-<div class="summary-block">
-<div class="block-label">Key Takeaway</div>
-<div class="key-takeaway">원티드랩이 사내용으로 개발한 디자인 에이전트 '몽타주(Montage)'를 공개했다. 기존 3~4주 소요되던 디자인 워크플로우를 2~3일로 단축하여 90%의 시간 절감을 달성했다. 내부 실증 결과를 바탕으로 B2B 서비스화를 검토 중이며, 에이전틱 AI의 실제 비즈니스 적용 사례로 주목받고 있다. 한국정보처리학회는 4월 3일 이화여대에서 에이전틱 AI·멀티에이전트 단기강좌를 진행하며 학계의 관심도 증가하고 있다. 아이티센클로잇은 공공·금융 부문을 타깃으로 한 AI 코드 에이전트를 출시하여, 온프레미스 보안과 클라우드 AI를 결합한 하이브리드 접근을 제시했다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">So What — 전략적 시사점</div>
-<div class="sowhat-grid">
-<div class="sowhat-card">
-<div class="sowhat-label">시장·경쟁 관점 · 국내 에이전트 생태계</div>
-<div class="sowhat-text">원티드랩의 90% 시간 절감은 에이전틱 AI의 ROI가 특정 도메인(디자인, 코드)에서 극대화됨을 보여준다. 국내 기업들이 자체 에이전트를 개발·상용화하는 단계에 진입하면서, 글로벌 플랫폼 의존 탈피 가능성이 열리고 있다.</div>
-</div>
-<div class="sowhat-card">
-<div class="sowhat-label">기술·전략 관점 · 하이브리드 배포</div>
-<div class="sowhat-text">아이티센클로잇의 온프레미스+클라우드 하이브리드 AI 코드 에이전트는 공공·금융 등 보안 민감 산업의 AI 에이전트 도입 경로를 제시한다. 규제 환경이 엄격한 한국 시장에서 하이브리드 배포 모델이 에이전틱 AI 확산의 표준이 될 수 있다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://www.aitimes.com/news/articleView.html?idxno=208339" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-<a href="https://translate.google.com/translate?sl=auto&tl=ko&u=https%3A%2F%2Fwww.aitimes.com%2Fnews%2FarticleView.html%3Fidxno%3D208339" target="_blank" rel="noopener" class="translate-link">🌐 전체 번역 보기</a>
-</div>
-</article>
-</div>
-
-<!-- SECTION: Space · New Tech -->
-<div class="section" id="sec-space">
-<div class="section-header">
-<span class="section-tag tag-space">우주 · 신기술</span>
-<span class="section-title">핵융합 · SMR · 우주</span>
-</div>
-
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">TechCrunch</span>
-<span class="meta-date">2026.04.02</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-yesterday">RECENT</span>
-</div>
-<h3 class="card-title">Commonwealth Fusion Systems, 마그넷 판매로 단기 매출 확보 — 핵융합 상용화 진전</h3>
-<div class="summary-block">
-<div class="block-label">Key Takeaway</div>
-<div class="key-takeaway">Commonwealth Fusion Systems(CFS)가 고온초전도 마그넷을 Realta Fusion에 판매하는 업계 최대 규모 거래를 성사시키며, 핵융합 발전 이전의 단기 수익 모델을 확보했다. CFS는 SPARC 원형로에 18기 마그넷 중 첫 번째를 설치 완료했으며, SPARC이 투입 에너지보다 많은 에너지를 생산하는 최초의 핵융합 장치가 될 것으로 기대된다. Nvidia와의 딜도 성사하여 AI+핵융합의 기술 교차점이 형성되고 있다. 한국의 인에이블퓨전은 이탈리아 DTT(Divertor Tokamak Test) 프로젝트용 450억 원 규모 핵심설비 수주에 성공하여 K-핵융합 기술의 글로벌 경쟁력을 입증했다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">So What — 전략적 시사점</div>
-<div class="sowhat-grid">
-<div class="sowhat-card">
-<div class="sowhat-label">시장·경쟁 관점 · 핵융합 비즈니스 모델</div>
-<div class="sowhat-text">CFS의 마그넷 판매 비즈니스는 핵융합 스타트업이 발전 상용화 이전에도 핵심 기술 부품 판매로 수익을 창출할 수 있음을 증명한다. 핵융합 기술이 MRI·입자가속기·에너지저장 등 인접 시장으로 확장되는 기술 파급 효과가 가시화되고 있다.</div>
-</div>
-<div class="sowhat-card">
-<div class="sowhat-label">기술·전략 관점 · K-핵융합 기회</div>
-<div class="sowhat-text">인에이블퓨전의 450억 원 이탈리아 DTT 수주는 한국 핵융합 기업의 글로벌 수주 역량을 확인시켜주며, KSTAR 경험을 상용 기술로 전환하는 전략의 성과이다. AI-핵융합 기술 교차(CFS-Nvidia)가 플라즈마 제어·최적화에서 새로운 경쟁력 원천이 되고 있다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://techcrunch.com/2026/04/02/commonwealth-fusion-systems-leans-on-magnets-for-near-term-revenue/" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-<a href="https://translate.google.com/translate?sl=auto&tl=ko&u=https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F02%2Fcommonwealth-fusion-systems-leans-on-magnets-for-near-term-revenue%2F" target="_blank" rel="noopener" class="translate-link">🌐 전체 번역 보기</a>
-</div>
-</article>
-
-<article class="card">
-<div class="card-meta">
-<span class="meta-source">전자신문</span>
-<span class="meta-date">2026.03.24</span>
-<span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-<span class="fresh-yesterday">RECENT</span>
-</div>
-<h3 class="card-title">인에이블퓨전, 450억 규모 핵융합 핵심설비 수주 — K-핵융합 글로벌 진출</h3>
-<div class="summary-block">
-<div class="block-label">Key Takeaway</div>
-<div class="key-takeaway">한국 핵융합 스타트업 인에이블퓨전이 이탈리아 DTT(Divertor Tokamak Test) 프로젝트의 핵심설비 제작을 450억 원 규모로 수주했다. 이는 한국 민간 핵융합 기업의 대형 해외 수주로, KSTAR 등 국내 핵융합 연구 인프라에서 축적된 기술력의 상용화 성과이다. 글로벌 핵융합 산업은 CFS, First Light Fusion 등이 2031~2032년 상용 발전을 목표로 하며, 전체 산업 투자가 100억 달러를 돌파했다. EU도 2030년대 초 SMR 가동 전략을 발표하면서, 차세대 원자력(핵융합+SMR)이 AI DC 전력 솔루션의 장기 축으로 부상하고 있다.</div>
-</div>
-<div class="summary-block">
-<div class="block-label">So What — 전략적 시사점</div>
-<div class="sowhat-grid">
-<div class="sowhat-card">
-<div class="sowhat-label">시장·경쟁 관점 · K-핵융합 밸류체인</div>
-<div class="sowhat-text">450억 원 해외 수주는 한국 핵융합 밸류체인의 수출 경쟁력을 입증하며, ITER·DTT 등 국제 프로젝트 참여를 통한 기술 레퍼런스 확보가 후속 수주의 기반이 된다. 한국의 핵융합 장비·소재 기업들에 대한 전략적 투자 검토가 필요한 시점이다.</div>
-</div>
-<div class="sowhat-card">
-<div class="sowhat-label">기술·전략 관점 · 차세대 원자력 로드맵</div>
-<div class="sowhat-text">EU SMR 전략(2030년대 초)과 미국 파일럿 행정명령(2026년 7월)이 동시 추진되면서, SMR이 3~7년 내 데이터센터 전력의 실질적 옵션으로 전환된다. 핵융합(10년+)과 SMR(3~7년)의 이중 트랙 에너지 전략이 AI 인프라 경쟁력의 장기적 차별화 요인이 될 수 있다.</div>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<a href="https://www.etnews.com/20260324000182" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-<a href="https://translate.google.com/translate?sl=auto&tl=ko&u=https%3A%2F%2Fwww.etnews.com%2F20260324000182" target="_blank" rel="noopener" class="translate-link">🌐 전체 번역 보기</a>
-</div>
-</article>
 </div>
 
 </div>
 
-<footer>
-<p>SK Intelligence Daily News Scrap | Auto-generated by AI Agent | 2026.04.08</p>
-<p>Sources: TechCrunch, Bloomberg, VentureBeat, 한국경제, 전자신문, 디지털데일리, AITimes</p>
-</footer>
+<!-- ============ Section 2: 반도체 ============ -->
+<div class="section">
+<div class="section-title">🔬 반도체</div>
+
+<div class="card">
+<div class="card-header">
+<span class="badge badge-finance">MarketMinute</span>
+<span class="card-date">2026.04.07</span>
+</div>
+<div class="card-title"><a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-4-7-new-dram-etf-launch-signals-growing-investor-interest-in-specialized-chips" target="_blank">New DRAM ETF Launch Signals Growing Investor Interest in Specialized Chips</a></div>
+<div class="card-body">
+라운드힐 메모리 ETF가 4월 2일 출시 후 <span class="stat">일주일 만에 7% 상승</span>하여 AI 메모리 슈퍼사이클 시기의 투자자 관심을 반영합니다. HBM3E 중심 수요 확대와 HBM4로의 점진적 이행이 동시 진행되는 전환 단계입니다.
+<a class="translate-link" href="https://translate.google.com/translate?sl=en&tl=ko&u=https://markets.financialcontent.com/stocks/article/marketminute-2026-4-7-new-dram-etf-launch-signals-growing-investor-interest-in-specialized-chips" target="_blank">🌐 전체 번역 보기</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="badge badge-tech">TweakTown</span>
+<span class="card-date">2026.04</span>
+</div>
+<div class="card-title"><a href="https://www.tweaktown.com/news/109495/sk-hynix-samsung-and-micron-fighting-for-nvidia-supply-contracts-for-new-16-hi-hbm4-orders/index.html" target="_blank">SK hynix · Samsung · Micron, NVIDIA 16-Hi HBM4 공급 계약 경쟁</a></div>
+<div class="card-body">
+SK하이닉스, 삼성전자, 마이크론이 NVIDIA의 새로운 <span class="stat">16단 HBM4</span> 주문 공급 계약을 놓고 치열한 경쟁을 벌이고 있습니다. 빅3의 2026년 전체 HBM 생산 용량은 이미 완전 매진. 글로벌 반도체 시장은 2026년 <span class="stat">25%+ 성장하여 $9,750억</span>에 도달, 메모리 분야 30% 성장 전망.
+<a class="translate-link" href="https://translate.google.com/translate?sl=en&tl=ko&u=https://www.tweaktown.com/news/109495/sk-hynix-samsung-and-micron-fighting-for-nvidia-supply-contracts-for-new-16-hi-hbm4-orders/index.html" target="_blank">🌐 전체 번역 보기</a>
+</div>
+</div>
+
+</div>
+
+<!-- ============ Section 3: AI · Agentic ============ -->
+<div class="section">
+<div class="section-title">🤖 AI · Agentic</div>
+
+<div class="card">
+<div class="card-header">
+<span class="badge badge-defense">Defense One</span>
+<span class="card-date">2026.04</span>
+</div>
+<div class="card-title"><a href="https://www.defenseone.com/technology/2026/04/startup-takes-different-approach-ai-assistants/412545/" target="_blank">Startup Debuts Agentic AI Assistant for Defense</a></div>
+<div class="card-body">
+미국 국방부가 복잡한 작업을 자율 실행하는 AI 에이전트 소프트웨어 도입을 추진 중입니다. 대형 프론티어 모델에서 소규모 커스텀 솔루션으로 전환되는 트렌드. "에이전틱 AI" 관심도 <span class="stat">6,100% 증가</span> (2024.10~2025.10).
+<a class="translate-link" href="https://translate.google.com/translate?sl=en&tl=ko&u=https://www.defenseone.com/technology/2026/04/startup-takes-different-approach-ai-assistants/412545/" target="_blank">🌐 전체 번역 보기</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="badge badge-tech">Kai Waehner</span>
+<span class="card-date">2026.04.06</span>
+</div>
+<div class="card-title"><a href="https://www.kai-waehner.de/blog/2026/04/06/enterprise-agentic-ai-landscape-2026-trust-flexibility-and-vendor-lock-in/" target="_blank">Enterprise Agentic AI Landscape 2026: Trust, Flexibility, and Vendor Lock-in</a></div>
+<div class="card-body">
+에이전틱 AI가 프롬프트 응답 시스템에서 자율 목표 설정·계획·실행 시스템으로 전환되고 있습니다. MS가 4월 2일 <span class="stat">OWASP 에이전틱 AI 10대 위험</span>을 모두 다루는 "에이전트 거버넌스 툴킷" 오픈소스 공개. 2026년 말까지 기업 앱의 40%가 AI 에이전트 통합 전망.
+<a class="translate-link" href="https://translate.google.com/translate?sl=en&tl=ko&u=https://www.kai-waehner.de/blog/2026/04/06/enterprise-agentic-ai-landscape-2026-trust-flexibility-and-vendor-lock-in/" target="_blank">🌐 전체 번역 보기</a>
+</div>
+</div>
+
+</div>
+
+<!-- ============ Section 4: 우주 · 신기술 ============ -->
+<div class="section">
+<div class="section-title">🚀 우주 · 신기술</div>
+
+<div class="card">
+<div class="card-header">
+<span class="badge badge-science">Nature</span>
+<span class="card-date">2026</span>
+</div>
+<div class="card-title"><a href="https://www.nature.com/articles/d41586-026-00877-2" target="_blank">UK Bets Big on Homegrown Fusion and Quantum — Can It Lead the World?</a></div>
+<div class="card-body">
+영국이 양자 컴퓨팅 <span class="stat">£20억</span>, 핵융합 에너지 <span class="stat">£25억</span> 규모의 대규모 국가 전략을 추진 중입니다. SMR(소형 모듈형 원전)은 2025~2030년 상용화 예상되는 가장 성숙한 기술. 양자 컴퓨팅은 국방·항공우주에서 필수 도구로 자리매김 전망.
+<a class="translate-link" href="https://translate.google.com/translate?sl=en&tl=ko&u=https://www.nature.com/articles/d41586-026-00877-2" target="_blank">🌐 전체 번역 보기</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="badge badge-science">Physics World</span>
+<span class="card-date">2026</span>
+</div>
+<div class="card-title"><a href="https://physicsworld.com/a/happy-new-year-so-what-will-happen-in-physics-in-2026/" target="_blank">What's Happening in Physics in 2026? — Quantum & Fusion Outlook</a></div>
+<div class="card-body">
+2026 국제 양자과학기술의 해가 종료되며, 양자 컴퓨팅과 핵융합이 에너지·기후 위기의 잠재적 솔루션으로 주목받고 있습니다. 양자와 핵융합 모두 정부·기업의 역대 최대 투자를 기록하며 상용화 타임라인이 앞당겨지고 있습니다.
+<a class="translate-link" href="https://translate.google.com/translate?sl=en&tl=ko&u=https://physicsworld.com/a/happy-new-year-so-what-will-happen-in-physics-in-2026/" target="_blank">🌐 전체 번역 보기</a>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+News Briefing · Global & Korea Latest · 2026-04-08<br>
+Generated by Inhouse-consulting Intelligence System
+</div>
 </body>
 </html>
