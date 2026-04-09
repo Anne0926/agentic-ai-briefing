@@ -3,291 +3,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CR SNS 모니터링 | 2026.04.08</title>
+<title>국회의원 SNS 모니터링 대시보드 - 2026.04.09</title>
 <style>
-  :root {
-    --bg: #0b0f1a; --surface: #131929; --card: #1a2235;
-    --border: #243050; --text: #e2e8f0; --muted: #64748b;
-    --blue: #3b82f6; --green: #22c55e; --red: #ef4444;
-    --yellow: #f59e0b; --purple: #a78bfa; --orange: #fb923c;
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: -apple-system, 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); padding:20px; font-size:14px; }
-  .wrap { max-width:860px; margin:0 auto; }
-
-  /* HEADER */
-  .header { background:linear-gradient(135deg,#0f1f3d,#1a2e5a); border-radius:14px; padding:24px 28px; margin-bottom:18px; border:1px solid #1e3a6e; }
-  .header-top { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; }
-  .header h1 { font-size:20px; font-weight:700; color:#f0f6ff; }
-  .header .sub { font-size:13px; color:#7ea8d8; margin-top:4px; }
-  .badge-clean { background:#14532d; color:#86efac; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:700; }
-  .badge-alert { background:#7c2d12; color:#fdba74; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:700; }
-
-  /* STATS */
-  .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:18px; }
-  .stat { background:var(--card); border-radius:10px; padding:16px; text-align:center; border:1px solid var(--border); }
-  .stat .val { font-size:26px; font-weight:800; }
-  .stat .lbl { font-size:11px; color:var(--muted); margin-top:3px; text-transform:uppercase; letter-spacing:.5px; }
-
-  /* SECTION */
-  .section { background:var(--surface); border-radius:12px; padding:20px; margin-bottom:14px; border:1px solid var(--border); }
-  .section-title { font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:14px; }
-
-  /* POLITICIAN CARDS */
-  .pol-grid { display:grid; gap:10px; }
-  .pol { background:var(--card); border-radius:9px; padding:14px; border:1px solid var(--border); }
-  .pol-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
-  .pol-name { font-weight:700; font-size:14px; }
-  .pol-role { font-size:11px; color:var(--muted); margin-top:1px; }
-  .platforms { display:flex; gap:4px; }
-  .plt { font-size:10px; padding:2px 7px; border-radius:4px; font-weight:600; }
-  .plt-x { background:#1d4ed8; color:#bfdbfe; }
-  .plt-fb { background:#1e40af; color:#93c5fd; }
-  .plt-off { background:#292524; color:#78716c; }
-  .post { background:var(--bg); border-radius:7px; padding:10px 12px; border-left:3px solid var(--blue); margin-top:6px; }
-  .post-meta { font-size:11px; color:var(--muted); margin-bottom:3px; }
-  .post-text { font-size:13px; color:#cbd5e1; line-height:1.5; }
-
-  /* SK ALERT */
-  .sk-section { background:linear-gradient(135deg,#1a1a0a,#252510); border:1px solid #4d4d1a; border-radius:12px; padding:20px; margin-bottom:14px; }
-  .sk-title { font-size:11px; font-weight:700; color:#ca8a04; text-transform:uppercase; letter-spacing:1px; margin-bottom:14px; }
-  .sk-card { background:#1e1e0d; border-radius:8px; padding:14px; margin-bottom:10px; border-left:3px solid var(--yellow); }
-  .sk-card:last-child { margin-bottom:0; }
-  .sk-card-header { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
-  .sk-level { font-size:10px; font-weight:700; padding:2px 8px; border-radius:4px; }
-  .sk-high { background:#7c2d12; color:#fdba74; }
-  .sk-mid { background:#713f12; color:#fde68a; }
-  .sk-watch { background:#1c1917; color:#a8a29e; }
-  .sk-entity { font-size:12px; color:#fcd34d; font-weight:600; }
-  .sk-body { font-size:13px; color:#d4c89a; line-height:1.5; }
-  .sk-action { font-size:12px; color:#86efac; margin-top:6px; padding-top:6px; border-top:1px solid #333310; }
-
-  /* CONTEXT */
-  .context-box { background:var(--card); border-radius:8px; padding:12px 14px; margin-bottom:8px; border:1px solid var(--border); font-size:13px; color:#94a3b8; line-height:1.6; }
-  .context-box strong { color:#cbd5e1; }
-
-  .footer { text-align:center; color:var(--muted); font-size:11px; padding:16px; }
-  a { color:#60a5fa; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f23; color: #e0e0e0; line-height: 1.6; }
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+header { background: linear-gradient(135deg, #1a1a3e 0%, #0d1b2a 100%); padding: 32px; border-radius: 16px; margin-bottom: 24px; border: 1px solid #2a2a5a; }
+header h1 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+header .meta { font-size: 13px; color: #8888aa; }
+header .live { display: inline-block; background: #00c853; color: #fff; font-size: 11px; padding: 2px 10px; border-radius: 10px; margin-left: 8px; animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+.stat { background: #1a1a3e; border: 1px solid #2a2a5a; border-radius: 12px; padding: 20px; text-align: center; }
+.stat .num { font-size: 36px; font-weight: 800; }
+.stat .lbl { font-size: 12px; color: #8888aa; margin-top: 4px; }
+.stat.red .num { color: #ff5252; }
+.stat.yellow .num { color: #ffc107; }
+.stat.green .num { color: #00e676; }
+.stat.blue .num { color: #448aff; }
+.section { background: #1a1a3e; border: 1px solid #2a2a5a; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.section h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #2a2a5a; }
+.match-card { background: #0d1b2a; border-radius: 10px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #ffc107; }
+.match-card.urgent { border-left-color: #ff5252; }
+.match-card .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.match-card .name { font-weight: 700; color: #fff; font-size: 15px; }
+.match-card .time { font-size: 12px; color: #8888aa; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-left: 6px; }
+.tag.dem { background: #1565c0; color: #bbdefb; }
+.tag.ppp { background: #c62828; color: #ffcdd2; }
+.tag.x { background: #6a1b9a; color: #e1bee7; }
+.tag.fb { background: #1565c0; color: #bbdefb; }
+.tag.kw { background: #33691e; color: #c5e1a5; }
+.tag.kw-urgent { background: #b71c1c; color: #ffcdd2; }
+.post-body { font-size: 14px; color: #ccc; margin-top: 10px; padding: 12px; background: #111128; border-radius: 8px; white-space: pre-wrap; word-break: break-word; }
+.person-card { background: #0d1b2a; border-radius: 10px; padding: 16px; margin-bottom: 10px; }
+.person-card .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.person-card .name { font-weight: 700; color: #fff; }
+.person-card .count { font-size: 12px; color: #8888aa; background: #1a1a3e; padding: 2px 10px; border-radius: 10px; }
+.person-card .post { font-size: 13px; color: #bbb; padding: 10px; background: #111128; border-radius: 6px; margin-top: 8px; white-space: pre-wrap; word-break: break-word; }
+.person-card .post-time { font-size: 11px; color: #666; margin-bottom: 4px; }
+.no-match { text-align: center; padding: 24px; color: #555; }
+.link-row { display: flex; gap: 8px; margin-top: 8px; }
+.link-row a { font-size: 12px; color: #448aff; text-decoration: none; padding: 4px 10px; border: 1px solid #2a2a5a; border-radius: 6px; }
+.link-row a:hover { background: #2a2a5a; }
+footer { text-align: center; padding: 24px; font-size: 11px; color: #555; }
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="container">
 
-<!-- HEADER -->
-<div class="header">
-  <div class="header-top">
-    <div>
-      <h1>📊 CR SNS 모니터링 Daily Briefing</h1>
-      <div class="sub">2026.04.08 (수) | 평일 09:00 · 12:00 · 15:00 · 18:00 자동 실행</div>
-    </div>
-    <div class="badge-clean">✅ CLEAN — 키워드 매칭 없음</div>
-  </div>
+<header>
+  <h1>국회의원 SNS 모니터링 대시보드 <span class="live">LIVE</span></h1>
+  <div class="meta">2026년 4월 9일 (수) | Chrome 브라우저 실시간 크롤링 | 로그인 상태 수집</div>
+</header>
+
+<div class="summary">
+  <div class="stat blue"><div class="num">7</div><div class="lbl">모니터링 대상</div></div>
+  <div class="stat green"><div class="num">10</div><div class="lbl">수집 게시물</div></div>
+  <div class="stat red"><div class="num">0</div><div class="lbl">긴급 매칭</div></div>
+  <div class="stat yellow"><div class="num">1</div><div class="lbl">일반 매칭</div></div>
 </div>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stat">
-    <div class="val">7</div>
-    <div class="lbl">모니터링 인물</div>
-  </div>
-  <div class="stat">
-    <div class="val">10</div>
-    <div class="lbl">수집 게시물</div>
-  </div>
-  <div class="stat">
-    <div class="val" style="color:var(--green)">0</div>
-    <div class="lbl">키워드 매칭</div>
-  </div>
-</div>
-
-<!-- SK PERSPECTIVE -->
-<div class="sk-section">
-  <div class="sk-title">⚠️ SK 그룹 관점 — 주의 포인트 분석</div>
-
-  <div class="sk-card" style="border-left-color:#ef4444">
-    <div class="sk-card-header">
-      <span class="sk-level sk-high">🔴 HIGH</span>
-      <span class="sk-entity">SK이노베이션 · SK E&S</span>
-    </div>
-    <div class="sk-body">이재명 대통령이 <strong>글로벌 에너지 공급망 불확실성</strong>을 언급하며 한-태국 정상 통화에서 공동 대응 공조를 논의(4/7). 또한 구윤철 부총리의 <strong>전국민 공급망 핫라인</strong>(4/6)을 RT — 정부가 원자재·에너지 공급망 이슈를 직접 핵심 아젠다로 격상 중. 정유·가스 원자재 조달 비용 급등 리스크 가시화.</div>
-    <div class="sk-action">→ 액션: 원자재 조달처 다변화 현황 점검 / 중동 익스포저 헤지 전략 재검토</div>
-  </div>
-
-  <div class="sk-card">
-    <div class="sk-card-header">
-      <span class="sk-level sk-mid">🟡 WATCH</span>
-      <span class="sk-entity">SK하이닉스 — 임이자 기획재정위원장</span>
-    </div>
-    <div class="sk-body">임이자 의원은 현 <strong>기획재정위원회 위원장</strong>(상주·문경). 반도체 세액공제(K-칩스법) 확대·연장 여부, 법인세 개정 논의가 기재위를 통과해야 함. 최근 SNS는 지역구 활동 집중 중이나 <strong>4월 추경 국회 시기</strong>와 겹쳐 세제 이슈 논의 가능성 상존.</div>
-    <div class="sk-action">→ 액션: 기재위 법안 상정 일정 모니터링 강화 / 반도체 세액공제 일몰 시기 재확인</div>
-  </div>
-
-  <div class="sk-card">
-    <div class="sk-card-header">
-      <span class="sk-level sk-mid">🟡 WATCH</span>
-      <span class="sk-entity">SK텔레콤 · SK스퀘어 — 최민희 과기방통위원장</span>
-    </div>
-    <div class="sk-body">최민희 의원(과기정보방송통신위원장)이 오늘 <strong>당내 지도부 관련 게시물</strong>(4/8) 활발히 게시 중. 과기방통위는 SKT 등 통신사 요금 인가, 플랫폼 규제, AI 법안 주관. 온플법(온라인 플랫폼 공정화법) 정무위 상정 논의와 맞물려 <strong>플랫폼 서비스 영위 계열사</strong> 규제 리스크 잠재.</div>
-    <div class="sk-action">→ 액션: 온플법 / 통신요금 관련 위원회 동향 주 1회 이상 추적</div>
-  </div>
-
-  <div class="sk-card">
-    <div class="sk-card-header">
-      <span class="sk-level sk-mid">🟡 WATCH</span>
-      <span class="sk-entity">SK 전체 — 윤한홍 정무위원장</span>
-    </div>
-    <div class="sk-body">윤한홍 의원은 현 <strong>정무위원회 위원장</strong>. 정무위는 공정거래위원회, 금융위원회, 한국은행 등을 감독 — SK 계열 대기업 집단의 내부거래·공정거래법 이슈, SK계열 금융사(SK증권 등) 규제를 직접 관할. 오늘은 민원의 날 게시물만 있으나, <strong>4월 추경 이후 정무위 활동 재개 예상.</strong></div>
-    <div class="sk-action">→ 액션: 공정거래법 개정 / 대기업 집단 지정 기준 변경 관련 정무위 일정 모니터링</div>
-  </div>
-
-  <div class="sk-card" style="border-left-color:var(--muted)">
-    <div class="sk-card-header">
-      <span class="sk-level sk-watch">⚪ LOW</span>
-      <span class="sk-entity">SK 전체 — 4월 추경·개헌 국회</span>
-    </div>
-    <div class="sk-body">26조 2천억원 규모 추경안이 4/10 본회의 의결 예정. 추경 심사 과정에서 <strong>산업 지원 예산(반도체·에너지·AI 인프라)</strong> 세부 내역 확인 필요. 개헌 추진과 맞물려 국회 일정 과부하 → 업계 요청 법안 처리 지연 가능성.</div>
-    <div class="sk-action">→ 액션: 추경안 산업부·기재부 세부 항목 검토 / 법안 처리 일정 지연 대비 대관 전략 조정</div>
-  </div>
-</div>
-
-<!-- POLITICIAN POSTS -->
 <div class="section">
-  <div class="section-title">인물별 SNS 최근 게시물</div>
-  <div class="pol-grid">
-
-    <div class="pol">
-      <div class="pol-header">
-        <div>
-          <div class="pol-name">이재명</div>
-          <div class="pol-role">대한민국 제21대 대통령</div>
-        </div>
-        <div class="platforms">
-          <span class="plt plt-x">X</span>
-          <span class="plt plt-fb">FB</span>
-        </div>
-      </div>
-      <div class="post">
-        <div class="post-meta">2026-04-07 · X @Jaemyung_Lee</div>
-        <div class="post-text">아누틴 태국 총리님 재선출 축하. 글로벌 에너지 공급망 불확실성 속 한국-태국 긴밀한 공조 논의 (한국-태국 정상 통화 2026.4.7)</div>
-      </div>
-      <div class="post">
-        <div class="post-meta">2026-04-06 · X (RT 구윤철 부총리)</div>
-        <div class="post-text">중동전쟁에 따른 공급망 병목 해소 위해 전국민 공급망 애로 핫라인 가동. 수입·생산·유통 현장 애로 구글 폼 실시간 접수</div>
-      </div>
-      <div class="post">
-        <div class="post-meta">2026-04-05 · X</div>
-        <div class="post-text">제81회 식목일 메시지 / 부활절 평화 메시지</div>
-      </div>
+  <h2>📌 키워드 매칭 (1건)</h2>
+  <div class="match-card">
+    <div class="top">
+      <div class="name">이재명 <span class="tag dem">더불어민주당</span> <span class="tag x">X</span></div>
+      <div class="time">2026-04-08 23:15 KST (약 10시간 전)</div>
     </div>
+    <div><span class="tag kw">AI</span></div>
+    <div class="post-body">중기부 직원이 쓴 광고 시나리오, AI로 완성한 모두의창업 홍보 영상, 200만 재생수를 넘다
 
-    <div class="pol">
-      <div class="pol-header">
-        <div>
-          <div class="pol-name">안철수</div>
-          <div class="pol-role">국민의힘 의원 · 성남 분당구갑</div>
-        </div>
-        <div class="platforms">
-          <span class="plt plt-fb">FB</span>
-          <span class="plt plt-off">X 비활성</span>
-        </div>
-      </div>
-      <div class="post">
-        <div class="post-meta">2026-04-08 · Facebook @ahncs111</div>
-        <div class="post-text">저축은행의 소상공인·중견기업 대출 확대 추진</div>
-      </div>
-    </div>
-
-    <div class="pol">
-      <div class="pol-header">
-        <div>
-          <div class="pol-name">윤한홍 <span style="font-size:11px;color:var(--yellow)">정무위원장</span></div>
-          <div class="pol-role">국민의힘 의원 · 마산회원구</div>
-        </div>
-        <div class="platforms"><span class="plt plt-fb">FB</span></div>
-      </div>
-      <div class="post">
-        <div class="post-meta">2026-04-05 · Facebook @uhh609</div>
-        <div class="post-text">4월 첫째 주 토요일, 민원의 날 진행</div>
-      </div>
-    </div>
-
-    <div class="pol">
-      <div class="pol-header">
-        <div>
-          <div class="pol-name">임이자 <span style="font-size:11px;color:var(--yellow)">기재위원장</span></div>
-          <div class="pol-role">국민의힘 의원 · 상주·문경</div>
-        </div>
-        <div class="platforms"><span class="plt plt-fb">FB</span></div>
-      </div>
-      <div class="post">
-        <div class="post-meta">2026-04-03 · Facebook @llj11</div>
-        <div class="post-text">경주·김천의 미래, 임이자도 원팀으로 함께하겠습니다</div>
-      </div>
-    </div>
-
-    <div class="pol">
-      <div class="pol-header">
-        <div>
-          <div class="pol-name">최민희 <span style="font-size:11px;color:var(--yellow)">과기방통위원장</span></div>
-          <div class="pol-role">더불어민주당 의원</div>
-        </div>
-        <div class="platforms">
-          <span class="plt plt-fb">FB</span>
-          <span class="plt plt-off">X 비활성</span>
-        </div>
-      </div>
-      <div class="post">
-        <div class="post-meta">2026-04-08 · Facebook @minhee.official</div>
-        <div class="post-text">[당지도부에 요청드립니다!] 추미애 후보 과반 득표 관련 의견</div>
-      </div>
-    </div>
-
-    <div class="pol">
-      <div class="pol-header">
-        <div>
-          <div class="pol-name">이철규</div>
-          <div class="pol-role">국민의힘 의원 · 동해·태백·삼척·정선</div>
-        </div>
-        <div class="platforms"><span class="plt plt-fb">FB</span></div>
-      </div>
-      <div class="post">
-        <div class="post-meta">2026-04-07 · Facebook @dslove.assembly</div>
-        <div class="post-text">시민들의 통행권은 보장 되어야 합니다</div>
-      </div>
-    </div>
-
-    <div class="pol">
-      <div class="pol-header">
-        <div>
-          <div class="pol-name">한준호</div>
-          <div class="pol-role">더불어민주당 의원 · 고양시을 · 국토교통위</div>
-        </div>
-        <div class="platforms">
-          <span class="plt plt-fb">FB</span>
-          <span class="plt plt-off">X 정지</span>
-        </div>
-      </div>
-      <div class="post">
-        <div class="post-meta">2026-04-08 · Facebook @hanjuno.news</div>
-        <div class="post-text">선거 결과 관련 의견 게시 (좋아요 934개)</div>
-      </div>
-    </div>
-
+"콩쥐가 일상 속 작은 아이디어에서 창업 기회를 찾아낸 점이 정말 멋져요."
+"밑 빠진 독에 물 붓기 같던 가사 노동에서 서비스 앱의 수요를 발견한 콩쥐의 안목에 무릎을 탁 치고 갑니다."</div>
+    <div class="link-row"><a href="https://x.com/Jaemyung_Lee" target="_blank">원문 보기 (X)</a></div>
   </div>
 </div>
 
-<!-- CONTEXT -->
 <div class="section">
-  <div class="section-title">📌 4월 국회 주요 배경</div>
-  <div class="context-box"><strong>추경 · 개헌:</strong> 여야 26조 2천억원 규모 추경안 4/10 본회의 의결 예정. 여당은 추경과 함께 개헌도 전격 추진 중.</div>
-  <div class="context-box"><strong>온라인플랫폼법(온플법):</strong> 이정문 의원 발의안 정무위 상정. 배달 수수료 상한제 입법 예상. SK텔레콤·11번가 등 플랫폼 사업 직접 영향.</div>
-  <div class="context-box"><strong>반도체 세액공제(K-칩스법):</strong> 기재위 통과, 본회의 의결 완료. 대기업 6%→8% 상향. SK하이닉스 세제 혜택 확정.</div>
+  <h2>🚨 긴급 키워드 매칭</h2>
+  <div class="no-match">긴급 키워드(발의, 개정안, 청문회, 긴급, 본회의, 법안) 매칭 건 없음</div>
 </div>
 
-<div class="footer">
-  CR Monitoring Bot | 자동 실행 | 다음 실행 2026-04-09 09:00 KST<br>
-  <a href="https://anne0926.github.io/agentic-ai-briefing">📊 In-House Consulting Daily Intelligence</a>
+<div class="section">
+  <h2>📋 전체 수집 게시물 원문</h2>
+
+  <!-- 이재명 -->
+  <div class="person-card">
+    <div class="head">
+      <div class="name">이재명 <span class="tag dem">대통령</span></div>
+      <div class="count">X 3건 + FB 1건</div>
+    </div>
+    <div class="post-time">X | 2026-04-08 23:15 KST (약 10시간 전)</div>
+    <div class="post">중기부 직원이 쓴 광고 시나리오, AI로 완성한 모두의창업 홍보 영상, 200만 재생수를 넘다
+
+"콩쥐가 일상 속 작은 아이디어에서 창업 기회를 찾아낸 점이 정말 멋져요."
+"밑 빠진 독에 물 붓기 같던 가사 노동에서 서비스 앱의 수요를 발견한 콩쥐의 안목에 무릎을 탁 치고 갑니다."</div>
+    <div class="post-time" style="margin-top:8px">X | 2026-04-08 21:03 KST (약 12시간 전)</div>
+    <div class="post">국민과 직접 대화, 정말 중요합니다. 이훈기 의원님 잘 하십니다. 정치는 국민이 합니다.
+
+이훈기표 '불금정치' 100만보의 기적…눈물 닦고 현안 풀어</div>
+    <div class="post-time" style="margin-top:8px">X | 2026-04-08 20:21 KST (약 13시간 전)</div>
+    <div class="post">고유가로 어려움을 겪고 계신 화물운송과 물류업계 종사자분들을 찾아 뵈었습니다. 오랜 시간 우리 경제를 지탱해 오신 여러분의 노고가 얼마나 큰지 다시금 느낄 수 있었습니다.
+
+정부의 신속한 대응으로 시행된 석유 최고가격제와 유가 연동보조금이 피해를 줄이는 데 도움이 되었다고 말씀해...</div>
+    <div class="post-time" style="margin-top:8px">Facebook | 3일 전</div>
+    <div class="post">전쟁과 가난으로 황폐했던 우리의 산과 들은 국민 여러분의 손길로 되살아났습니다. 한 그루 한 그루 정성 다해 심은 나무들이 모여 전국 곳곳에 80억 그루가 넘게 자라났고, 그 덕에 산천은 다시 푸른 생명으로 가득해졌습니다.
+
+제81회 식목일을 맞아 관저와 청와대에도 새 생명을 심었습니다. 체리나무와 복사나무입니다. 아직은 작은 묘목이지만 따스한 봄 햇살이 더해지면, 국민 여러분의 정성으로 키워낸 나무들처럼 머지않아 꽃을 피우고 풍성한 열매를 맺겠지요.
+
+우리 대한민국은 언제나 시련을 넘어 희망을 일궈온 굳건한 저력을 지닌 나라입니다. 혹독한 겨울 지나 새순이 돋고 꽃이 피는 봄의 순리처럼, 이 땅에도 다시 희망의 기운이 널리 퍼질 수 있도록 대통령으로서 최선을 다하겠습니다.</div>
+    <div class="link-row">
+      <a href="https://x.com/Jaemyung_Lee" target="_blank">X 프로필</a>
+      <a href="https://www.facebook.com/jaemyunglee" target="_blank">Facebook 프로필</a>
+    </div>
+  </div>
+
+  <!-- 안철수 -->
+  <div class="person-card">
+    <div class="head">
+      <div class="name">안철수 <span class="tag ppp">국민의힘</span></div>
+      <div class="count">FB 1건</div>
+    </div>
+    <div class="post-time">Facebook | 약 1시간 전</div>
+    <div class="post">경기도의원선거 제5,6선거구 공천확정!
+안철수와 함께할 분당갑 도의원은 #송경택 #방성환 입니다
+- 제5선거구: 야탑, 이매, 삼평동
+- 제6선거구: 서현1·2, 판교, 백현, 운중동
+#경기도의원선거 #공천확정 #안철수 #분당갑 #필승</div>
+    <div class="link-row"><a href="https://www.facebook.com/ahncs111" target="_blank">Facebook 프로필</a></div>
+  </div>
+
+  <!-- 윤한홍 -->
+  <div class="person-card">
+    <div class="head">
+      <div class="name">윤한홍 <span class="tag ppp">국민의힘</span> 정무위원장</div>
+      <div class="count">FB 1건</div>
+    </div>
+    <div class="post-time">Facebook | 3일 전</div>
+    <div class="post">4월 첫째 주 토요일, 민원의 날을 진행했습니다.
+비가 내리는 날씨에도 찾아와 주신 주민 여러분과 차분히 이야기를 나누는 시간을 가졌으며, 시·도의원 회의를 통해 지역 현안도 점검하였습니다.
+'민원의 날'은 매달 첫째 주 토요일마다 이어집니다.
+부담 없이 편하게 방문하셔서 동네 이야기나 생활 속 불편 사항을 함께 나눠주시면 좋겠습니다.</div>
+    <div class="link-row"><a href="https://www.facebook.com/uhh609" target="_blank">Facebook 프로필</a></div>
+  </div>
+
+  <!-- 임이자 -->
+  <div class="person-card">
+    <div class="head">
+      <div class="name">임이자 <span class="tag ppp">국민의힘</span> 기획재정위원장</div>
+      <div class="count">FB 1건</div>
+    </div>
+    <div class="post-time">Facebook | 14시간 전</div>
+    <div class="post">[이철우 경북도지사 상주·문경 당협사무실 방문]</div>
+    <div class="link-row"><a href="https://www.facebook.com/llj11" target="_blank">Facebook 프로필</a></div>
+  </div>
+
+  <!-- 최민희 -->
+  <div class="person-card">
+    <div class="head">
+      <div class="name">최민희 <span class="tag dem">더불어민주당</span> 과기위원장</div>
+      <div class="count">FB 1건</div>
+    </div>
+    <div class="post-time">Facebook | 20시간 전</div>
+    <div class="post">[당지도부에 요청드립니다!]
+추미애후보가 과반 득표로...</div>
+    <div class="link-row"><a href="https://www.facebook.com/minhee.official" target="_blank">Facebook 프로필</a></div>
+  </div>
+
+  <!-- 이철규 -->
+  <div class="person-card">
+    <div class="head">
+      <div class="name">이철규 <span class="tag ppp">국민의힘</span></div>
+      <div class="count">FB 1건</div>
+    </div>
+    <div class="post-time">Facebook | 2일 전</div>
+    <div class="post">(시민들의 통행권은 보장 되어야 합니다.)</div>
+    <div class="link-row"><a href="https://www.facebook.com/dslove.assembly" target="_blank">Facebook 프로필</a></div>
+  </div>
+
+  <!-- 한준호 -->
+  <div class="person-card">
+    <div class="head">
+      <div class="name">한준호 <span class="tag dem">더불어민주당</span></div>
+      <div class="count">FB 1건</div>
+    </div>
+    <div class="post-time">Facebook | 16시간 전</div>
+    <div class="post">아쉬운 마음에 혼자 털어놓았던 귀갓길의 짧은 넋두리였습니다.
+아차 하는 마음에 곧바로 비공개로 전환했으나, 저의 신중하지 못한 처신으로 심려를 끼쳐드려 송구할 따름입니다.
+추미애 후보님의 출중한 역량과 탁월한 학습 능력을 누구보다 잘 알고 신뢰합니다. 후보님과 당원 동지들께 상처를 드린 점 진심으로 사과드립니다.</div>
+    <div class="link-row"><a href="https://www.facebook.com/hanjuno.news" target="_blank">Facebook 프로필</a></div>
+  </div>
 </div>
+
+<div class="section">
+  <h2>🔍 모니터링 키워드</h2>
+  <p style="margin-bottom:8px"><strong style="color:#ffc107">일반:</strong> 공정거래, 법인세, 반도체, 플랫폼, AI, 인공지능, 규제, 산업정책, 독점, 대기업</p>
+  <p><strong style="color:#ff5252">긴급:</strong> 발의, 개정안, 청문회, 긴급, 본회의, 법안</p>
+</div>
+
+<footer>
+  CR Monitoring Bot | 실시간 크롤링 대시보드 | 2026.04.09<br>
+  수집: Chrome 브라우저 직접 방문 (Facebook 로그인 상태) | Telegram 알림 연동
+</footer>
 
 </div>
 </body>
