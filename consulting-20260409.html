@@ -35,12 +35,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .meta-source{color:var(--accent);font-weight:600;}
 .meta-date{color:var(--text-muted);}
 .meta-badge{font-size:0.7rem;padding:2px 8px;border-radius:10px;font-weight:600;}
-.badge-drive{background:rgba(63,185,80,0.15);color:var(--success);}
 .badge-gmail{background:rgba(218,54,51,0.15);color:#da3633;}
-.badge-restricted{background:rgba(210,153,34,0.15);color:var(--warning);}
 .fresh-today{font-size:0.65rem;padding:2px 6px;border-radius:8px;background:rgba(63,185,80,0.2);color:var(--success);font-weight:700;}
 .fresh-yesterday{font-size:0.65rem;padding:2px 6px;border-radius:8px;background:rgba(210,153,34,0.2);color:var(--warning);font-weight:700;}
-.fresh-recent{font-size:0.65rem;padding:2px 6px;border-radius:8px;background:rgba(88,166,255,0.15);color:var(--accent);font-weight:700;}
 .card-title{font-size:1.05rem;font-weight:700;color:var(--text-primary);margin-bottom:14px;}
 .summary-block{margin-bottom:16px;}
 .block-label{font-size:0.75rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--border);}
@@ -65,10 +62,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .nav-top a:hover{border-color:var(--accent);color:var(--accent);}
 </style>
 <script>
-function toggleTranslate(id){
-  var el=document.getElementById(id);
-  if(el){el.classList.toggle('show');}
-}
+function toggleTranslate(id){var el=document.getElementById(id);if(el){el.classList.toggle('show');}}
 </script>
 </head>
 <body>
@@ -82,9 +76,9 @@ function toggleTranslate(id){
   <h1>📊 SK Intelligence | Consulting</h1>
   <div class="hero-sub">McKinsey · BCG · Bain · Gartner · Deloitte · Accenture 등 주요 기관 최신 리포트 — 전략기획 전용</div>
   <div class="stats-row">
-    <span class="stat">총 12건 분석</span>
-    <span class="stat">📧 Gmail 3건 포함</span>
-    <span class="stat">기준: 최근 3일</span>
+    <span class="stat">총 3건 분석</span>
+    <span class="stat">📧 Gmail 3건</span>
+    <span class="stat">기준: 최근 3일 (04.07~09)</span>
   </div>
 </div>
 
@@ -102,139 +96,13 @@ function toggleTranslate(id){
 
 <!-- ═══════ SEC-AIDC ═══════ -->
 <section id="sec-aidc">
-<h2 class="section-title">
-  <span class="section-tag tag-aidc">AI DC</span>
-  AI DC · 전력 · 쿨링 · GPU
-</h2>
-
-<article class="card">
-  <div class="card-meta">
-    <span class="meta-source">McKinsey</span>
-    <span class="meta-date">2026-04</span>
-    <span class="fresh-recent">FRESH</span>
-  </div>
-  <h3 class="card-title">AI Power: Expanding Data Center Capacity to Meet Growing Demand</h3>
-  <div class="summary-block">
-    <div class="block-label">Executive Summary</div>
-    <div class="exec-summary">
-      글로벌 데이터센터 용량 수요가 2023~2030년 연평균 19~22% 성장하여 171~219GW에 달할 전망이다. 이 중 70%가 AI 워크로드 전용으로 배정될 것으로 예측된다. McKinsey는 2030년까지 전 세계 데이터센터 인프라에 총 6.7조 달러(AI 장비 시설에 5.2조 달러)의 투자가 필요하다고 분석했다. 전력 확보(Power availability)가 GPU·건설보다 더 핵심적인 병목 요인으로 부상하고 있으며, 전력 공급 부족이 AI 인프라 확장의 최대 제약조건이다. 북미 지역은 이미 가용 전력의 한계에 근접하고 있어, 전력 인프라의 선제적 확충 없이는 AI 성장 전략 자체가 위협받을 수 있다. 데이터센터 사업자들은 자체 발전(on-site generation), 장기 전력구매계약(PPA) 등 다각적 전력 확보 전략을 병행하고 있다.
-    </div>
-  </div>
-  <div class="summary-block">
-    <div class="block-label">Strategic Implication — C-Suite 관점</div>
-    <div class="implication-grid">
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 01 · 전력 인프라 투자 전략</div>
-        <div class="impl-text">
-          6.7조 달러 규모의 글로벌 데이터센터 투자 중 전력 관련 비중이 급증하고 있다. 2030년까지 AI 전용 시설에만 5.2조 달러가 소요되며, 전력 공급 계약(PPA)과 자체 발전 설비 확보가 선점 경쟁의 핵심이다. 전력 인프라 투자 결정의 리드타임이 3~5년인 점을 감안하면 2026~2027년이 의사결정 임계점이다.
-        </div>
-      </div>
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 02 · AI 워크로드 집중 리스크</div>
-        <div class="impl-text">
-          전체 용량의 70%가 AI에 집중될 경우, AI 투자 사이클 변동에 따른 유휴 설비 리스크가 상존한다. 연평균 19~22% 성장 전제 하에서도 지정학적 이슈·규제 변화·기술 세대교체에 따른 수요 변동성을 3~5년 단위 시나리오로 관리해야 한다. 다변화된 포트폴리오 전략이 필수적이다.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/ai-power-expanding-data-center-capacity-to-meet-growing-demand" target="_blank" rel="noopener" class="source-link">원문 보기 &rarr;</a>
-    <button class="translate-btn" onclick="toggleTranslate('tl-aidc-1')">원본 번역보기</button>
-  </div>
-  <div class="translate-block" id="tl-aidc-1">
-    <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    McKinsey는 AI 데이터센터 전력 수요 급증에 따른 용량 확장 전략을 분석했다. 글로벌 데이터센터 용량은 2023~2030년 연 19~22% 성장하여 최대 219GW에 도달하며, AI 워크로드가 전체의 70%를 차지할 전망이다. 인프라 총투자 규모는 6.7조 달러로, 이 중 AI 전용 시설에 5.2조 달러가 투입된다. 전력 가용성(Power availability)이 GPU 공급이나 건설 역량보다 더 심각한 병목 요인으로 부상했으며, 북미 전력 그리드는 이미 한계에 근접하고 있다. 데이터센터 사업자들은 장기 PPA, 자체 발전, 원자력·재생에너지 조합 등 다각적 전력 확보 전략을 구사하고 있다.
-  </div>
-</article>
-
-<article class="card">
-  <div class="card-meta">
-    <span class="meta-source">BCG</span>
-    <span class="meta-date">2026</span>
-    <span class="fresh-recent">FRESH</span>
-  </div>
-  <h3 class="card-title">Solving the US Data Center Power Crunch</h3>
-  <div class="summary-block">
-    <div class="block-label">Executive Summary</div>
-    <div class="exec-summary">
-      BCG는 미국 데이터센터의 전력 위기(Power Crunch)를 집중 분석하며, AI 수요 가속이 전력 인프라의 구조적 한계를 노출시키고 있다고 진단했다. 현재 미국 데이터센터 전력 수요는 약 4GW에서 2035년 123GW로 30배 성장이 예상되며(Deloitte 병행 분석), 그리드 확장·신규 발전소 건설·에너지 효율화를 포함한 종합 솔루션이 필수적이다. 특히 Gartner는 2027년까지 AI 데이터센터의 40%가 전력 부족으로 운영 제약을 받을 것으로 경고했다. BCG는 분산형 전력(Distributed Generation), 배터리 저장(BESS), 소형모듈원전(SMR) 등 다층적 전력 공급 포트폴리오를 권고하며, 단일 전력원 의존은 사업 연속성 리스크를 높인다고 강조한다.
-    </div>
-  </div>
-  <div class="summary-block">
-    <div class="block-label">Strategic Implication — C-Suite 관점</div>
-    <div class="implication-grid">
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 01 · 전력 다변화 포트폴리오</div>
-        <div class="impl-text">
-          4GW→123GW(30배)의 전력 수요 증가는 기존 그리드 의존 모델의 한계를 명확히 한다. SMR, BESS, 자체 발전을 포함한 다층적 전력 포트폴리오 구축이 경쟁우위의 핵심이며, 전력 조달 전략이 곧 데이터센터 사업 전략이 되는 국면이다.
-        </div>
-      </div>
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 02 · 40% 운영 제약 리스크</div>
-        <div class="impl-text">
-          Gartner의 2027년 40% 전력 제약 전망은 AI 인프라 확장 계획의 긴급한 재점검을 요구한다. 전력 확보 실패는 곧 AI 서비스 가용성 저하→고객 이탈→매출 감소로 직결되므로, 전력 확보를 최우선 전략 과제로 격상해야 한다.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <a href="https://www.bcg.com/publications/2026/solving-the-us-data-center-power-crunch" target="_blank" rel="noopener" class="source-link">원문 보기 &rarr;</a>
-    <button class="translate-btn" onclick="toggleTranslate('tl-aidc-2')">원본 번역보기</button>
-  </div>
-  <div class="translate-block" id="tl-aidc-2">
-    <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    BCG는 미국 데이터센터 전력 부족 문제의 해결 방안을 제시했다. AI 워크로드 급증으로 미국 데이터센터 전력 수요가 폭발적으로 증가하고 있으며, 기존 전력 그리드만으로는 감당이 불가능한 상황이다. 보고서는 그리드 확장, 신규 발전소 건설, 에너지 효율화 기술, 분산형 발전, 배터리 에너지 저장 시스템(BESS), 소형모듈원전(SMR) 등 다양한 솔루션의 조합을 권고한다. 단일 전력원에 의존하는 전략은 사업 연속성 리스크를 크게 높이며, 전력 공급 다변화가 데이터센터 사업의 핵심 경쟁력이 될 것이다.
-  </div>
-</article>
-
-<article class="card">
-  <div class="card-meta">
-    <span class="meta-source">McKinsey</span>
-    <span class="meta-date">2026</span>
-    <span class="fresh-recent">FRESH</span>
-  </div>
-  <h3 class="card-title">Beyond Compute: Infrastructure That Powers and Cools AI Data Centers</h3>
-  <div class="summary-block">
-    <div class="block-label">Executive Summary</div>
-    <div class="exec-summary">
-      McKinsey는 AI 데이터센터의 전력·냉각 인프라 시장을 심층 분석했다. 글로벌 냉각 시장 규모가 2030년까지 400~450억 달러에 달할 것으로 전망되며, 이 중 액체냉각(Liquid Cooling) 시장만 150~200억 달러를 형성한다. Direct-to-Chip(직접 칩 냉각) 기술은 60~120kW의 고밀도 전력을 처리할 수 있으며, 에어쿨링 대비 에너지 소비를 27% 절감하고 PUE(전력사용효율)를 10% 개선한다. AI 칩의 전력밀도가 매 세대 50~70% 증가하는 추세에서, 기존 공랭식 냉각으로는 한계에 도달했으며, 2027년 이후 신규 AI 데이터센터의 80% 이상이 액체냉각을 기본 사양으로 채택할 전망이다. 냉각 기술 선택이 데이터센터 운영비용(OpEx)과 AI 워크로드 성능을 좌우하는 핵심 변수로 부상했다.
-    </div>
-  </div>
-  <div class="summary-block">
-    <div class="block-label">Strategic Implication — C-Suite 관점</div>
-    <div class="implication-grid">
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 01 · 액체냉각 시장 선점</div>
-        <div class="impl-text">
-          150~200억 달러 규모의 액체냉각 시장은 아직 지배적 사업자가 부재한 블루오션이다. Direct-to-Chip 기술이 27% 에너지 절감 효과를 제공하므로, 이 기술을 보유한 기업과의 전략적 파트너십 또는 M&A가 시급하다. 2027년 이전 선점이 장기 경쟁우위를 결정할 것이다.
-        </div>
-      </div>
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 02 · 냉각 OpEx 최적화</div>
-        <div class="impl-text">
-          PUE 10% 개선은 대규모 데이터센터 기준 연간 수천만 달러의 운영비 절감을 의미한다. AI 칩 전력밀도가 세대당 50~70% 증가하는 상황에서, 냉각 효율이 곧 AI 서비스 원가 경쟁력을 결정하며, 이는 최종 서비스 가격에 직접 반영된다.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <a href="https://www.mckinsey.com/industries/industrials/our-insights/beyond-compute-infrastructure-that-powers-and-cools-ai-data-centers" target="_blank" rel="noopener" class="source-link">원문 보기 &rarr;</a>
-    <button class="translate-btn" onclick="toggleTranslate('tl-aidc-3')">원본 번역보기</button>
-  </div>
-  <div class="translate-block" id="tl-aidc-3">
-    <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    McKinsey는 AI 데이터센터를 지탱하는 전력·냉각 인프라의 미래를 분석했다. 컴퓨팅 역량을 넘어, 전력 공급과 열 관리가 AI 인프라의 핵심 과제로 부상하고 있다. 글로벌 데이터센터 냉각 시장은 2030년 400~450억 달러 규모로 성장하며, 액체냉각 부문이 150~200억 달러를 차지할 전망이다. Direct-to-Chip 기술은 60~120kW 고밀도 랙을 지원하며, 기존 공랭식 대비 에너지 소비 27% 절감, PUE 10% 개선 효과를 제공한다. AI 칩 전력밀도의 세대별 50~70% 증가 추세를 고려하면, 액체냉각은 선택이 아닌 필수가 되고 있다.
-  </div>
-</article>
-
+<h2 class="section-title"><span class="section-tag tag-aidc">AI DC</span> AI DC · 전력 · 쿨링 · GPU</h2>
+<div class="empty-notice">해당 기간 내 주요 컨설팅 기관의 신규 AI DC 리포트 없음 — 이전 보고서의 Drive 문서는 아카이브 참조</div>
 </section>
 
 <!-- ═══════ SEC-SEMI ═══════ -->
 <section id="sec-semi">
-<h2 class="section-title">
-  <span class="section-tag tag-semi">반도체</span>
-  반도체 · HBM · 파운드리
-</h2>
+<h2 class="section-title"><span class="section-tag tag-semi">반도체</span> 반도체 · HBM · 파운드리</h2>
 
 <article class="card">
   <div class="card-meta">
@@ -247,7 +115,7 @@ function toggleTranslate(id){
   <div class="summary-block">
     <div class="block-label">Executive Summary</div>
     <div class="exec-summary">
-      McKinsey 반도체 프랙티스의 Bill Wiseman과 Marc de Jong이 공동 분석한 이 리포트는 AI 붐에 의한 데이터센터 건설 급증이 반도체 산업의 가치 창출 패러다임을 근본적으로 재편하고 있다고 진단한다. 반도체 기업들은 점진적 조정(incremental adjustments)이 아닌 과감한 전략적 전환(bold strategic moves)을 통해 다음 가치 창출 파도를 포착해야 한다. AI 프로세서 매출은 2025년 2,000억 달러를 돌파했으며, HBM이 DRAM 시장의 23%($300억 이상)를 차지하는 구조적 변화가 진행 중이다. 특히 AI 워크로드와 하이퍼스케일러 전략의 변화가 반도체 수요 구조를 재편하고 있으며, 반도체 산업의 실제 규모가 과소평가되어 왔다는 점도 지적한다.
+      McKinsey 반도체 프랙티스의 Bill Wiseman과 Marc de Jong이 공동 분석한 리포트로, AI 붐에 의한 데이터센터 건설 급증이 반도체 산업의 가치 창출 패러다임을 근본적으로 재편하고 있다고 진단한다. 반도체 기업들은 점진적 조정이 아닌 과감한 전략적 전환(bold strategic moves)을 통해 다음 가치 창출 파도를 포착해야 한다. AI 프로세서 매출은 2025년 2,000억 달러를 돌파했으며, HBM이 DRAM 시장의 23%($300억 이상)를 차지하는 구조적 변화가 진행 중이다. 특히 AI 워크로드와 하이퍼스케일러 전략의 변화가 반도체 수요 구조를 재편하고 있으며, 반도체 산업의 실제 규모가 과소평가되어 왔다는 점도 지적한다.
     </div>
   </div>
   <div class="summary-block">
@@ -255,15 +123,11 @@ function toggleTranslate(id){
     <div class="implication-grid">
       <div class="impl-card">
         <div class="impl-number">IMPLICATION 01 · 가치사슬 재편 대응</div>
-        <div class="impl-text">
-          AI 프로세서 2,000억 달러 시대의 도래는 반도체 가치사슬의 무게중심이 설계(Design)→패키징(Advanced Packaging)→메모리(HBM)로 이동하고 있음을 의미한다. HBM의 DRAM 시장 점유율 23% 달성은 메모리 기업의 수익성 구조를 근본적으로 변화시키며, 범용 DRAM 대비 3~5배 높은 마진을 제공한다.
-        </div>
+        <div class="impl-text">AI 프로세서 2,000억 달러 시대는 가치사슬 무게중심이 설계→패키징→메모리(HBM)로 이동하고 있음을 의미한다. HBM의 DRAM 점유율 23%는 메모리 기업 수익성을 근본적으로 변화시키며, 범용 DRAM 대비 3~5배 높은 마진을 제공한다.</div>
       </div>
       <div class="impl-card">
         <div class="impl-number">IMPLICATION 02 · 하이퍼스케일러 전략 변화</div>
-        <div class="impl-text">
-          하이퍼스케일러들의 맞춤형 칩(Custom Silicon) 내재화 전략이 가속화되면서, 기존 범용 반도체 기업의 시장 지위가 도전받고 있다. 'Bold strategic moves'의 핵심은 하이퍼스케일러와의 공동 설계(Co-Design) 모델로의 전환이며, 이를 놓칠 경우 가치사슬에서의 주변화 리스크가 높다.
-        </div>
+        <div class="impl-text">하이퍼스케일러들의 맞춤형 칩(Custom Silicon) 내재화가 가속화되면서, 기존 범용 반도체 기업의 시장 지위가 도전받고 있다. 하이퍼스케일러와의 공동 설계(Co-Design) 모델 전환이 핵심이며, 이를 놓칠 경우 가치사슬 주변화 리스크가 높다.</div>
       </div>
     </div>
   </div>
@@ -273,98 +137,14 @@ function toggleTranslate(id){
   </div>
   <div class="translate-block" id="tl-semi-1">
     <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    McKinsey 반도체 프랙티스의 글로벌 리더 Bill Wiseman과 Marc de Jong이 공동으로 집필한 본 리포트는, AI 붐이 촉발한 데이터센터 건설 급증이 반도체 기업에게 새로운 가치 창출의 기회를 제공하고 있다고 분석한다. 점진적 조정이 아닌 과감한 전략적 이동(bold strategic moves)만이 차세대 가치의 물결을 포착할 수 있다. AI 워크로드와 하이퍼스케일러 전략의 대전환, 그리고 반도체 산업의 과소평가된 실제 규모가 주요 논점이다. 반도체 기업은 지금 행동해야 한다(Act now).
+    McKinsey 반도체 프랙티스 글로벌 리더 Bill Wiseman과 Marc de Jong이 분석한 본 리포트는, AI 붐이 촉발한 데이터센터 건설 급증이 반도체 기업에게 새로운 가치 창출 기회를 제공한다고 분석한다. 점진적 조정이 아닌 과감한 전략적 이동만이 차세대 가치의 물결을 포착할 수 있다. AI 워크로드와 하이퍼스케일러 전략의 대전환, 반도체 산업의 과소평가된 실제 규모가 주요 논점이다.
   </div>
 </article>
-
-<article class="card">
-  <div class="card-meta">
-    <span class="meta-source">Deloitte</span>
-    <span class="meta-date">2026</span>
-    <span class="fresh-recent">FRESH</span>
-  </div>
-  <h3 class="card-title">2026 Semiconductor Industry Outlook</h3>
-  <div class="summary-block">
-    <div class="block-label">Executive Summary</div>
-    <div class="exec-summary">
-      Deloitte는 2026년 반도체 산업 전망을 통해 AI 반도체가 2025년 전체 매출의 약 3분의 1을 차지하며 전례 없는 성장을 주도했다고 분석한다. 2026년 메모리 매출은 2,000억 달러(전체 반도체 매출의 25%)에 달할 전망이며, HBM은 2025년 DRAM 시장의 23%를 차지하면서 300억 달러를 초과했다. AI 인프라 지출은 2026년 1.3조 달러를 돌파할 것으로 예측되며, HBM과 최첨단 칩의 연평균 성장률(CAGR)은 2030년까지 20% 이상을 유지할 전망이다. 범용 DRAM 가격도 2025년 9~11월 약 4배 상승하는 등 메모리 시장 전체가 구조적 호황기에 진입했다.
-    </div>
-  </div>
-  <div class="summary-block">
-    <div class="block-label">Strategic Implication — C-Suite 관점</div>
-    <div class="implication-grid">
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 01 · 메모리 슈퍼사이클 지속</div>
-        <div class="impl-text">
-          2,000억 달러 메모리 매출과 HBM CAGR 20%+ 전망은 메모리 산업이 단기 호황이 아닌 구조적 슈퍼사이클에 진입했음을 시사한다. 특히 HBM 300억 달러 돌파는 고부가가치 메모리 비중 확대를 의미하며, 투자자·기업 모두 장기적 관점의 설비 투자 결정이 필요하다.
-        </div>
-      </div>
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 02 · 1.3조 달러 AI 인프라 투자</div>
-        <div class="impl-text">
-          2026년 1.3조 달러 AI 인프라 지출은 반도체 산업 전체에 걸친 수혜를 의미하나, 동시에 공급망 병목·인력 부족·원자재 가격 상승 리스크도 수반한다. 선제적 공급망 확보와 전략적 재고 관리가 시장 점유율 방어의 핵심이다.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html" target="_blank" rel="noopener" class="source-link">원문 보기 &rarr;</a>
-    <button class="translate-btn" onclick="toggleTranslate('tl-semi-2')">원본 번역보기</button>
-  </div>
-  <div class="translate-block" id="tl-semi-2">
-    <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    Deloitte 2026년 반도체 산업 전망 보고서에 따르면, AI 반도체가 2025년 전체 매출의 약 1/3을 차지하며 산업 성장을 주도했다. 메모리 매출은 2026년 2,000억 달러(전체의 25%)로 전망되며, HBM은 DRAM 시장의 23%를 넘어 300억 달러를 돌파했다. AI 인프라 투자는 2026년 1.3조 달러를 초과할 것이며, HBM·최첨단 칩의 CAGR은 2030년까지 20% 이상을 유지할 전망이다. 범용 DRAM 가격도 2025년 하반기 약 4배 급등하면서 메모리 시장 전체가 구조적 호황기에 진입했다.
-  </div>
-</article>
-
-<article class="card">
-  <div class="card-meta">
-    <span class="meta-source">Gartner</span>
-    <span class="meta-date">2026-01</span>
-    <span class="fresh-recent">FRESH</span>
-  </div>
-  <h3 class="card-title">Worldwide Semiconductor Revenue Grew 21% in 2025</h3>
-  <div class="summary-block">
-    <div class="block-label">Executive Summary</div>
-    <div class="exec-summary">
-      Gartner는 2025년 전 세계 반도체 매출이 전년 대비 21% 성장했다고 발표했다. AI 인프라 투자 확대와 HBM 용량 제약으로 인한 메모리 가격 상승이 성장의 핵심 동력이다. 소비자 제품용 메모리 가격이 2025년 9~11월 사이 약 4배 상승하여, 메모리 부문이 전체 반도체 성장을 견인했다. NVIDIA·AMD 등 AI 칩 기업의 매출 급증과 함께 파운드리 가동률도 역대 최고 수준을 기록했다. 2026년에도 AI 관련 반도체 수요가 전체 시장 성장을 주도할 전망이며, 특히 HBM4 양산 개시와 차세대 AI 가속기 출시가 하반기 성장을 가속화할 것으로 예상된다.
-    </div>
-  </div>
-  <div class="summary-block">
-    <div class="block-label">Strategic Implication — C-Suite 관점</div>
-    <div class="implication-grid">
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 01 · 21% 성장의 지속 가능성</div>
-        <div class="impl-text">
-          21% 성장률은 AI 수요에 기반한 구조적 성장이나, 과거 반도체 사이클의 급락 패턴을 감안하면 2027~2028년 조정 가능성도 대비해야 한다. 메모리 가격 4배 상승은 단기적으로는 수익성 호조이나, 고객사 비용 부담 증가→수요 둔화 리스크를 내포한다.
-        </div>
-      </div>
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 02 · HBM4·차세대 가속기 대응</div>
-        <div class="impl-text">
-          2026년 하반기 HBM4 양산과 차세대 AI 가속기 출시는 새로운 설비 투자 사이클을 촉발할 것이다. 장비·소재 기업에게는 기술 전환기의 선점 기회이며, 후공정(Advanced Packaging) 역량 확보가 경쟁력의 핵심 차별화 요인이 된다.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <a href="https://www.gartner.com/en/newsroom/press-releases/2026-01-12-gartner-says-worldwide-semiconductor-revenue-grew-21-percent-in-2025" target="_blank" rel="noopener" class="source-link">원문 보기 &rarr;</a>
-    <button class="translate-btn" onclick="toggleTranslate('tl-semi-3')">원본 번역보기</button>
-  </div>
-  <div class="translate-block" id="tl-semi-3">
-    <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    Gartner 발표에 따르면, 2025년 전 세계 반도체 매출이 21% 성장하며 강한 상승세를 이어갔다. 소비자 제품용 메모리 가격이 2025년 9~11월 약 4배 상승했으며, AI 인프라 투자와 HBM 용량 제약이 주요 성장 동력이었다. 산업 전반에 걸쳐 AI 중심의 지속적 수요가 확인되었으며, 2026년에도 이 추세가 계속될 것으로 전망된다.
-  </div>
-</article>
-
 </section>
 
 <!-- ═══════ SEC-AI ═══════ -->
 <section id="sec-ai">
-<h2 class="section-title">
-  <span class="section-tag tag-ai">AI</span>
-  AI · Agentic AI · LLM
-</h2>
+<h2 class="section-title"><span class="section-tag tag-ai">AI</span> AI · Agentic AI · LLM</h2>
 
 <article class="card">
   <div class="card-meta">
@@ -377,7 +157,7 @@ function toggleTranslate(id){
   <div class="summary-block">
     <div class="block-label">Executive Summary</div>
     <div class="exec-summary">
-      BCG Tech+Us 4월호의 핵심 리포트로, Agentic AI가 기업 운영 모델(Operating Model)을 근본적으로 재편하고 있다고 분석한다. AI 에이전트는 단순 분석을 넘어 관찰(observe)→계획(plan)→실행(act)의 엔드투엔드 워크플로우를 자율적으로 수행하며, HR·재무·고객서비스·IT 전반의 비용을 구조적으로 절감하고 있다. AI 선도 기업은 3배 높은 비용 절감, 1.6배 높은 EBIT 마진, 2.7배 높은 투자자본수익률(ROIC)을 달성하고 있다. LLM 기반 에이전트가 정보 검색·해석·실행을 매개하면서, 기업은 인간 소비가 아닌 기계 해석(machine interpretation)에 최적화된 데이터 구조를 구축해야 한다. 또한 기존의 일률적(one-size-fits-all) AI 거버넌스 모델은 병목이 되고 있으며, 계층적 트리아지(tiered triage) 모델로의 전환이 필요하다.
+      BCG Tech+Us 4월호 핵심 리포트로, Agentic AI가 기업 운영 모델을 근본적으로 재편하고 있다고 분석한다. AI 에이전트는 관찰→계획→실행의 엔드투엔드 워크플로우를 자율적으로 수행하며, HR·재무·고객서비스·IT 전반의 비용을 구조적으로 절감한다. AI 선도 기업은 3배 높은 비용 절감, 1.6배 높은 EBIT 마진, 2.7배 높은 투자자본수익률(ROIC)을 달성하고 있다. LLM 기반 에이전트가 정보 검색·해석·실행을 매개하면서, 기업은 기계 해석(machine interpretation)에 최적화된 데이터 구조를 구축해야 한다. 기존 일률적 AI 거버넌스는 병목이 되고 있으며, 계층적 트리아지 모델 전환이 필요하다.
     </div>
   </div>
   <div class="summary-block">
@@ -385,15 +165,11 @@ function toggleTranslate(id){
     <div class="implication-grid">
       <div class="impl-card">
         <div class="impl-number">IMPLICATION 01 · 운영 모델 재설계</div>
-        <div class="impl-text">
-          AI 선도 기업의 3배 비용 절감·1.6배 EBIT 마진 격차는 AI를 기존 프로세스에 '얹는' 방식이 아닌, AI 중심으로 운영 모델 자체를 '재설계'한 결과다. 이 격차는 시간이 지날수록 확대되며, 2027년까지 운영 모델 전환에 착수하지 않으면 경쟁 열위가 구조화될 리스크가 높다.
-        </div>
+        <div class="impl-text">AI 선도 기업의 3배 비용 절감·1.6배 EBIT 마진 격차는 AI를 기존 프로세스에 '얹는' 방식이 아닌, AI 중심 운영 모델 '재설계'의 결과다. 2027년까지 운영 모델 전환에 착수하지 않으면 경쟁 열위가 구조화된다.</div>
       </div>
       <div class="impl-card">
         <div class="impl-number">IMPLICATION 02 · AI 거버넌스 계층화</div>
-        <div class="impl-text">
-          일률적 AI 검토 체계는 도입 속도를 저해하고 리스크 집중 관리를 방해한다. BCG가 제안하는 계층적 트리아지 모델(검증된 유스케이스→신속 도입 / 고위험 에이전트→심층 검토)은 속도와 안전을 동시에 확보하는 균형점이며, 거버넌스 성숙도가 AI 확장 속도를 결정한다.
-        </div>
+        <div class="impl-text">일률적 AI 검토 체계는 속도와 안전의 균형을 무너뜨린다. BCG의 계층적 트리아지 모델(검증된 유스케이스→신속 도입 / 고위험→심층 검토)이 거버넌스 성숙도와 AI 확장 속도를 동시에 확보하는 최적해다.</div>
       </div>
     </div>
   </div>
@@ -403,7 +179,7 @@ function toggleTranslate(id){
   </div>
   <div class="translate-block" id="tl-ai-1">
     <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    BCG Tech+Us 2026년 4월호의 주제는 "AI 에이전트가 운영 모델을 다시 쓰고 있다"이다. AI 에이전트는 사용자가 말하는 것을 실행하며, 점점 더 무엇이 수행될지를 결정하고, 기업 전반에서 의사결정이 행동으로 전환되는 방식을 재형성하고 있다. 다음 효율성 향상은 분석만 하는 AI가 아니라, 행동하는 AI에서 나올 것이다. 선도 기업들은 AI를 기존 프로세스 위에 얹는 것이 아니라, AI를 중심으로 비용 구조를 재설계하고 있다. Agentic AI는 이 전환을 가속화하고 있으며, 관찰·계획·실행이 가능한 시스템이 HR, 재무, 고객서비스, IT 전반의 엔드투엔드 워크플로우를 수행하여 비용을 절감한다. AI 리더 기업은 3배 높은 비용 절감, 1.6배 높은 EBIT 마진, 2.7배 높은 투자자본수익률을 달성하고 있다.
+    BCG Tech+Us 2026년 4월호: AI 에이전트가 운영 모델을 다시 쓰고 있다. AI 에이전트는 사용자가 말하는 것을 실행하며, 점점 더 무엇이 수행될지를 결정한다. 선도 기업들은 AI를 기존 프로세스 위에 얹는 것이 아니라 비용 구조를 재설계하고 있다. Agentic AI가 관찰·계획·실행을 수행하며 HR, 재무, 고객서비스, IT 전반의 엔드투엔드 워크플로우를 처리한다. AI 리더 기업은 3배 비용 절감, 1.6배 EBIT 마진, 2.7배 ROIC를 달성하고 있다.
   </div>
 </article>
 
@@ -418,7 +194,7 @@ function toggleTranslate(id){
   <div class="summary-block">
     <div class="block-label">Executive Summary</div>
     <div class="exec-summary">
-      McKinsey 시니어 파트너 Kate Smaje, Robert Levin과 McKinsey 명예 어드바이저 Eric Lamarre가 'Rewired' 2판(Wiley, 2026년 4월)을 통해 AI 시대의 기업 경쟁력 확보 전략을 제시한다. 지난 수년간의 변화를 진단하면서, 조직 속도(organizational speed) 구축의 중요성과 기술·AI 변혁이 궁극적으로 '사람'에 관한 것임을 강조한다. 가장 성공적인 AI 변혁은 기술 도입이 아닌 조직 역량·문화·리더십의 재편(rewiring)에서 시작된다는 것이 핵심 메시지다. Alex Singla와 Alexander Sukharevsky 시니어 파트너의 리더십 역할에 대한 추가 인터뷰도 예정되어 있어, AI 변혁에서 경영진의 역할에 대한 심층 논의가 이어질 전망이다.
+      McKinsey 시니어 파트너 Kate Smaje, Robert Levin과 명예 어드바이저 Eric Lamarre가 'Rewired' 2판(Wiley, 2026년 4월)을 통해 AI 시대 기업 경쟁력 확보 전략을 제시한다. 조직 속도(organizational speed) 구축의 중요성과 기술·AI 변혁이 궁극적으로 '사람'에 관한 것임을 강조한다. 가장 성공적인 AI 변혁은 기술 도입이 아닌 조직 역량·문화·리더십의 재편에서 시작된다. Alex Singla와 Alexander Sukharevsky의 리더십 역할에 대한 추가 인터뷰도 예정되어 있어, AI 변혁에서 경영진 역할의 심층 논의가 이어질 전망이다.
     </div>
   </div>
   <div class="summary-block">
@@ -426,15 +202,11 @@ function toggleTranslate(id){
     <div class="implication-grid">
       <div class="impl-card">
         <div class="impl-number">IMPLICATION 01 · 조직 속도 경쟁</div>
-        <div class="impl-text">
-          AI 변혁의 성패를 가르는 핵심 변수가 기술이 아닌 '조직 속도'라는 점은, C-Suite가 기술 투자와 동일한 수준의 자원을 조직 역량 구축에 배분해야 함을 시사한다. '사람 중심 변혁'이라는 메시지는 인재 확보·리스킬링·문화 변화에 대한 체계적 투자 없이는 AI ROI 실현이 불가능함을 의미한다.
-        </div>
+        <div class="impl-text">AI 변혁 성패의 핵심이 '조직 속도'라는 점은, 기술 투자와 동일한 수준의 자원을 조직 역량 구축에 배분해야 함을 시사한다. 인재 확보·리스킬링·문화 변화 없이는 AI ROI 실현이 불가능하다.</div>
       </div>
       <div class="impl-card">
         <div class="impl-number">IMPLICATION 02 · 리더십 재정의</div>
-        <div class="impl-text">
-          McKinsey가 시니어 파트너 5인의 집단 저서로 이 주제를 다룬다는 것 자체가, AI 변혁이 더 이상 CTO/CIO의 영역이 아닌 CEO·전체 C-Suite의 최우선 어젠다임을 상징한다. 리더십의 역할이 '기술 감독'에서 '조직 재설계 총괄'로 확장되고 있다.
-        </div>
+        <div class="impl-text">시니어 파트너 5인의 집단 저서라는 것 자체가, AI 변혁이 CTO/CIO 영역이 아닌 CEO·전체 C-Suite의 최우선 어젠다임을 상징한다. 리더십 역할이 '기술 감독'에서 '조직 재설계 총괄'로 확장되고 있다.</div>
       </div>
     </div>
   </div>
@@ -444,144 +216,20 @@ function toggleTranslate(id){
   </div>
   <div class="translate-block" id="tl-ai-2">
     <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    McKinsey Author Talks에서 시니어 파트너 Kate Smaje, Robert Levin, 그리고 McKinsey 출신 명예 어드바이저 Eric Lamarre가 'Rewired' 2판(기술과 AI로 경쟁 우위를 확보하는 법, Wiley, 2026년 4월)에 대해 이야기한다. 지난 수년간 무엇이 변했는지, 조직 속도를 구축한다는 것이 무엇을 의미하는지, 그리고 가장 중요한 변혁이 궁극적으로 '사람'에 관한 것인 이유를 논의한다. AI 변혁으로 가치를 창출하는 방법에 대한 후속 인터뷰도 예정되어 있다.
+    McKinsey Author Talks: 시니어 파트너 Kate Smaje, Robert Levin, 명예 어드바이저 Eric Lamarre가 'Rewired' 2판(Wiley, 2026년 4월)에 대해 이야기한다. 지난 수년간 무엇이 변했는지, 조직 속도 구축의 의미, 가장 중요한 변혁이 궁극적으로 '사람'에 관한 것인 이유를 논의한다.
   </div>
 </article>
-
-<article class="card">
-  <div class="card-meta">
-    <span class="meta-source">Gartner</span>
-    <span class="meta-date">2026</span>
-    <span class="fresh-recent">FRESH</span>
-  </div>
-  <h3 class="card-title">40% of Enterprise Apps Will Feature Task-Specific AI Agents by 2026</h3>
-  <div class="summary-block">
-    <div class="block-label">Executive Summary</div>
-    <div class="exec-summary">
-      Gartner는 2025년 5% 미만이던 AI 에이전트 탑재 기업 앱 비율이 2026년 40%로 급증할 것으로 전망한다. 이는 8배의 도약으로, 에이전틱 AI가 실험 단계를 넘어 기업 IT 인프라의 핵심 구성요소로 자리잡고 있음을 의미한다. 나아가 2028년까지 B2B 구매의 90%가 AI 에이전트를 통해 중개될 것이며, 이는 15조 달러 이상의 B2B 지출이 AI 에이전트 교환(Agent Exchange)을 통해 흐르게 됨을 의미한다. 또한 Gartner는 2028년까지 브랜드의 60%가 일대일 고객 인터랙션을 위해 Agentic AI를 도입할 것으로 예측하며, AI 에이전트가 단순 자동화를 넘어 기업 간 거래·고객 관계 관리의 표준 인터페이스로 진화하고 있다.
-    </div>
-  </div>
-  <div class="summary-block">
-    <div class="block-label">Strategic Implication — C-Suite 관점</div>
-    <div class="implication-grid">
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 01 · 15조 달러 에이전트 경제</div>
-        <div class="impl-text">
-          2028년 B2B 지출 15조 달러가 AI 에이전트를 통해 흐른다는 것은, 기업의 구매·판매 프로세스 전체가 에이전트 인터페이스로 전환됨을 의미한다. 자사 제품·서비스가 AI 에이전트에 의해 검색·비교·추천될 수 있도록 machine-readable 데이터 구조를 선제적으로 구축해야 한다.
-        </div>
-      </div>
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 02 · 8배 도약 대응 속도</div>
-        <div class="impl-text">
-          5%→40%의 1년 내 8배 도약은 AI 에이전트 도입이 점진적 확산이 아닌 급격한 전환(Phase Transition)임을 시사한다. 2026년 하반기가 도입의 임계점이며, 이 시점에 에이전트 전략이 부재한 기업은 디지털 고립(Digital Isolation) 리스크에 직면한다.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025" target="_blank" rel="noopener" class="source-link">원문 보기 &rarr;</a>
-    <button class="translate-btn" onclick="toggleTranslate('tl-ai-3')">원본 번역보기</button>
-  </div>
-  <div class="translate-block" id="tl-ai-3">
-    <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    Gartner는 2025년 5% 미만이던 AI 에이전트 탑재 기업 애플리케이션 비율이 2026년까지 40%에 달할 것으로 예측한다. 이 극적인 성장은 에이전틱 AI가 실험 단계를 넘어 기업 인프라의 핵심 요소로 자리잡고 있음을 보여준다. 2028년까지 B2B 구매의 90%가 AI 에이전트 중개를 통해 이루어지며, 15조 달러 이상의 B2B 지출이 AI 에이전트 교환을 통해 처리될 전망이다. 또한 브랜드의 60%가 2028년까지 개인화된 1:1 고객 인터랙션을 위해 Agentic AI를 채택할 것으로 예측된다.
-  </div>
-</article>
-
 </section>
 
 <!-- ═══════ SEC-SPACE ═══════ -->
 <section id="sec-space">
-<h2 class="section-title">
-  <span class="section-tag tag-space">우주·신기술</span>
-  우주 · 양자컴퓨팅 · SMR · 핵융합
-</h2>
-
-<article class="card">
-  <div class="card-meta">
-    <span class="meta-source">McKinsey</span>
-    <span class="meta-date">2026</span>
-    <span class="fresh-recent">FRESH</span>
-  </div>
-  <h3 class="card-title">The Rise of Quantum Computing</h3>
-  <div class="summary-block">
-    <div class="block-label">Executive Summary</div>
-    <div class="exec-summary">
-      McKinsey는 양자컴퓨팅 산업이 2024년 6.5~7.5억 달러 매출을 기록하고 2025년 10억 달러를 돌파할 것으로 전망한다. 첫 번째 의미 있는 돌파구는 화학·제약/생명과학·금융서비스·운송 분야에서 나타날 것으로 예측되며, 2035년까지 잠재적 경제 가치가 2조 달러에 달한다. 양자컴퓨팅의 핵심 전환점은 오류 보정(Error Correction) 기술의 성숙으로, 이것이 달성되면 현재의 NISQ(Noisy Intermediate-Scale Quantum) 단계에서 본격적 상용화 단계로 진입한다. IBM·Google·Microsoft 등 주요 기업들이 2027~2029년 사이 오류 보정 양자 컴퓨터 상용화를 목표로 경쟁하고 있으며, 기업들은 지금부터 양자 인재 확보와 유스케이스 발굴에 선제 투자해야 한다.
-    </div>
-  </div>
-  <div class="summary-block">
-    <div class="block-label">Strategic Implication — C-Suite 관점</div>
-    <div class="implication-grid">
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 01 · 2조 달러 기회 선점</div>
-        <div class="impl-text">
-          2035년 2조 달러 경제 가치 중 화학·제약·금융이 초기 수혜 분야라는 점은, 해당 산업의 기업들이 지금부터 양자 컴퓨팅 파일럿 프로젝트를 시작해야 함을 의미한다. 양자 전문 인재의 글로벌 수급이 극도로 제한적이므로, 인재 확보는 2~3년 선행 투자가 필수적이다.
-        </div>
-      </div>
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 02 · 오류 보정 기술 임계점</div>
-        <div class="impl-text">
-          2027~2029년 오류 보정 양자 컴퓨터 상용화 시점은 양자 우위(Quantum Advantage)의 실질적 시작을 의미한다. 기존 암호화 체계(RSA 등)의 취약성이 현실화될 수 있어, 포스트양자암호(PQC) 마이그레이션을 2026~2027년 내 착수해야 한다.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <a href="https://www.mckinsey.com/featured-insights/the-rise-of-quantum-computing" target="_blank" rel="noopener" class="source-link">원문 보기 &rarr;</a>
-    <button class="translate-btn" onclick="toggleTranslate('tl-space-1')">원본 번역보기</button>
-  </div>
-  <div class="translate-block" id="tl-space-1">
-    <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    McKinsey 양자컴퓨팅 보고서에 따르면, 양자컴퓨팅 산업은 2024년 6.5~7.5억 달러 매출을 기록했으며 2025년 10억 달러를 초과할 전망이다. 첫 번째 의미 있는 돌파구는 화학, 제약/생명과학, 금융서비스, 운송 분야에서 예상된다. 잠재적 경제적 이득은 2035년까지 2조 달러에 달한다. 오류 보정 기술의 성숙이 핵심 전환점이며, IBM·Google·Microsoft가 2027~2029년 상용화를 목표로 경쟁하고 있다.
-  </div>
-</article>
-
-<article class="card">
-  <div class="card-meta">
-    <span class="meta-source">TechCrunch</span>
-    <span class="meta-date">2026-04-02</span>
-    <span class="fresh-recent">FRESH</span>
-  </div>
-  <h3 class="card-title">Commonwealth Fusion Systems: 핵융합 상용화를 위한 초전도 자석 전략</h3>
-  <div class="summary-block">
-    <div class="block-label">Executive Summary</div>
-    <div class="exec-summary">
-      Commonwealth Fusion Systems(CFS)가 Sparc 핵융합 실험로에 첫 번째 초전도 자석을 설치하며 상용화 일정을 구체화하고 있다. 총 18개의 고온 초전도(HTS) 자석이 자기 밀폐 시스템에 배치될 예정이며, Sparc는 2026년 말~2027년 초 가동 목표다. 상용 발전소 Arc는 버지니아 리치몬드 인근에 건설되어 400MW의 전력을 생산할 계획이며, Google이 Arc 발전량의 절반을 구매하기로 합의했다. CFS는 NVIDIA와도 상업적 파트너십을 체결하여, 핵융합 에너지가 AI 데이터센터 전력 공급원으로 주목받고 있음을 보여준다. 핵융합의 3대 기술 혁신(고성능 칩, AI, 고온 초전도 자석)이 상용화 타임라인을 앞당기고 있다.
-    </div>
-  </div>
-  <div class="summary-block">
-    <div class="block-label">Strategic Implication — C-Suite 관점</div>
-    <div class="implication-grid">
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 01 · 핵융합-AI 시너지</div>
-        <div class="impl-text">
-          Google·NVIDIA 등 빅테크의 핵융합 투자·구매 계약은 핵융합이 단순 R&D가 아닌 AI 인프라 전력 공급의 실질적 대안으로 부상하고 있음을 시사한다. 400MW Arc 발전소의 Google 구매 계약은 핵융합 에너지의 첫 상업적 검증 사례가 될 것이며, 2030년대 에너지 포트폴리오 전략에 핵융합 옵션을 포함해야 한다.
-        </div>
-      </div>
-      <div class="impl-card">
-        <div class="impl-number">IMPLICATION 02 · HTS 자석 기술 생태계</div>
-        <div class="impl-text">
-          CFS의 초전도 자석 기술이 핵융합 외에도 의료(MRI)·반도체 장비·가속기 등 다양한 분야에 응용 가능하다는 점에서, HTS 소재·제조 역량 확보는 미래 기술 플랫폼의 핵심이다. 한국의 초전도체 연구 역량을 산업화로 연결할 전략적 기회가 존재한다.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <a href="https://techcrunch.com/2026/04/02/commonwealth-fusion-systems-leans-on-magnets-for-near-term-revenue/" target="_blank" rel="noopener" class="source-link">원문 보기 &rarr;</a>
-    <button class="translate-btn" onclick="toggleTranslate('tl-space-2')">원본 번역보기</button>
-  </div>
-  <div class="translate-block" id="tl-space-2">
-    <div class="tl-label">🌐 원문 핵심 내용 (한국어 번역)</div>
-    Commonwealth Fusion Systems(CFS)가 Sparc 핵융합 반응로에 첫 번째 자석을 설치했으며, 총 18개 자석이 자기 밀폐 시스템에 배치될 예정이다. CFS는 Sparc가 2026년 말~2027년 초에 가동될 것으로 예상하며, 상용 발전소 Arc는 버지니아 리치몬드 인근에서 400메가와트의 전력을 생산할 계획이다. Google은 Arc 출력의 절반을 구매하기로 합의했다. CFS는 단기 수익을 위해 자석 기술 자체를 상업화하는 전략도 추진 중이다.
-  </div>
-</article>
-
+<h2 class="section-title"><span class="section-tag tag-space">우주·신기술</span> 우주 · 양자컴퓨팅 · SMR · 핵융합</h2>
+<div class="empty-notice">해당 기간 내 주요 컨설팅 기관의 신규 우주·신기술 리포트 없음</div>
 </section>
 
 <div class="footer">
   📊 SK Intelligence | Consulting Briefing — 2026-04-09 자동 생성<br>
-  데이터 출처: McKinsey, BCG, Gartner, Deloitte, Bain, Accenture, PwC, Forrester
+  데이터 출처: McKinsey, BCG (Gmail 수신 리포트만 — 구 문서 제외)
 </div>
 
 </div>
