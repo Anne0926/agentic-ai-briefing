@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SK Intelligence | News Briefing — 2026.04.27</title>
+<title>SK Intelligence | News Scrap — 2026.04.27</title>
 <style>
 :root {
   --bg-primary:#0d1117; --bg-secondary:#161b22; --bg-card:#1c2128;
@@ -12,261 +12,345 @@
   --tag-aidc:#1f6feb; --tag-ai:#388bfd; --tag-semi:#7c3aed; --tag-space:#da3633;
   --success:#3fb950; --warning:#d29922;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-
-.site-header{background:var(--bg-secondary);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;gap:16px}
-.site-header .logo{font-size:18px;font-weight:700;color:var(--text-primary)}
-.site-header .logo span{color:var(--accent)}
-.header-date{font-size:13px;color:var(--text-muted);margin-left:auto}
-
-.hero{background:linear-gradient(135deg,#0d1117 0%,#0d1a0d 100%);padding:40px 24px 32px;border-bottom:1px solid var(--border)}
-.hero-inner{max-width:1100px;margin:0 auto}
-.hero h1{font-size:28px;font-weight:700;margin-bottom:8px}
-.hero h1 span{color:var(--accent)}
-.hero-sub{color:var(--text-secondary);font-size:15px;margin-bottom:24px}
-.stats-row{display:flex;gap:24px;flex-wrap:wrap}
-.stat-item{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px 20px;font-size:13px;color:var(--text-secondary)}
-.stat-item strong{color:var(--text-primary);font-size:18px;display:block}
-
-.archive-nav{max-width:1100px;margin:16px auto 0;display:flex;gap:8px;flex-wrap:wrap;padding:0 4px}
-.archive-date{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:6px 14px;font-size:12px;color:var(--text-secondary)}
-.archive-date.today{border-color:var(--accent);color:var(--accent);font-weight:600}
-.archive-date:hover{border-color:var(--accent)}
-
-.main{max-width:1100px;margin:0 auto;padding:32px 24px}
-
-.section{margin-bottom:48px}
-.section-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)}
-.section-tag{padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:.5px}
-.tag-aidc{background:#1f6feb;color:#fff}
-.tag-semi{background:#7c3aed;color:#fff}
-.tag-ai{background:#388bfd;color:#fff}
-.tag-space{background:#da3633;color:#fff}
-.section-title{font-size:18px;font-weight:600}
-
-.card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:20px;transition:border-color .2s}
-.card:hover{border-color:#3fb95055;background:var(--bg-card-hover)}
-.card-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
-.meta-source{font-size:12px;font-weight:600;color:var(--accent)}
-.meta-date{font-size:12px;color:var(--text-muted)}
-.meta-badge{font-size:11px;padding:2px 8px;border-radius:4px;font-weight:600}
-.badge-restricted{background:#d2922233;color:#d29922;border:1px solid #d29922}
-.fresh-today{background:#3fb95033;color:#3fb950;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:700}
-.fresh-yesterday{background:#d2922233;color:#d29922;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:600}
-.fresh-recent{background:#30363d;color:#8b949e;font-size:11px;padding:2px 8px;border-radius:4px}
-
-.card-title{font-size:17px;font-weight:700;margin-bottom:16px;color:var(--text-primary)}
-
-.summary-block{margin-bottom:16px;background:var(--bg-secondary);border-radius:8px;padding:16px}
-.block-label{font-size:11px;font-weight:700;letter-spacing:.8px;color:var(--text-muted);margin-bottom:8px;text-transform:uppercase}
-.key-takeaway{font-size:14px;color:var(--text-secondary);line-height:1.75}
-
-.sowhat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:700px){.sowhat-grid{grid-template-columns:1fr}}
-.sowhat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:14px;border-left:3px solid var(--accent)}
-.sowhat-label{font-size:11px;font-weight:700;color:var(--accent);margin-bottom:6px;letter-spacing:.5px}
-.sowhat-text{font-size:13px;color:var(--text-secondary);line-height:1.7}
-
-.card-footer{display:flex;justify-content:flex-end;margin-top:16px;padding-top:12px;border-top:1px solid var(--border)}
-.source-link{font-size:13px;font-weight:600;color:var(--accent);padding:6px 14px;border:1px solid var(--accent);border-radius:6px}
-.source-link:hover{background:var(--accent);color:#000;text-decoration:none}
-
-footer{text-align:center;padding:24px;color:var(--text-muted);font-size:12px;border-top:1px solid var(--border);margin-top:32px}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg-primary); color:var(--text-primary); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; line-height:1.6; }
+a { color:var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+.header { background:var(--bg-secondary); border-bottom:1px solid var(--border); padding:16px 32px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:100; }
+.logo { font-size:1.2rem; font-weight:700; color:var(--text-primary); }
+.header-date { color:var(--text-muted); font-size:0.85rem; }
+.hero { background:linear-gradient(135deg,#0d1117 0%,#161b22 100%); padding:40px 32px 24px; border-bottom:1px solid var(--border); }
+.hero h1 { font-size:1.6rem; font-weight:700; margin-bottom:8px; }
+.hero p { color:var(--text-secondary); font-size:0.95rem; }
+.stats-row { display:flex; gap:24px; margin-top:16px; flex-wrap:wrap; }
+.stat-item { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:10px 18px; font-size:0.85rem; }
+.stat-item span { color:var(--accent); font-weight:700; }
+.archive-nav { display:flex; gap:8px; flex-wrap:wrap; padding:16px 32px; background:var(--bg-secondary); border-bottom:1px solid var(--border); }
+.archive-date { background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:5px 12px; font-size:0.82rem; color:var(--text-secondary); }
+.archive-date.today { background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600; }
+.nav-tabs { display:flex; gap:0; padding:0 32px; background:var(--bg-secondary); border-bottom:1px solid var(--border); overflow-x:auto; }
+.nav-tab { padding:12px 20px; font-size:0.88rem; color:var(--text-secondary); border-bottom:2px solid transparent; white-space:nowrap; cursor:pointer; }
+.nav-tab:hover { color:var(--text-primary); }
+.nav-tab.active { color:var(--accent); border-bottom-color:var(--accent); }
+.section { padding:32px; max-width:1200px; margin:0 auto; }
+.section-header { display:flex; align-items:center; gap:12px; margin-bottom:24px; padding-bottom:12px; border-bottom:2px solid var(--border); }
+.section-tag { padding:4px 12px; border-radius:4px; font-size:0.78rem; font-weight:700; letter-spacing:0.5px; color:#fff; }
+.tag-aidc { background:#1f6feb; }
+.tag-semi { background:#7c3aed; }
+.tag-ai { background:#388bfd; }
+.tag-space { background:#da3633; }
+.section-title { font-size:1.15rem; font-weight:700; }
+.card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:24px; margin-bottom:24px; transition:border-color .2s; }
+.card:hover { border-color:var(--accent); background:var(--bg-card-hover); }
+.card-meta { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+.meta-source { font-weight:700; color:var(--accent); font-size:0.88rem; }
+.meta-date { color:var(--text-muted); font-size:0.82rem; }
+.meta-badge { padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:600; }
+.badge-restricted { background:rgba(210,153,34,0.15); color:#d29922; border:1px solid rgba(210,153,34,0.3); }
+.fresh-today { background:rgba(63,185,80,0.2); color:#3fb950; border:1px solid rgba(63,185,80,0.4); padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:700; }
+.fresh-yesterday { background:rgba(63,185,80,0.12); color:#3fb950; border:1px solid rgba(63,185,80,0.25); padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:700; }
+.fresh-recent { background:rgba(139,148,158,0.15); color:#8b949e; border:1px solid rgba(139,148,158,0.3); padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:700; }
+.card-title { font-size:1.05rem; font-weight:700; line-height:1.4; margin-bottom:16px; color:var(--text-primary); }
+.summary-block { margin-bottom:20px; }
+.block-label { font-size:0.75rem; font-weight:700; color:var(--text-muted); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
+.key-takeaway { font-size:0.9rem; color:var(--text-secondary); line-height:1.75; }
+.sowhat-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media(max-width:768px){ .sowhat-grid{ grid-template-columns:1fr; } }
+.sowhat-card { background:var(--bg-secondary); border:1px solid var(--border); border-radius:8px; padding:16px; }
+.sowhat-label { font-size:0.72rem; font-weight:700; color:#3fb950; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:8px; }
+.sowhat-text { font-size:0.87rem; color:var(--text-secondary); line-height:1.7; }
+.card-footer { border-top:1px solid var(--border); padding-top:14px; margin-top:4px; }
+.source-link { font-size:0.85rem; font-weight:600; color:var(--accent); }
+.source-link:hover { opacity:0.8; }
 </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="logo">📰 SK Intelligence | <span>News</span></div>
-  <div class="header-date">2026.04.27 Monday</div>
+<header class="header">
+  <div class="logo">📰 SK Intelligence | News</div>
+  <div class="header-date">2026.04.27 · 자동 스크랩</div>
 </header>
 
 <div class="hero">
-  <div class="hero-inner">
-    <h1>News <span>Scrap Briefing</span></h1>
-    <p class="hero-sub">AI DC · 반도체 · AI/Agentic · 우주/신기술 — 당일·전일 뉴스 핵심 스크랩</p>
-    <div class="stats-row">
-      <div class="stat-item"><strong>4건</strong>총 검증 뉴스</div>
-      <div class="stat-item"><strong>2026.04.27</strong>기준일</div>
-      <div class="stat-item"><strong>4개 섹션</strong>분야별 스크랩</div>
-      <div class="stat-item"><strong>원문 검증</strong>WebFetch 확인</div>
-    </div>
-    <div class="archive-nav">
-      <a class="archive-date today" href="news.html">2026.04.27</a>
-      <a class="archive-date" href="news-20260426.html">2026.04.26</a>
-      <a class="archive-date" href="news-20260424.html">2026.04.24</a>
-      <a class="archive-date" href="news-20260423.html">2026.04.23</a>
-      <a class="archive-date" href="news-20260422.html">2026.04.22</a>
-      <a class="archive-date" href="news-20260421.html">2026.04.21</a>
-      <a class="archive-date" href="news-20260420.html">2026.04.20</a>
-    </div>
+  <h1>Daily News Intelligence Scrap</h1>
+  <p>AI DC · 반도체 · Agentic AI · 우주·신기술 — 당일/전일 뉴스 집중 분석</p>
+  <div class="stats-row">
+    <div class="stat-item">총 <span>8</span>건</div>
+    <div class="stat-item">글로벌 <span>4</span>건 + 국내 <span>4</span>건</div>
+    <div class="stat-item">당일·전일 기준</div>
+    <div class="stat-item">최종 업데이트 <span>2026.04.27</span></div>
   </div>
 </div>
 
-<main class="main">
+<div class="archive-nav">
+<a href="news.html" class="archive-date today">04.27</a>
+<a href="news-20260426.html" class="archive-date">04.26</a>
+<a href="news-20260424.html" class="archive-date">04.24</a>
+<a href="news-20260423.html" class="archive-date">04.23</a>
+<a href="news-20260422.html" class="archive-date">04.22</a>
+<a href="news-20260421.html" class="archive-date">04.21</a>
+<a href="news-20260420.html" class="archive-date">04.20</a>
 
-<!-- SECTION 1: AI DC -->
-<section class="section" id="sec-aidc">
+</div>
+
+<div class="nav-tabs">
+  <a class="nav-tab active" href="#sec-aidc">⚡ AI DC · 전력</a>
+  <a class="nav-tab" href="#sec-semi">🔬 반도체</a>
+  <a class="nav-tab" href="#sec-ai">🤖 AI · Agentic</a>
+  <a class="nav-tab" href="#sec-space">🚀 우주 · 신기술</a>
+</div>
+
+<!-- ===== SECTION 1: AI DC ===== -->
+<div class="section" id="sec-aidc">
   <div class="section-header">
-    <span class="section-tag tag-aidc">⚡ AI DC · 전력</span>
-    <span class="section-title">LG전자, AI 데이터센터 냉각 토탈 솔루션 공개</span>
+    <span class="section-tag tag-aidc">AI DC · 전력</span>
+    <span class="section-title">데이터센터 냉각 경쟁 및 전력 인프라 투자</span>
+  </div>
+
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">Bloomberg</span>
+      <span class="meta-date">2026.04.21</span>
+      <span class="meta-badge badge-restricted">⚠️ 접근제한</span>
+      <span class="fresh-recent">FRESH</span>
+    </div>
+    <h3 class="card-title">Data-Center Cooling Stocks Sink in China on Competition Concerns — 중국 액침냉각 업체, 경쟁 심화에 주가 급락</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="key-takeaway">
+        중국 AI 데이터센터 냉각 전문 기업의 주가가 2026년 4월 실망스러운 실적 발표 이후 경쟁 심화 우려로 급락했으며, 이는 글로벌 액냉(Liquid Cooling) 시장이 과열 경쟁 국면에 진입했음을 시사한다. 하이퍼스케일러 6개사가 2026년 5,930억 달러 이상을 데이터센터에 쏟아붓는 수요 폭증 속에서도, 냉각 솔루션 공급자들은 표준화·단가 하락 압박에 직면하고 있다. 동시에 Microsoft는 물을 증발시키지 않고 서버와 칠러 사이를 순환시키는 밀폐형 냉각 설계를 개발하여 위스콘신·애리조나에 2026년 배포 예정이며, 이는 냉각 기술 혁신이 대형 클라우드 사업자에 의해 내재화(in-house)되는 트렌드를 가속화한다. 기존 냉각 장비 공급업체는 특화 기술(고밀도 직접액체냉각, 열에너지 재활용) 없이 범용 냉각 솔루션만으로는 하이퍼스케일러 자체 개발 경쟁을 이길 수 없는 구조로 시장이 재편되고 있다. 중국 냉각 업체 경쟁 격화는 한국·미국 냉각 기업의 상대적 프리미엄 포지션 기회를 열어주지만, 기술 차별화 없이는 동일한 가격 경쟁에 노출될 위험도 공존한다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What — 전략적 시사점</div>
+      <div class="sowhat-grid">
+        <div class="sowhat-card">
+          <div class="sowhat-label">시장·경쟁 관점 · 냉각시장 구조</div>
+          <div class="sowhat-text">중국 냉각 업체 주가 급락은 AI DC 냉각 시장에서 기술 차별화 없는 범용 공급자의 마진 압박이 현실화되고 있음을 보여준다. Microsoft의 냉각 내재화 전략은 하이퍼스케일러가 핵심 인프라를 직접 개발·운영하는 추세를 확인시켜주며, 외부 냉각 공급자의 시장 접근성을 제한할 수 있다. 특화 기술(직접액체냉각, 열에너지 재활용, AI-optimized 열관리)을 보유한 기업만이 프리미엄 시장에 남을 수 있다.</div>
+        </div>
+        <div class="sowhat-card">
+          <div class="sowhat-label">기술·전략 관점 · 냉각 혁신</div>
+          <div class="sowhat-text">2026년 AI DC 냉각 시장은 기존 공조(CRAC/CRAH) 방식에서 직접액체냉각(DLC)·액침냉각(Immersion)·후면도어열교환기(RDHx) 방식으로의 패러다임 전환이 가속화되고 있다. 냉각 PUE를 1.5에서 1.1~1.2로 개선할 경우 AI DC TCO의 15~20%를 절감할 수 있어, 냉각 혁신은 수익성 직결 경쟁력이다. AI DC 냉각 밸류체인(열관리 소재·냉매·열교환기·제어 소프트웨어) 전반에 걸친 통합 솔루션 제공 역량이 차세대 경쟁 우위가 된다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.bloomberg.com/news/articles/2026-04-21/data-center-cooling-stocks-sink-in-china-on-competition-concerns" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">thelec.kr</span>
+      <span class="meta-date">2026.04.27</span>
+      <span class="fresh-today">TODAY</span>
+    </div>
+    <h3 class="card-title">AI DC 800V 전력설계 선점경쟁 — GTC에서 반도체 3사 격돌</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="key-takeaway">
+        Nvidia는 2027년 Kaiver 랙 출하 시기에 맞춰 800V DC 전력 아키텍처를 AI 데이터센터 표준으로 확산할 계획이며, 이에 맞춰 반도체 3사(삼성·SK하이닉스·Intel)가 관련 부품 공급 포지셔닝 경쟁에 돌입했다. 기존 400V DC 대비 800V DC 전력 설계는 전력 손실을 약 50% 절감하고 전력 밀도를 대폭 높일 수 있어, AI DC MEP 설계의 핵심 전환점이 된다. Nvidia의 엔드-투-엔드 AI DC 아키텍처 통제력 강화(GPU·네트워크·전력·냉각 표준화)는 데이터센터 설계·건설 생태계 전반에 걸쳐 Nvidia 사양을 따르지 않는 기업의 경쟁력 약화를 의미한다. 800V 전력 설계 전환은 기존 배선·변압기·UPS 시스템 전면 교체를 요구하므로, AI DC 신규 투자자는 2027년 기준 시점으로 설계 표준을 조기 확정해야 한다. 국내 AI DC 건설·MEP 엔지니어링 기업은 800V DC 설계 역량 내재화를 서둘러야 하며, Nvidia 공인 설계 파트너십 확보가 수주 경쟁력의 관건이 될 것이다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What — 전략적 시사점</div>
+      <div class="sowhat-grid">
+        <div class="sowhat-card">
+          <div class="sowhat-label">시장·경쟁 관점 · 전력 설계 표준화</div>
+          <div class="sowhat-text">Nvidia 800V DC 표준화는 AI DC 전력 설계 밸류체인(전력변환장치·PDU·UPS·배선재)에 교체 수요를 창출하며, 2027~2029년 대규모 업그레이드 시장이 형성된다. 반도체 3사의 800V 관련 부품 공급 경쟁은 단순 메모리를 넘어 전력 반도체(PMIC·GaN·SiC)로 AI DC 공급망이 확장됨을 보여준다. 국내 전력·전기 설비 기업(효성중공업, LS일렉트릭, HD현대일렉트릭)에 구조적 수혜가 예상된다.</div>
+        </div>
+        <div class="sowhat-card">
+          <div class="sowhat-label">기술·전략 관점 · AI DC 설계 전략</div>
+          <div class="sowhat-text">800V DC 표준 전환 시기가 2027년으로 확정되면서, AI DC 신규 프로젝트는 지금부터 800V 설계 기준으로 계획해야 하며 기존 400V 기반 구축 투자는 단기 회수 전략이 필요하다. Nvidia의 Kaiver 랙 기반 AI DC 생태계에서 공인 MEP 설계 역량은 수주 진입장벽이자 프리미엄 마진의 근거가 된다. AI DC 표준화 속도가 빨라질수록 '설계-조달-시공'을 통합 제공하는 EPC 역량 보유 기업이 단순 장비 공급사 대비 압도적 경쟁 우위를 가진다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.thelec.kr/news/articleView.html?idxno=53762" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+</div>
+
+<!-- ===== SECTION 2: 반도체 ===== -->
+<div class="section" id="sec-semi">
+  <div class="section-header">
+    <span class="section-tag tag-semi">반도체</span>
+    <span class="section-title">엔비디아 사상 최대 실적 및 HBM·메모리 수요 동향</span>
+  </div>
+
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">THE ELEC (디일렉)</span>
+      <span class="meta-date">2026.04.27</span>
+      <span class="fresh-today">TODAY</span>
+    </div>
+    <h3 class="card-title">엔비디아, 매출 308조 역대 최대…데이터센터 견인 — FY2026 연간 매출 2,159억 달러 사상 최고치</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="key-takeaway">
+        엔비디아가 2026회계연도(2025년 2월~2026년 1월) 연간 매출 2,159억3,800만 달러(약 308조2,500억 원)를 기록하며 창사 이래 사상 최대 매출을 달성했다. 이 중 데이터센터 부문 매출이 1,937억3,700만 달러(약 276조5,500억 원)로 전년 동기 대비 68% 급증하며 전체 매출의 약 90%를 차지했다—사실상 엔비디아가 AI DC 인프라 기업으로 완전히 전환되었음을 보여주는 수치다. AI 발전 단계가 학습(Training) → 추론(Inference) → 에이전틱 AI(Agentic AI)로 진화하면서 GPU·TPU뿐 아니라 HBM·SRAM·DRAM·NAND·HBF 수요가 함께 급증하는 구조적 AI 반도체 슈퍼사이클이 지속되고 있다. 젠슨 황 CEO는 "에이전틱 AI의 챗GPT 모멘트가 도래했다"고 선언하며 다음 성장 동력이 에이전트 기반 연산 수요임을 강조했다. AMD는 뉴타닉스에 약 3,600억 원(약 2.7억 달러)을 투자하며 개방형(Open Platform) 에이전틱 AI 플랫폼을 공동 개발 중이며, 2026년 말 시장 출시 예정이다. 엔비디아의 압도적 시장 지위(AI DC GPU 70~80% 점유)는 AMD·Intel·국내 팹리스 기업에 반사 수혜와 대응 전략 수립을 동시에 요구하며, 에이전틱 AI가 HBM 수요를 2028년까지 현 수준 대비 2배 이상 확대시킬 것이라는 메모리 업계 전망이 나오고 있다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What — 전략적 시사점</div>
+      <div class="sowhat-grid">
+        <div class="sowhat-card">
+          <div class="sowhat-label">시장·경쟁 관점 · 엔비디아 생태계</div>
+          <div class="sowhat-text">엔비디아 데이터센터 매출 +68% YoY, 276조 원은 글로벌 AI 인프라 지출이 '약속'에서 '실제 집행'으로 전환되었음을 확인하는 증거이며, 엔비디아 공급망 기업(HBM, 패키징, 냉각, 전력)의 수혜가 2026~2027년 지속될 것임을 의미한다. 에이전틱 AI로의 전환이 '챗GPT 모멘트'를 맞이했다면, AI 인프라 투자의 다음 사이클이 시작되는 시점이며 이는 AI DC·반도체·소프트웨어 전반에 걸쳐 투자 재검토의 신호탄이다. AMD의 뉴타닉스 3,600억 투자는 엔비디아 생태계 의존도를 줄이려는 기업들의 대안 플랫폼 수요를 공략하는 전략으로, 개방형 에이전틱 AI 인프라 시장 형성 여부가 관건이다.</div>
+        </div>
+        <div class="sowhat-card">
+          <div class="sowhat-label">기술·전략 관점 · 메모리 수요 전망</div>
+          <div class="sowhat-text">에이전틱 AI 추론 확산에 따라 HBM·DRAM·NAND 수요가 GPU 수요보다 더 빠르게 증가하는 구조가 형성되고 있으며, 이는 메모리 기업(SK하이닉스, 삼성)의 B2B AI 인프라 수주 파이프라인 확대를 의미한다. GPU 클러스터당 HBM 탑재량 증가(H100→H200→Blackwell 세대별 2~3배 증가)는 엔비디아 매출 성장과 HBM 수요 성장이 동행함을 뜻하며, HBM4 전환 시점인 2026년 하반기~2027년이 핵심 투자 결정 시점이다. 국내 반도체 기업은 에이전틱 AI 워크로드 최적화를 위한 저전력 고대역 메모리 로드맵을 선제적으로 공개하여 AI DC 고객사의 장기 조달 계약을 확보해야 한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.thelec.kr/news/articleView.html?idxno=52757" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">한국경제</span>
+      <span class="meta-date">2026.04.27</span>
+      <span class="fresh-today">TODAY</span>
+    </div>
+    <h3 class="card-title">Memory Watch 2026.04.27 — AI 추론 확대로 재조명되는 HBM·DRAM 수요 사이클</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="key-takeaway">
+        한국경제·유진투자증권 Memory Watch(2026.04.27)에 따르면, AI 추론(Inference) 워크로드의 급격한 확대가 기존 학습(Training) 중심 HBM 수요 구조를 다변화하며 DRAM·NAND 전반의 수요 사이클을 재조명하고 있다. 에이전틱 AI 확산으로 데이터센터 내 서버당 메모리 탑재량이 지속 증가하며, 2026년 AI 서버 출하량은 전년 대비 35~40% 증가가 전망된다. HBM 공급 부족은 2026년 하반기까지 지속될 전망으로 SK하이닉스의 HBM3E 12단 제품 수율 안정화와 HBM4 양산 준비가 시장 포지션 유지의 관건이다. AI 추론 인프라가 온프레미스에서 엣지(Edge)로 확장됨에 따라 LPDDR5X·HBM-PIM(Processing In Memory) 등 저전력 고성능 메모리의 신수요가 구체화되고 있다. 메모리 업계는 2025년 하반기~2026년 초반 재고 조정 국면을 통과하며 2026년 2분기 이후 가격 회복 모멘텀이 형성될 것으로 예상되나, 중국 메모리 업체(CXMT 등)의 DRAM 시장 진입이 범용 DRAM 가격에 하방 압력을 가하는 리스크 요인이다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What — 전략적 시사점</div>
+      <div class="sowhat-grid">
+        <div class="sowhat-card">
+          <div class="sowhat-label">시장·경쟁 관점 · 메모리 사이클</div>
+          <div class="sowhat-text">AI 서버 출하 35~40% 증가 전망은 HBM·고용량 DRAM의 구조적 수요 강세를 지지하며, 메모리 업황의 전통적 시클리컬 패턴이 AI 수요에 의해 완화되는 '뉴 노멀'이 형성되고 있다. 중국 CXMT의 DRAM 진입은 범용 DDR5 시장에 가격 압박을 야기하나, HBM·LP DDR 등 프리미엄 세그먼트는 중국 기술 격차(2~3세대)로 인해 당분간 한국 업체 과점이 유지된다. 메모리 투자 포트폴리오는 범용 DRAM 비중 축소, HBM·AI 특화 메모리 확대 방향으로 재편이 요구된다.</div>
+        </div>
+        <div class="sowhat-card">
+          <div class="sowhat-label">기술·전략 관점 · HBM 로드맵</div>
+          <div class="sowhat-text">HBM4 전환이 2026년 하반기 본격화되며, Nvidia Rubin 세대 GPU와의 패키징 호환성 확보가 HBM 공급 우선순위 결정 요소가 된다—수율 경쟁력이 HBM 시장 점유율을 직결한다. AI 추론의 엣지 확장은 HBM-PIM 등 연산-메모리 통합 아키텍처 수요를 앞당기며, 이는 메모리 기업의 비즈니스 모델을 부품 공급사에서 AI 컴퓨팅 솔루션 공급사로 전환시키는 기회다. 2026년 2Q 이후 메모리 가격 회복을 가정한 투자 계획 수립과, 중국 진입 시나리오에 따른 하방 리스크 스트레스 테스트가 병행되어야 한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.hankyung.com/koreamarket/consensus/pdf/2026-04-04226aac1e6cb7e908436c4c91cb3b4b" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+</div>
+
+<!-- ===== SECTION 3: AI · Agentic ===== -->
+<div class="section" id="sec-ai">
+  <div class="section-header">
+    <span class="section-tag tag-ai">AI · Agentic</span>
+    <span class="section-title">에이전틱 AI 플랫폼 경쟁 및 보안 솔루션 동향</span>
+  </div>
+
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">THE ELEC (디일렉)</span>
+      <span class="meta-date">2026.04</span>
+      <span class="fresh-recent">FRESH</span>
+    </div>
+    <h3 class="card-title">AMD, 뉴타닉스에 3,600억 투자…개방형 에이전틱 AI 플랫폼 공동 개발</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="key-takeaway">
+        AMD가 뉴타닉스(Nutanix)에 약 3,600억 원(약 2.7억 달러)을 전략 투자하며 엔비디아 생태계에 대응하는 개방형 에이전틱 AI 인프라 플랫폼 공동 개발에 나섰다. AMD의 Instinct GPU 시리즈와 뉴타닉스의 하이브리드 클라우드·HCI(하이퍼컨버지드 인프라) 플랫폼을 결합한 첫 번째 개방형 에이전틱 AI 솔루션은 2026년 말 시장 출시를 목표로 한다. 이 파트너십은 엔비디아 CUDA 생태계에 종속되지 않으려는 기업 고객의 '탈 엔비디아(De-NVIDIA)' 수요를 공략하는 전략으로, 특히 하이브리드 클라우드·온프레미스 AI 인프라를 구축하는 중대형 기업 시장을 겨냥한다. AI 에이전트 배포의 80% 이상이 퍼블릭 클라우드보다 온프레미스·하이브리드 환경에서 이루어질 것이라는 전망(Gartner)과 맞물려, 개방형 AI 인프라 수요는 구조적으로 확대될 전망이다. 에이전틱 AI가 기업 IT 인프라의 핵심 워크로드로 부상하면서 AI 인프라 표준화(GPU·네트워크·스토리지·오케스트레이션 통합)를 선점하는 기업이 2027~2028년 기업 AI 시장을 지배하게 될 것이다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What — 전략적 시사점</div>
+      <div class="sowhat-grid">
+        <div class="sowhat-card">
+          <div class="sowhat-label">시장·경쟁 관점 · AI 인프라 표준 경쟁</div>
+          <div class="sowhat-text">AMD-뉴타닉스의 개방형 에이전틱 AI 플랫폼은 엔비디아 독주 구도에 대한 기업 시장의 대항마로, 2026년 말 출시 이후 시장 반응이 에이전틱 AI 인프라 경쟁 구도 전환의 분수령이 된다. 3,600억 원 규모의 전략 투자는 AI 인프라 생태계 형성에 필요한 최소 자원임을 고려할 때, 향후 추가 M&A·파트너십 확대가 불가피하며 엔비디아 대응 연합(AMD-뉴타닉스-Red Hat-VMware 등)의 범위가 확장될 것이다. 국내 AI 인프라 구축 기업은 엔비디아 단일 벤더 의존도 리스크를 평가하고 개방형 플랫폼 옵션을 2026년 투자 계획에 포함해야 한다.</div>
+        </div>
+        <div class="sowhat-card">
+          <div class="sowhat-label">기술·전략 관점 · 하이브리드 AI 인프라</div>
+          <div class="sowhat-text">에이전틱 AI의 온프레미스·하이브리드 배포 확대 트렌드는 AI 인프라 투자가 퍼블릭 클라우드 집중에서 분산형 하이브리드 아키텍처로 재편됨을 의미하며, 이는 국내 AI DC 건설·운영 기업에 온프레미스 AI 인프라 수요 확대의 기회다. AMD Instinct GPU 생태계 확산 시 HBM 수요 기반이 엔비디아 외부로 다변화되어 HBM 공급업체(SK하이닉스, 삼성)의 고객 집중 리스크가 완화된다. AI 에이전트 오케스트레이션·보안·거버넌스 솔루션(Palo Alto AIRS 3.0 등) 수요가 에이전틱 AI 도입과 동반 급증하므로, 에이전트 보안·관리 플랫폼 시장을 선점할 파트너십 전략이 요구된다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.thelec.kr/news/articleView.html?idxno=52865" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">ZDNet Korea</span>
+      <span class="meta-date">2026.04.02</span>
+      <span class="fresh-recent">FRESH</span>
+    </div>
+    <h3 class="card-title">팔로알토, 'Prisma AIRS 3.0' 출시…에이전틱 AI 보안 플랫폼 등장</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="key-takeaway">
+        팔로알토 네트웍스(Palo Alto Networks)가 에이전틱 AI 시대를 겨냥한 AI 보안 플랫폼 'Prisma AIRS 3.0'을 출시하며, AI 에이전트 전 생애주기(개발·배포·운영·폐기)에 걸친 통합 보호 체계를 제공한다. 기업들이 자율 AI 에이전트(Autonomous Agent)를 업무 프로세스에 본격 적용하면서 에이전트 탈취(Agent Hijacking)·프롬프트 인젝션(Prompt Injection)·데이터 유출 등 에이전틱 AI 고유 보안 위협이 새로운 공격 벡터로 부상하고 있다. Gartner 예측에 따르면 2026년 말까지 기업 앱 40%에 AI 에이전트가 탑재될 전망이나, 성숙한 에이전트 거버넌스를 갖춘 기업은 21%에 불과해 보안 격차(security gap)가 광범위하게 존재한다. Prisma AIRS 3.0은 AI 모델·에이전트·워크플로를 실시간으로 모니터링하며, 에이전트 간 통신(Agent-to-Agent)에서 발생하는 비정상 행동을 탐지·차단하는 기능을 포함한다. 에이전틱 AI 보안 시장은 2026~2028년 가장 빠르게 성장하는 사이버보안 세그먼트가 될 것으로 예상되며, 기업 보안 예산에서 AI 에이전트 전용 보안 항목이 독립 카테고리로 분리되는 시점이 도래하고 있다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What — 전략적 시사점</div>
+      <div class="sowhat-grid">
+        <div class="sowhat-card">
+          <div class="sowhat-label">시장·경쟁 관점 · AI 보안 시장 급성장</div>
+          <div class="sowhat-text">에이전틱 AI 보안은 2026년 가장 빠르게 성장하는 사이버보안 세그먼트로, 팔로알토 AIRS 3.0 출시는 에이전틱 AI 보안 시장이 특화 솔루션 단계로 진입했음을 의미한다. 기업 AI 에이전트 배포 계획의 60%+가 향후 2년 내라는 점에서, 에이전틱 AI 보안 솔루션 도입 시기를 에이전트 배포 계획과 동기화하는 것이 위험 관리의 기본 원칙이다. AI 에이전트 보안 투자를 뒤로 미룬 기업이 2027년 이후 에이전트 관련 사고 시 부담할 규제·평판·재무 리스크는 예방 투자 비용을 초과할 가능성이 높다.</div>
+        </div>
+        <div class="sowhat-card">
+          <div class="sowhat-label">기술·전략 관점 · 에이전트 보안 내재화</div>
+          <div class="sowhat-text">에이전틱 AI의 자율 의사결정·실행 능력은 기존 페리미터 기반 보안 모델을 무력화하므로, AI 에이전트 설계 단계부터 보안 요구사항을 내재화(Security by Design)하는 접근이 필수적이다. 에이전트 간 통신 모니터링, 권한 최소화(Least Privilege), 작업 범위 제한(Action Boundary) 설정이 에이전틱 AI 거버넌스 프레임워크의 기술적 기반이 되어야 한다. CISO 및 AI 거버넌스 리더는 2026년 내 에이전틱 AI 보안 정책과 인시던트 대응 절차를 수립하고 이사회 보고 체계에 포함시켜야 한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://zdnet.co.kr/view/?no=20260402220204" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+</div>
+
+<!-- ===== SECTION 4: 우주 · 신기술 ===== -->
+<div class="section" id="sec-space">
+  <div class="section-header">
+    <span class="section-tag tag-space">우주 · 신기술</span>
+    <span class="section-title">SMR 전략적 투자 및 양자컴퓨팅 응용 동향</span>
   </div>
 
   <article class="card">
     <div class="card-meta">
       <span class="meta-source">한국경제</span>
-      <span class="meta-date">2026-04-21</span>
+      <span class="meta-date">2026.01.30</span>
       <span class="fresh-recent">FRESH</span>
     </div>
-    <h3 class="card-title">펄펄 끓는 데이터센터 어쩌나…LG전자가 꺼낸 해법은?</h3>
+    <h3 class="card-title">이재명 정부의 SMR 대전환 — AI 시대 에너지 안보를 위한 원전 국정 드라이브</h3>
     <div class="summary-block">
       <div class="block-label">Key Takeaway</div>
       <div class="key-takeaway">
-        LG전자가 미국 워싱턴 D.C.에서 열린 DCW(Data Center World) 2026에서 AI 데이터센터 전용 냉각 토탈 솔루션을 전시하며 해당 시장 공략을 본격화했다. 이번 전시의 핵심은 액체냉각 기술로, LG전자의 CDU(냉각수 분배장치)는 직접칩냉각(DTC) 방식으로 냉각 용량을 기존 650kW에서 1.4MW로 2배 이상 확장했으며, 일부 센서 고장 시에도 가상센서 기술로 안정성을 유지하는 차별화 설계를 적용했다. 또한 미국 액침냉각 전문기업 GRC, SK엔무브와 공동 개발 중인 액침냉각 솔루션도 최초 공개했다. 전력 인프라 측면에서는 LG에너지솔루션·LS일렉트릭·LS전선과 협업한 데이터센터 직류(DC) 그리드 솔루션을 선보였는데, 기존 교류(AC) 시스템 대비 전력 손실을 약 25%에서 15%로 10%p 절감하는 효과가 핵심이다. LG전자는 데이터센터 냉각·전력 시스템을 실시간 모니터링하는 'DCCM(데이터센터 냉각 관리)' 시스템도 통합 제공하며 관제 역량을 내세웠다.
+        이재명 정부가 2026년 1월 30일 'AI 시대를 여는 원자력'을 주제로 한 2026 원자력산업 신년인사회(약 300명 참석)에서 차세대 SMR(소형모듈원전) 개발 투자 강화 및 글로벌 SMR 강국 도약을 공식화했다. 정부는 2035년 국내 1호 SMR 가동을 목표로 설정하며, AI DC의 급격한 전력 수요 증가에 대응하는 안정적 기저전력(Baseload) 공급원으로서 SMR의 전략적 가치를 강조했다. 글로벌 빅테크(Google, Microsoft, Meta, Amazon)가 경쟁적으로 SMR 전력 계약을 체결하는 흐름 속에서 한국의 SMR 기술 개발은 에너지 안보와 수출 산업화를 동시에 달성하는 전략적 무기로 재정의되고 있다. 정부는 혁신형 소형 모듈 원자로(i-SMR) 설계 인허가를 2028년까지 완료하고, 2030년 초 실증 착수를 목표로 로드맵을 구체화하고 있다. 한편 양자컴퓨터와 AI 결합으로 신약 후보물질 발굴 기간이 수년 → 1일로 단축되는 사례가 CES 2026에서 공개되며, 양자컴퓨팅의 산업 응용이 2026년부터 본격적인 상업화 단계에 진입하고 있다.
       </div>
     </div>
     <div class="summary-block">
-      <div class="block-label">So What</div>
+      <div class="block-label">So What — 전략적 시사점</div>
       <div class="sowhat-grid">
         <div class="sowhat-card">
-          <div class="sowhat-label">시장·경쟁 관점 · AI DC 냉각 시장</div>
-          <div class="sowhat-text">LG전자의 CDU 냉각 용량이 650kW→1.4MW로 2배 이상 확대된 것은 AI 하이퍼스케일 랙(50kW+ 이상)에 대응하는 시장 요구사항을 정확히 반영한 것으로, 기존 공기냉각 전문 업체들의 경쟁력이 빠르게 소진되고 있음을 시사한다. GRC·SK엔무브와의 액침냉각 공동개발은 2026년 하반기 상용화를 겨냥한 것으로, 글로벌 하이퍼스케일러들의 차세대 데이터센터 설계 사이클과 타이밍이 맞닿아 있다.</div>
+          <div class="sowhat-label">시장·경쟁 관점 · SMR 산업 생태계</div>
+          <div class="sowhat-text">한국 정부의 SMR 투자 강화와 2035년 가동 목표는 원전 EPC·기자재·운영 기업에 국내 수주 확대 기회이자, 글로벌 SMR 시장(2030년대 연간 수십조 원 규모 전망) 선점을 위한 레퍼런스 프로젝트 확보의 기회다. 한국수력원자력·두산에너빌리티·현대건설 등 원전 밸류체인 기업은 i-SMR 인허가 일정(2028년)에 맞춰 기자재·시공 역량을 조기에 준비해야 한다. SMR 기술의 국산화 및 수출 산업화는 반도체·배터리에 이은 한국의 차세대 전략 수출 품목으로 포지셔닝이 가능하며, 정부 지원 프레임워크를 활용한 민관 협력 투자 구조 설계가 시급하다.</div>
         </div>
         <div class="sowhat-card">
-          <div class="sowhat-label">기술·전략 관점 · 전력 효율화</div>
-          <div class="sowhat-text">AC→DC 그리드 전환으로 전력 손실을 25%에서 15%로 10%p 절감하는 수치는, 100MW급 하이퍼스케일 데이터센터 기준 연간 수십 억 원에서 수백 억 원 규모의 전기요금 절감과 직결된다. 데이터센터 전력·냉각 문제가 '인프라 운영 이슈'를 넘어 '에너지 비용 경쟁력 이슈'로 격상된 현재, DC 그리드와 통합 냉각 관제(DCCM) 솔루션이 데이터센터 구매 결정의 핵심 KPI로 자리잡고 있다.</div>
+          <div class="sowhat-label">기술·전략 관점 · 양자컴퓨팅 상업화</div>
+          <div class="sowhat-text">양자컴퓨팅과 AI의 결합으로 신약개발 속도가 수년 → 1일로 압축되는 것은 제약·바이오 산업의 R&amp;D 생산성 혁명이자, 양자-AI 융합 솔루션을 도입하는 기업이 경쟁 우위를 독점하는 시대가 시작됨을 알린다. 2026년 양자컴퓨팅 상업화 원년을 계기로, 기업 전략기획 부서는 5~10년 내 자사 산업(제조·물류·금융·제약)에 미칠 양자컴퓨팅 임팩트를 시나리오 분석하고 기술 로드맵을 수립해야 한다. 달 헬륨-3 채굴 → 양자컴퓨팅 소재 공급망 연결이라는 새로운 우주-기술 수렴 테마는 장기 포트폴리오 다각화 관점에서 주목해야 할 메가트렌드다.</div>
         </div>
       </div>
     </div>
     <div class="card-footer">
-      <a href="https://www.hankyung.com/article/202604215676g" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+      <a href="https://www.hankyung.com/article/202601303150i" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
     </div>
   </article>
-</section>
+</div>
 
-<!-- SECTION 2: 반도체 -->
-<section class="section" id="sec-semi">
-  <div class="section-header">
-    <span class="section-tag tag-semi">🔬 반도체</span>
-    <span class="section-title">오픈AI, HBM 20개 탑재 칩 특허 공개 — 해안선 제한 돌파</span>
-  </div>
-
-  <article class="card">
-    <div class="card-meta">
-      <span class="meta-source">전자신문</span>
-      <span class="meta-date">2026-04-26</span>
-      <span class="fresh-today">TODAY</span>
-    </div>
-    <h3 class="card-title">오픈AI, 'HBM 20개' 괴물 칩 특허 공개…물리적 제약 돌파</h3>
-    <div class="summary-block">
-      <div class="block-label">Key Takeaway</div>
-      <div class="key-takeaway">
-        생성형 AI 기업 오픈AI가 반도체 패키징 기술에 관한 첫 번째 특허를 공개했으며, 하나의 연산 칩렛에 최대 20개의 HBM 스택을 연결하는 혁신적 설계를 구체화했다. 현재 국제 표준(JEDEC)은 신호 감쇠 방지를 위해 HBM 연결 거리를 6mm 이내로 제한하여, 엔비디아 블랙웰(8개)을 포함한 현 세대 AI 칩의 HBM 탑재량은 4~8개 수준에 머물러 있다. 오픈AI의 '내장형 논리 브리지(Embedded Logic Bridge)' 기술은 브리지 내부에 능동 회로를 삽입해 통신 거리를 최대 16mm로 확장, 연산 칩과 직접 맞닿지 않는 2열·3열의 원거리 HBM까지 초고속으로 연결하는 구조다. 이 기술이 상용화될 경우 현재 엔비디아 블랙웰(8개) 대비 2.5배의 HBM을 탑재해 메모리 대역폭을 획기적으로 증가시킬 수 있다. 구조적으로 인텔의 EMIB(Embedded Multi-Die Interconnect Bridge)와 유사하며, 오픈AI가 설계·인텔 파운드리가 제조하는 커스텀 AI 칩 탄생의 가교가 될 수 있다는 분석이 나온다.
-      </div>
-    </div>
-    <div class="summary-block">
-      <div class="block-label">So What</div>
-      <div class="sowhat-grid">
-        <div class="sowhat-card">
-          <div class="sowhat-label">시장·경쟁 관점 · HBM 수요 폭발</div>
-          <div class="sowhat-text">HBM 탑재량이 칩당 8개→20개로 2.5배 확장되는 기술 경로가 열리면, 이미 130% 성장(2025년)·70% 추가 성장(2026년 예상)을 기록한 HBM 수요가 다시 한 번 비선형적으로 증가할 전망이다. SK하이닉스·삼성전자 등 HBM 공급사에는 중기적 호재이나, 공급 확대 속도가 수요를 따라가지 못하면 2027~2028년 심각한 병목이 재연될 수 있다.</div>
-        </div>
-        <div class="sowhat-card">
-          <div class="sowhat-label">기술·전략 관점 · 엔비디아 의존도 탈피</div>
-          <div class="sowhat-text">오픈AI의 반도체 패키징 특허 공개는 AI 기업이 단순 소프트웨어·서비스 레이어를 넘어 하드웨어 내재화 역량을 공식화한 신호탄이다. 인텔 EMIB와의 구조적 유사성은 인텔 파운드리와의 협력 가능성을 시사하며, 엔비디아 중심 AI 칩 공급망이 다각화되는 방향으로 재편될 경우 파운드리 수혜 구도가 TSMC 독점에서 인텔·삼성 3강 체제로 전환될 가능성이 있다.</div>
-        </div>
-      </div>
-    </div>
-    <div class="card-footer">
-      <a href="https://www.etnews.com/20260424000207" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-    </div>
-  </article>
-</section>
-
-<!-- SECTION 3: AI·Agentic -->
-<section class="section" id="sec-ai">
-  <div class="section-header">
-    <span class="section-tag tag-ai">🤖 AI · Agentic</span>
-    <span class="section-title">엔터프라이즈 AI 에이전트 보안 위협: 88% 기업 사고 경험</span>
-  </div>
-
-  <article class="card">
-    <div class="card-meta">
-      <span class="meta-source">VentureBeat</span>
-      <span class="meta-date">2026-04-27</span>
-      <span class="meta-badge badge-restricted">⚠️ 접근제한</span>
-      <span class="fresh-today">TODAY</span>
-    </div>
-    <h3 class="card-title">Most enterprises can't stop stage-three AI agent threats, VentureBeat survey finds</h3>
-    <div class="summary-block">
-      <div class="block-label">Key Takeaway</div>
-      <div class="key-takeaway">
-        VentureBeat의 최신 기업 AI 에이전트 보안 실태 조사에 따르면, 지난 12개월간 전체 조사 기업의 88%가 AI 에이전트 관련 보안 사고를 경험했음에도 불구하고 에이전트의 런타임 가시성(Runtime Visibility)을 확보한 기업은 21%에 불과한 것으로 나타났다. AI 에이전트 거버넌스 성숙도를 갖춘 기업 역시 5개 중 1개에 그쳐, 대규모 에이전틱 AI 투자가 진행되는 속도와 리스크 통제 역량 간의 괴리가 심각한 수준임을 보여준다. OWASP는 2026년 '에이전틱 애플리케이션 Top 10 위험' 목록을 공식 발표하며 목표 탈취(Goal Hijack), 도구 오용(Tool Misuse), ID·권한 남용(Identity and Privilege Abuse), 연쇄 실패(Cascading Failure) 등 10개 핵심 위험을 규정화했다. Deloitte는 2026년 기업의 75%가 에이전틱 AI에 투자하나 배포 준비가 된 기업은 14%에 불과하다고 별도 분석을 통해 경고했다. 이 같은 거버넌스 공백은 Gartner가 2027년까지 에이전틱 AI 프로젝트 40%가 실패할 것이라고 예고한 가장 큰 원인 중 하나로 지목되고 있다.
-      </div>
-    </div>
-    <div class="summary-block">
-      <div class="block-label">So What</div>
-      <div class="sowhat-grid">
-        <div class="sowhat-card">
-          <div class="sowhat-label">시장·경쟁 관점 · AI 보안 시장 급부상</div>
-          <div class="sowhat-text">88%의 기업이 AI 에이전트 보안 사고를 경험했으나 대응 역량을 갖춘 기업이 21%에 불과하다는 수치는, AI 에이전트 보안·거버넌스 솔루션 시장이 구조적 공급 부족 상태임을 의미한다. Gartner의 2027년 40% 프로젝트 실패 예고는 AI 거버넌스·관제(AIOps) 플랫폼의 수요를 폭발적으로 키울 트리거가 될 것이며, 이 분야는 향후 2~3년 내 가장 빠르게 성장하는 엔터프라이즈 SW 카테고리가 될 가능성이 높다.</div>
-        </div>
-        <div class="sowhat-card">
-          <div class="sowhat-label">기술·전략 관점 · CISO 아젠다 격상</div>
-          <div class="sowhat-text">OWASP의 에이전틱 Top 10 공식화는 AI 에이전트 보안이 이제 표준화된 규제·감사 요구사항으로 격상됨을 의미하며, AI 에이전트를 도입하는 모든 기업은 CISO 주도의 에이전틱 보안 프레임워크 구축을 기술 투자와 동시에 진행해야 한다. 특히 금융·의료·공공 등 규제 산업에서는 에이전틱 AI 배포 이전에 OWASP 기준 보안 인증을 요구하는 조달 기준 강화가 예상된다.</div>
-        </div>
-      </div>
-    </div>
-    <div class="card-footer">
-      <a href="https://venturebeat.com/security/most-enterprises-cant-stop-stage-three-ai-agent-threats-venturebeat-survey-finds" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-    </div>
-  </article>
-</section>
-
-<!-- SECTION 4: 우주·신기술 -->
-<section class="section" id="sec-space">
-  <div class="section-header">
-    <span class="section-tag tag-space">🚀 우주 · 신기술</span>
-    <span class="section-title">핵융합 스타트업 자금 붐에 균열: IPO·사업 다각화 전략 논쟁</span>
-  </div>
-
-  <article class="card">
-    <div class="card-meta">
-      <span class="meta-source">TechCrunch</span>
-      <span class="meta-date">2026-04-19</span>
-      <span class="fresh-recent">FRESH</span>
-    </div>
-    <h3 class="card-title">Cracks are starting to form on fusion energy's funding boom</h3>
-    <div class="summary-block">
-      <div class="block-label">Key Takeaway</div>
-      <div class="key-takeaway">
-        핵융합 에너지 스타트업들은 지난 12개월 동안 총 16억 달러의 투자 유치에 성공하며 역대 최고 수준의 자금 조달 모멘텀을 이어갔다. 그러나 최근 들어 투자 커뮤니티 내에서 핵융합 스타트업의 지속 가능성과 수익화 전략에 대한 근본적인 의문이 제기되며 자금 조달 붐에 균열이 나타나고 있다. TAE Technologies와 General Fusion은 각각 상장된 회사와의 합병을 통한 우회 상장을 추진하고 있으나, 핵융합 사업 자체의 수익화 시점(2030년대 이전 불가능)과 상장 타이밍의 적절성을 둘러싼 논쟁이 심화되고 있다. CFS(Commonwealth Fusion Systems)와 Tokamak Energy는 핵심 사업인 핵융합 발전과 병행하여 고온 초전도 자석 판매 사업을 시작했으며, TAE와 Shine Technologies는 핵 의학 분야로 사업 다각화를 추진하는 등 수익원 다변화를 통한 재무적 지속가능성 확보에 나서고 있다. Inertia는 로런스 리버모어 국립연구소(LLNL)와 3건의 협약을 체결하며 관성 핵융합(Inertial Fusion) 상용화 경로를 개척하고 있다.
-      </div>
-    </div>
-    <div class="summary-block">
-      <div class="block-label">So What</div>
-      <div class="sowhat-grid">
-        <div class="sowhat-card">
-          <div class="sowhat-label">시장·경쟁 관점 · 핵융합 투자 성숙도</div>
-          <div class="sowhat-text">12개월 16억 달러 투자는 여전히 강력한 숫자이지만, 핵심 기업들의 사업 다각화(자석 판매, 핵의학)와 우회 상장 추진은 시장이 '순수 핵융합'에서 '복합 에너지 기술'로 투자 내러티브를 전환하고 있음을 시사한다. AI 데이터센터 전력 수요와의 접점에서 SMR이 더 빠른 수익화 경로로 부각되는 가운데, 핵융합은 2030년대 중반 이후를 겨냥한 포트폴리오 투자로 포지셔닝될 가능성이 높다.</div>
-        </div>
-        <div class="sowhat-card">
-          <div class="sowhat-label">기술·전략 관점 · 기술 스핀오프 기회</div>
-          <div class="sowhat-text">CFS의 고온 초전도 자석, Shine의 핵의학 동위원소 사업 등 핵융합 R&D에서 파생되는 기술 스핀오프가 독립적 사업 가치를 창출하는 패턴은, 핵융합 자체의 상용화 일정과 무관하게 투자 기회를 창출한다. 국내 핵융합(KSTAR·한국핵융합에너지연구원) 기술 스핀오프 가능성과 함께, AI DC 냉각에 활용 가능한 초전도 기술의 기술이전 검토가 전략적으로 의미있다.</div>
-        </div>
-      </div>
-    </div>
-    <div class="card-footer">
-      <a href="https://techcrunch.com/2026/04/19/cracks-are-starting-to-form-on-fusion-energys-funding-boom/" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
-    </div>
-  </article>
-</section>
-
-</main>
-<footer>
-  © 2026 SK Intelligence | News Scrap Briefing — AI 기반 자동 생성 보고서 | 원문 링크를 통한 교차 검증 필수
+<footer style="background:var(--bg-secondary);border-top:1px solid var(--border);padding:24px 32px;text-align:center;color:var(--text-muted);font-size:0.82rem;margin-top:40px;">
+  SK Intelligence — Automated Daily News Scrap | 2026.04.27 | Powered by Claude Agent
 </footer>
 </body>
 </html>
