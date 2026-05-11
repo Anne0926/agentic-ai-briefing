@@ -3,77 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Intelligence Briefing Hub</title>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+<title>SK Intelligence | Daily Briefing</title>
 <style>
-  :root {
-    --bg:#0d1117;--surface:#161b22;--border:#30363d;
-    --text:#c9d1d9;--heading:#f0f6fc;--accent:#58a6ff;
-    --green:#3fb950;--muted:#8b949e;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:16px;max-width:900px;margin:auto;}
-  h1{color:var(--heading);font-size:1.5rem;margin-bottom:4px;}
-  .subtitle{color:var(--muted);font-size:0.85rem;margin-bottom:24px;}
-  .card-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;}
-  @media (max-width:600px){
-    .card-grid{grid-template-columns:1fr;gap:12px;}
-    h1{font-size:1.25rem;}
-    body{padding:12px;}
-  }
-  .hub-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;color:var(--text);transition:border-color .2s,transform .1s;display:block;}
-  .hub-card:hover{border-color:var(--accent);transform:translateY(-2px);}
-  .hub-card h2{font-size:1.1rem;margin-bottom:8px;}
-  .hub-card .count{font-size:2rem;font-weight:700;}
-  .hub-card .label{color:var(--muted);font-size:0.85rem;}
-  .hub-card .detail{color:var(--muted);font-size:0.78rem;margin-top:6px;}
-  .consulting-card h2,.consulting-card .count{color:var(--accent);}
-  .news-card h2,.news-card .count{color:var(--green);}
-  .archive-title{color:var(--muted);font-size:1rem;font-weight:600;margin-bottom:12px;}
-  .archive-list{list-style:none;}
-  .archive-list li{margin-bottom:6px;font-size:0.9rem;}
-  .archive-list a{color:var(--accent);text-decoration:none;}
-  .archive-list a:hover{text-decoration:underline;}
-  .footer{text-align:center;color:var(--muted);font-size:0.75rem;margin-top:32px;padding-top:16px;border-top:1px solid var(--border);}
+:root{--bg:#0d1117;--bg2:#161b22;--border:#30363d;--accent:#58a6ff;--green:#3fb950;--text:#e6edf3;--muted:#8b949e}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:32px}
+.logo{font-size:2.5rem;font-weight:900;margin-bottom:8px}
+.logo span{color:var(--accent)}
+.tagline{color:var(--muted);margin-bottom:48px;font-size:1rem}
+.date{font-size:0.9rem;color:var(--muted);margin-bottom:32px}
+.cards{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:32px 40px;text-align:center;text-decoration:none;transition:all 0.2s;min-width:220px}
+.card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.card-icon{font-size:3rem;margin-bottom:16px}
+.card-title{font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.card-sub{font-size:0.85rem;color:var(--muted)}
+.card-count{margin-top:12px;font-size:0.8rem;padding:4px 12px;border-radius:20px;display:inline-block}
+.cnt-consulting{background:#1f3a6e;color:var(--accent)}
+.cnt-news{background:#1f3a2e;color:var(--green)}
+.footer{margin-top:48px;color:var(--muted);font-size:0.78rem}
 </style>
 </head>
 <body>
-
-<h1>🏢 Daily Intelligence Briefing</h1>
-<p class="subtitle">전략기획 임원을 위한 데일리 인텔리전스 허브 · 최종 업데이트: 2026-05-08 KST</p>
-
-<div class="card-grid">
-  <a href="consulting.html" class="hub-card consulting-card">
-    <h2>📊 Consulting Briefing</h2>
-    <div class="count">6</div>
-    <div class="label">건 · McKinsey·Gartner·Deloitte·Crunchbase 기반</div>
-    <div class="detail">AI DC전력·반도체HBM·Agentic AI·AI보안·양자컴퓨팅·VC투자</div>
+<div class="logo">🤖 SK <span>Intelligence</span></div>
+<p class="tagline">전략기획 임원을 위한 데일리 AI·기술 인텔리전스</p>
+<p class="date">최종 업데이트: 2026년 5월 11일 (월)</p>
+<div class="cards">
+  <a href="consulting.html" class="card">
+    <div class="card-icon">📊</div>
+    <div class="card-title">Consulting Briefing</div>
+    <div class="card-sub">McKinsey · BCG · Deloitte · Gartner</div>
+    <span class="card-count cnt-consulting">오늘 6건</span>
   </a>
-  <a href="news.html" class="hub-card news-card">
-    <h2>📰 News Briefing</h2>
-    <div class="count">6</div>
-    <div class="label">건 · 당일·전일 뉴스 (Today/Yesterday)</div>
-    <div class="detail">Microsoft RE100후퇴·삼성$1조·Salesforce에이전트·AI보안·IonQ·VC $2,855억</div>
+  <a href="news.html" class="card">
+    <div class="card-icon">📰</div>
+    <div class="card-title">News Scrap</div>
+    <div class="card-sub">TechCrunch · VentureBeat · 전자신문</div>
+    <span class="card-count cnt-news">오늘 6건</span>
   </a>
 </div>
-
-<div class="archive-title">📂 7-Day Archive</div>
-<ul class="archive-list">
-  <li><strong>2026-05-08 (오늘)</strong> — <a href="consulting.html">Consulting</a> · <a href="news.html">News</a></li>
-  <li>2026-05-07 — <a href="consulting-20260430.html">Consulting</a> · <a href="news-20260430.html">News</a></li>
-  <li>2026-05-07 — <a href="consulting-20260429.html">Consulting</a> · <a href="news-20260429.html">News</a></li>
-  <li>2026-05-07 — <a href="consulting-20260427.html">Consulting</a> · <a href="news-20260427.html">News</a></li>
-  <li>2026-05-07 — <a href="consulting-20260426.html">Consulting</a> · <a href="news-20260426.html">News</a></li>
-  <li>2026-05-07 — <a href="consulting-20260424.html">Consulting</a> · <a href="news-20260424.html">News</a></li>
-  <li>2026-05-07 — <a href="consulting-20260423.html">Consulting</a> · <a href="news-20260423.html">News</a></li>
-</ul>
-
-<div class="footer">
-  Sectors: AI DC·전력 | 반도체 | AI·Agentic | 우주·신기술<br>
-  Powered by automated intelligence pipeline
-</div>
-
+<p class="footer">© 2026 SK Intelligence | Powered by Agentic AI Daily Briefing</p>
 </body>
 </html>
