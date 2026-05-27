@@ -3,45 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SK Intelligence | Daily Briefing</title>
+<title>SK Intelligence — AI 인텔리전스 브리핑 허브</title>
 <style>
-:root{--bg:#0d1117;--bg2:#161b22;--border:#30363d;--accent:#58a6ff;--green:#3fb950;--text:#e6edf3;--muted:#8b949e}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:32px}
-.logo{font-size:2.5rem;font-weight:900;margin-bottom:8px}
-.logo span{color:var(--accent)}
-.tagline{color:var(--muted);margin-bottom:48px;font-size:1rem}
-.date{font-size:0.9rem;color:var(--muted);margin-bottom:32px}
-.cards{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
-.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:32px 40px;text-align:center;text-decoration:none;transition:all 0.2s;min-width:220px}
-.card:hover{border-color:var(--accent);transform:translateY(-3px)}
-.card-icon{font-size:3rem;margin-bottom:16px}
-.card-title{font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:8px}
-.card-sub{font-size:0.85rem;color:var(--muted)}
-.card-count{margin-top:12px;font-size:0.8rem;padding:4px 12px;border-radius:20px;display:inline-block}
-.cnt-consulting{background:#1f3a6e;color:var(--accent)}
-.cnt-news{background:#1f3a2e;color:var(--green)}
-.footer{margin-top:48px;color:var(--muted);font-size:0.78rem}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif; min-height: 100vh; }
+  .hero { background: linear-gradient(135deg, #161b22 0%, #0d1117 100%); border-bottom: 1px solid #30363d; padding: 60px 24px 40px; text-align: center; }
+  .hero-logo { font-size: 32px; font-weight: 800; background: linear-gradient(90deg, #58a6ff, #3fb950); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px; }
+  .hero-sub { font-size: 16px; color: #8b949e; margin-bottom: 8px; }
+  .hero-date { display: inline-block; background: #21262d; border: 1px solid #30363d; border-radius: 20px; padding: 4px 16px; font-size: 13px; color: #58a6ff; margin-top: 8px; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 40px 24px 80px; }
+  .section-title { font-size: 14px; font-weight: 700; color: #8b949e; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+  .cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; }
+  @media (max-width: 640px) { .cards-row { grid-template-columns: 1fr; } }
+  .report-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; text-decoration: none; display: block; transition: all 0.2s; }
+  .report-card:hover { border-color: var(--card-accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); text-decoration: none; }
+  .report-card.consulting { --card-accent: #58a6ff; }
+  .report-card.news { --card-accent: #3fb950; }
+  .card-icon { font-size: 28px; margin-bottom: 12px; }
+  .card-name { font-size: 18px; font-weight: 700; color: var(--card-accent); margin-bottom: 6px; }
+  .card-desc { font-size: 13px; color: #8b949e; line-height: 1.5; margin-bottom: 16px; }
+  .card-stats { display: flex; gap: 10px; flex-wrap: wrap; }
+  .stat { background: #21262d; border-radius: 4px; padding: 3px 10px; font-size: 11px; color: #8b949e; }
+  .stat strong { color: var(--card-accent); }
+  .archive-section { margin-top: 8px; }
+  .archive-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+  .archive-item { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px 16px; }
+  .archive-item-date { font-size: 13px; font-weight: 600; color: #e6edf3; margin-bottom: 6px; }
+  .archive-item-links { display: flex; gap: 8px; }
+  .archive-link { font-size: 11px; padding: 2px 8px; border-radius: 4px; border: 1px solid #30363d; text-decoration: none; transition: border-color 0.15s; }
+  .archive-link.c { color: #58a6ff; border-color: rgba(88,166,255,0.3); }
+  .archive-link.n { color: #3fb950; border-color: rgba(63,185,80,0.3); }
+  .archive-link.c:hover { border-color: #58a6ff; text-decoration: none; }
+  .archive-link.n:hover { border-color: #3fb950; text-decoration: none; }
+  footer { text-align: center; padding: 24px; border-top: 1px solid #21262d; font-size: 12px; color: #6e7681; }
 </style>
 </head>
 <body>
-<div class="logo">🤖 SK <span>Intelligence</span></div>
-<p class="tagline">전략기획 임원을 위한 데일리 AI·기술 인텔리전스</p>
-<p class="date">최종 업데이트: 2026년 5월 13일 (수)</p>
-<div class="cards">
-  <a href="consulting.html" class="card">
-    <div class="card-icon">📊</div>
-    <div class="card-title">Consulting Briefing</div>
-    <div class="card-sub">McKinsey · BCG · Deloitte · Gartner</div>
-    <span class="card-count cnt-consulting">오늘 4건</span>
-  </a>
-  <a href="news.html" class="card">
-    <div class="card-icon">📰</div>
-    <div class="card-title">News Scrap</div>
-    <div class="card-sub">TechCrunch · VentureBeat · 디일렉</div>
-    <span class="card-count cnt-news">오늘 4건</span>
-  </a>
+<div class="hero">
+  <div class="hero-logo">🧠 SK Intelligence</div>
+  <div class="hero-sub">AI · 반도체 · 데이터센터 · 우주 인텔리전스 브리핑</div>
+  <div class="hero-date">📅 최신 업데이트: 2026.05.27</div>
 </div>
-<p class="footer">© 2026 SK Intelligence | Powered by Agentic AI Daily Briefing</p>
+<div class="container">
+  <div class="section-title">오늘의 보고서</div>
+  <div class="cards-row">
+    <a class="report-card consulting" href="consulting.html">
+      <div class="card-icon">📊</div>
+      <div class="card-name">Consulting Insights</div>
+      <div class="card-desc">McKinsey·Gartner·BCG 등 글로벌 컨설팅 펌의 최신 리서치 요약 및 전략적 시사점 분석</div>
+      <div class="card-stats">
+        <span class="stat">총 <strong>4건</strong></span>
+        <span class="stat">섹션 <strong>4개</strong></span>
+        <span class="stat">McKinsey·Gartner·BCG</span>
+      </div>
+    </a>
+    <a class="report-card news" href="news.html">
+      <div class="card-icon">📰</div>
+      <div class="card-name">News Briefing</div>
+      <div class="card-desc">ZDNet Korea·AI타임스 검증 기사 기반 AI·반도체·DC·우주 분야 최신 뉴스 및 시사점 분석</div>
+      <div class="card-stats">
+        <span class="stat">총 <strong>4건</strong></span>
+        <span class="stat">ZDNet 3건 · AI타임스 1건</span>
+        <span class="stat">검증완료 <strong>✓</strong></span>
+      </div>
+    </a>
+  </div>
+  <div class="section-title archive-section">아카이브</div>
+  <div class="archive-grid">
+    <div class="archive-item">
+      <div class="archive-item-date">📅 2026.05.27</div>
+      <div class="archive-item-links">
+        <a class="archive-link c" href="consulting.html">컨설팅</a>
+        <a class="archive-link n" href="news.html">뉴스</a>
+      </div>
+    </div>
+    <div class="archive-item">
+      <div class="archive-item-date">📅 2026.05.26</div>
+      <div class="archive-item-links">
+        <a class="archive-link c" href="consulting-20260526.html">컨설팅</a>
+        <a class="archive-link n" href="news-20260526.html">뉴스</a>
+      </div>
+    </div>
+    <div class="archive-item">
+      <div class="archive-item-date">📅 2026.05.20</div>
+      <div class="archive-item-links">
+        <a class="archive-link c" href="consulting-20260520.html">컨설팅</a>
+        <a class="archive-link n" href="news-20260520.html">뉴스</a>
+      </div>
+    </div>
+    <div class="archive-item">
+      <div class="archive-item-date">📅 2026.05.19</div>
+      <div class="archive-item-links">
+        <a class="archive-link c" href="consulting-20260519.html">컨설팅</a>
+        <a class="archive-link n" href="news-20260519.html">뉴스</a>
+      </div>
+    </div>
+    <div class="archive-item">
+      <div class="archive-item-date">📅 2026.04.30</div>
+      <div class="archive-item-links">
+        <a class="archive-link c" href="consulting-20260430.html">컨설팅</a>
+        <a class="archive-link n" href="news-20260430.html">뉴스</a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  SK Intelligence Daily Briefing · Powered by Claude · 자동 생성 보고서
+</footer>
 </body>
 </html>
