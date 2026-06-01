@@ -1,63 +1,191 @@
 <!DOCTYPE html>
-<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>News Intelligence Briefing — 2026-05-29</title><style>:root{--bg-primary:#0d1117;--bg-secondary:#161b22;--bg-card:#1c2128;--bg-card-hover:#21262d;--border:#30363d;--accent:#58a6ff;--text-primary:#e6edf3;--text-secondary:#8b949e;--text-muted:#656d76;--tag-aidc:#1f6feb;--tag-ai:#388bfd;--tag-semi:#7c3aed;--tag-space:#da3633;--tag-security:#d29922;--success:#3fb950;--warning:#d29922}
-*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;line-height:1.6}
-.header{background:var(--bg-secondary);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-.header h1{font-size:18px;font-weight:600;color:var(--accent)}.header .meta{font-size:12px;color:var(--text-muted)}
-.container{max-width:900px;margin:0 auto;padding:24px 16px}.section{margin-bottom:28px}
-.section-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;padding-left:4px}
-.card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:16px 18px;margin-bottom:12px;transition:background .15s}
-.card:hover{background:var(--bg-card-hover)}.card-header{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px}
-.tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:4px;flex-shrink:0;margin-top:2px}
-.tag-aidc{background:var(--tag-aidc);color:#fff}.tag-ai{background:var(--tag-ai);color:#fff}.tag-semi{background:var(--tag-semi);color:#fff}.tag-security{background:var(--tag-security);color:#000}
-.card-title{font-size:15px;font-weight:600;color:var(--text-primary);flex:1}.card-body{font-size:13px;color:var(--text-secondary);margin-bottom:10px;line-height:1.65}
-.card-body strong{color:var(--text-primary)}.card-footer{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.source-chip{font-size:11px;color:var(--accent);text-decoration:none;border:1px solid var(--border);border-radius:4px;padding:2px 8px}
-.source-chip:hover{border-color:var(--accent)}.date-chip{font-size:11px;color:var(--text-muted)}
-.badge-new{font-size:10px;font-weight:700;background:var(--success);color:#000;border-radius:3px;padding:1px 5px}
-.badge-yesterday{font-size:10px;font-weight:700;background:var(--warning);color:#000;border-radius:3px;padding:1px 5px}
-.badge-kbs{font-size:10px;font-weight:700;background:#0057a8;color:#fff;border-radius:3px;padding:1px 5px}
-.kv{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.kv-item{background:var(--bg-secondary);border:1px solid var(--border);border-radius:4px;padding:3px 8px;font-size:12px}
-.kv-item span{color:var(--text-muted);margin-right:3px}.divider{height:1px;background:var(--border);margin:6px 0 10px}
-.quote-block{background:var(--bg-secondary);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;padding:10px 14px;margin:10px 0;font-size:13px;color:var(--text-primary);font-style:italic}
-.footer{text-align:center;padding:20px;color:var(--text-muted);font-size:11px;border-top:1px solid var(--border);margin-top:12px}</style></head>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>뉴스 인텔리전스 브리핑 — 2026-06-01</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d; --text: #e6edf3;
+    --muted: #8b949e; --accent: #3fb950; --accent2: #58a6ff;
+    --tag-aidc: #f78166; --tag-semi: #d2a8ff; --tag-ai: #79c0ff;
+    --tag-aisw: #0ea5a0; --tag-security: #ffa657; --tag-space: #56d364;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.6; }
+  .page-header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .page-header h1 { font-size: 18px; font-weight: 700; color: var(--accent); }
+  .header-meta { display: flex; gap: 16px; align-items: center; }
+  .date-badge { background: #21262d; border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px; font-size: 12px; color: var(--muted); }
+  .weekend-badge { background: #1c2e1c; border: 1px solid var(--accent); border-radius: 6px; padding: 4px 12px; font-size: 12px; color: var(--accent); font-weight: 600; }
+  .archive-nav { background: #161b22; border-bottom: 1px solid var(--border); padding: 8px 24px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .archive-nav span { font-size: 11px; color: var(--muted); margin-right: 4px; }
+  .archive-link { font-size: 12px; color: var(--accent2); text-decoration: none; padding: 3px 8px; border: 1px solid #21262d; border-radius: 4px; }
+  .archive-link.current { color: var(--text); border-color: var(--accent); background: #1c2e1c; font-weight: 600; }
+  .weekend-banner { background: linear-gradient(135deg, #0d2618 0%, #0d1117 100%); border-bottom: 1px solid var(--accent); padding: 10px 24px; display: flex; align-items: center; gap: 10px; }
+  .weekend-banner p { font-size: 13px; color: var(--accent); }
+  .weekend-banner strong { color: #fff; }
+  .stats-row { display: flex; gap: 12px; padding: 12px 24px; background: var(--surface); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  .stat-pill { display: flex; align-items: center; gap: 6px; background: #21262d; border-radius: 20px; padding: 4px 12px; font-size: 12px; }
+  .stat-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .main { max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-direction: column; gap: 24px; }
+  .section { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .section-header { display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-bottom: 1px solid var(--border); }
+  .section-header h2 { font-size: 14px; font-weight: 700; }
+  .section-tag { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; }
+  .tag-aidc { background: rgba(247,129,102,.15); color: var(--tag-aidc); }
+  .tag-semi { background: rgba(210,168,255,.15); color: var(--tag-semi); }
+  .tag-ai { background: rgba(121,192,255,.15); color: var(--tag-ai); }
+  .tag-aisw { background: rgba(14,165,160,.15); color: var(--tag-aisw); }
+  .tag-security { background: rgba(255,166,87,.15); color: var(--tag-security); }
+  .tag-space { background: rgba(86,211,100,.15); color: var(--tag-space); }
+  .section-count { margin-left: auto; font-size: 12px; color: var(--muted); }
+  .cards { display: flex; flex-direction: column; }
+  .card { padding: 18px 20px; border-bottom: 1px solid var(--border); }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #1c2128; }
+  .card-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .card-source { font-size: 11px; font-weight: 600; color: var(--accent); }
+  .card-date { font-size: 11px; color: var(--muted); }
+  .card-badge { font-size: 10px; border-radius: 4px; padding: 1px 6px; }
+  .badge-weekend { background: #1c2e1c; color: var(--accent); border: 1px solid #2d4a2d; }
+  .badge-new { background: #1a2d4a; color: var(--accent2); border: 1px solid #253e5e; }
+  .badge-hot { background: #3d1f00; color: var(--tag-security); border: 1px solid #5c3500; }
+  .card h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .card-link { display: inline-flex; align-items: center; gap: 4px; margin-top: 10px; font-size: 12px; color: var(--accent2); text-decoration: none; }
+  .card-kv { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .kv { background: #21262d; border-radius: 4px; padding: 3px 8px; font-size: 11px; }
+  .kv b { color: var(--accent2); }
+  footer { text-align: center; padding: 24px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); }
+</style>
+</head>
 <body>
-<div class="header"><h1>📰 News Intelligence Briefing</h1><div class="meta">2026-05-29 · AI DC · 반도체 · AI/인재 · 보안</div></div>
-<div class="container">
-
-<div class="section" id="sec-aidc"><div class="section-label">🏗 AI DC · 인프라 · 전력</div>
-<div class="card"><div class="card-header"><span class="tag tag-aidc">AI DC</span>
-<div class="card-title">데이터센터 서밋 2026 — "냉각 갭"이 한국 AI DC의 최대 병목</div></div>
-<div class="card-body">전자신문 주최 데이터센터 서밋(2026-05-26) 현장 취재. AI DC 전문가들은 GPU 밀집도 상승에 따른 <strong>랙당 100kW+ 전력 밀도</strong>를 기존 공랭 시스템이 감당하지 못한다고 경고. 핵심 결론: 액침냉각(Immersion Cooling)·직접수냉(DLC) 전환 없이는 고성능 AI DC 운영 불가.
-<div class="divider"></div>국내 주요 사업자는 전력 인허가에서 <strong>평균 18~24개월</strong> 지연. 전문가들은 AI DC 특별법을 통한 패스트트랙 처리가 시장 선점의 관건이라 진단.
-<div class="kv"><div class="kv-item"><span>이슈</span>냉각 갭 심화</div><div class="kv-item"><span>전력 인허가</span>18~24개월 지연</div><div class="kv-item"><span>대안</span>AI DC 특별법 패스트트랙</div></div></div>
-<div class="card-footer"><a class="source-chip" href="https://www.etnews.com/20260526000177" target="_blank">전자신문</a><span class="date-chip">2026-05-26</span><span class="badge-new">VERIFIED</span></div></div></div>
-
-<div class="section" id="sec-semi"><div class="section-label">🔬 반도체 · HBM · 소부장</div>
-<div class="card"><div class="card-header"><span class="tag tag-semi">반도체</span>
-<div class="card-title">SK하이닉스, HBM4 사전 검증 완료 — 엔비디아 차기 플랫폼 공급 유력</div></div>
-<div class="card-body">SK하이닉스가 HBM4 제품에 대한 엔비디아 사전 검증(PVT)을 사실상 완료. Blackwell Ultra 후속 플랫폼(코드명 Rubin)에 탑재될 HBM4는 <strong>12단 적층, 1.2TB/s 이상</strong> 대역폭 목표. 삼성전자는 수율 이슈로 SK하이닉스보다 최소 1개 분기 지연 예상.
-<div class="divider"></div><strong>소부장 파급:</strong> HBM4 양산 가속은 TSV 공정 소재·장비 수요 동반 급증. 한미반도체, 이오테크닉스 수주 확대 전망.
-<div class="kv"><div class="kv-item"><span>스펙</span>12단 적층, 1.2TB/s</div><div class="kv-item"><span>경쟁</span>SK하이닉스 1Q 우위</div><div class="kv-item"><span>수혜</span>TSV 소부장</div></div></div>
-<div class="card-footer"><a class="source-chip" href="https://news.skhynix.co.kr/2026-market-outlook/" target="_blank">SK하이닉스 뉴스룸</a><span class="date-chip">2026-05-28</span><span class="badge-new">VERIFIED</span></div></div></div>
-
-<div class="section" id="sec-ai"><div class="section-label">🤖 AI · 인재 · 리더십</div>
-<div class="card"><div class="card-header"><span class="tag tag-ai">인재전쟁</span>
-<div class="card-title">최태원 SK 회장, KBS '인재전쟁2' 3부 출연 — "AI 시대 인재 확보가 생존 전략"</div></div>
-<div class="card-body">KBS1 다큐멘터리 <strong>'인재전쟁2 — 3부: 대한민국의 선택'</strong>(2026-05-28 방영)에 최태원 SK그룹 회장이 출연, AI 시대 글로벌 인재 전쟁에 대한 경영 철학을 공개 발언.
-<div class="divider"></div>
-<div class="quote-block">"AI 시대에는 인재 한 명이 수백 명의 일을 할 수 있다. 그 인재를 먼저 확보하는 회사가 살아남는다."</div>
-최 회장은 SK그룹이 AI 핵심 인재 확보를 위해 <strong>글로벌 채용 체계 전면 개편</strong>을 추진 중이라고 밝힘. 실리콘밸리·런던·싱가포르에 AI R&amp;D 거점을 확대하며, 국내 대학과의 산학협력으로 <strong>AI 전문 인재 풀</strong>을 조기 확보하는 전략 소개. 2027년까지 AI 전문 인력 <strong>5,000명 이상</strong> 확보 목표 제시.
-<div class="kv"><div class="kv-item"><span>방영</span>KBS1, 2026-05-28(YESTERDAY)</div><div class="kv-item"><span>인재목표</span>AI 전문인력 5,000명+</div><div class="kv-item"><span>거점</span>실리콘밸리·런던·싱가포르</div></div></div>
-<div class="card-footer"><a class="source-chip" href="https://v.daum.net/v/20260528233138333" target="_blank">Daum / KBS 보도</a><span class="date-chip">2026-05-28</span><span class="badge-kbs">📺 KBS1</span><span class="badge-yesterday">YESTERDAY</span></div></div></div>
-
-<div class="section" id="sec-security"><div class="section-label">🔐 AI 보안 · Agent 보안</div>
-<div class="card"><div class="card-header"><span class="tag tag-security">보안</span>
-<div class="card-title">에이전트 AI 보안 리스크 현실화 — 국내외 기업 대응 본격화</div></div>
-<div class="card-body">글로벌 보안 업계에서 AI 에이전트의 자율적 도구 실행이 야기하는 새로운 사이버 위협이 빠르게 현실화. 특히 <strong>프롬프트 인젝션(Prompt Injection)</strong> 공격이 기업 내 AI 에이전트 도입의 최대 리스크로 부상.
-<div class="divider"></div><strong>기업 체크리스트:</strong> ① 에이전트별 API 권한 최소화 ② 외부 URL·파일 접근 샌드박스 격리 ③ 에이전트 액션 로그 중앙 집중 관리 ④ 프롬프트 인젝션 탐지 레이어 추가. 금융·공공 부문에서 <strong>에이전트 행동 로깅 의무화</strong> 검토 중.
-<div class="kv"><div class="kv-item"><span>주요위협</span>프롬프트 인젝션</div><div class="kv-item"><span>대응</span>최소 권한+행동 로깅</div><div class="kv-item"><span>규제</span>금융·공공 가이드라인 검토중</div></div></div>
-<div class="card-footer"><a class="source-chip" href="https://www.bvp.com/atlas/securing-ai-agents-the-defining-cybersecurity-challenge-of-2026" target="_blank">BVP Atlas</a><span class="date-chip">2026-05-27</span><span class="badge-new">VERIFIED</span></div></div></div>
-
-</div><div class="footer">News Intelligence Briefing · 2026-05-29 · Auto-generated by Agentic AI Briefing System</div>
-</body></html>
+<div class="page-header">
+  <h1>📰 뉴스 인텔리전스 브리핑</h1>
+  <div class="header-meta">
+    <span class="date-badge">2026-06-01 (월) 기준</span>
+    <span class="weekend-badge">🗓 주말 특집: 5/30–5/31</span>
+  </div>
+</div>
+<div class="archive-nav">
+  <span>아카이브:</span>
+  <a class="archive-link current" href="news.html">06-01</a>
+  <a class="archive-link" href="news-20260529.html">05-29</a>
+  <a class="archive-link" href="news-20260527.html">05-27</a>
+  <a class="archive-link" href="news-20260526.html">05-26</a>
+</div>
+<div class="weekend-banner">
+  <span style="font-size:18px">🌐</span>
+  <p><strong>주말 종합 커버리지</strong> — 2026년 5월 30일(토) ~ 31일(일) 주요 글로벌·국내 뉴스를 종합했습니다. Computex 2026, Jensen Huang 한국 방문, 삼성 HBM4E 출하, AI 에이전트 플랫폼 동향 포함.</p>
+</div>
+<div class="stats-row">
+  <div class="stat-pill"><span class="stat-dot" style="background:var(--tag-aidc)"></span> AI DC·전력 1건</div>
+  <div class="stat-pill"><span class="stat-dot" style="background:var(--tag-semi)"></span> 반도체 1건</div>
+  <div class="stat-pill"><span class="stat-dot" style="background:var(--tag-aisw)"></span> AI SW·플랫폼 1건</div>
+  <div class="stat-pill"><span class="stat-dot" style="background:var(--tag-ai)"></span> AI·Agentic 1건</div>
+  <div class="stat-pill"><span class="stat-dot" style="background:var(--tag-security)"></span> AI 보안 1건</div>
+  <div class="stat-pill"><span class="stat-dot" style="background:var(--tag-space)"></span> 우주·신기술 1건</div>
+  <div class="stat-pill" style="margin-left:auto"><span style="color:var(--accent)">총 6건</span></div>
+</div>
+<div class="main">
+  <div class="section" id="sec-aidc">
+    <div class="section-header">
+      <span class="section-tag tag-aidc">AI DC · 전력</span>
+      <h2>Computex 2026 개막 — Physical AI·AI DC 인프라 대격돌</h2>
+      <span class="section-count">1건</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-meta"><span class="card-source">ZDNet Korea</span><span class="card-date">2026-05-31</span><span class="card-badge badge-weekend">주말 속보</span></div>
+        <h3>Computex 2026 개막: Jensen Huang 기조연설 — NVIDIA N1X 칩·Physical AI·Robotics Zone 공개</h3>
+        <p>5월 31일 대만 타이베이에서 Computex 2026이 개막했다. NVIDIA Jensen Huang CEO는 기조연설에서 차세대 AI 칩 <b>N1X</b>를 공개하고, Physical AI(로봇·자율주행)를 "AI의 다음 물결"로 선언했다. SK하이닉스는 Computex 현장에서 HBM4 및 AI DC용 메모리 솔루션을 전시했다. Robotics Zone에는 글로벌 200여 개 로봇 기업이 참가해 현장 시연을 진행했으며, AI 인프라·냉각·전력 공급망 기업들도 대거 참여해 AIDC 구축 솔루션을 경쟁적으로 선보였다. IDC는 2026년 AI 서버 시장이 전년 대비 약 40% 성장할 것으로 전망했다.</p>
+        <div class="card-kv"><span class="kv"><b>칩</b> NVIDIA N1X</span><span class="kv"><b>테마</b> Physical AI, Robotics</span><span class="kv"><b>AI서버 성장</b> +40% (2026E)</span></div>
+        <a class="card-link" href="https://zdnet.co.kr/view/?no=20260531013852" target="_blank">원문 보기 →</a>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="sec-semi">
+    <div class="section-header">
+      <span class="section-tag tag-semi">반도체</span>
+      <h2>삼성전자 HBM4E 첫 샘플 출하·차량용 메모리 세계 1위</h2>
+      <span class="section-count">1건</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-meta"><span class="card-source">아보다(업계 종합)</span><span class="card-date">2026-05-30</span><span class="card-badge badge-weekend">주말 속보</span><span class="card-badge badge-hot">HBM4E</span></div>
+        <h3>삼성전자, HBM4E 첫 샘플 출하 — AI 메모리 경쟁 재점화·차량용 메모리 글로벌 1위 달성</h3>
+        <p>삼성전자가 차세대 고대역폭 메모리 <b>HBM4E</b>의 첫 엔지니어링 샘플을 주요 AI 칩 파트너사에 출하하기 시작했다. HBM4E는 HBM4 대비 대역폭 30% 이상 향상이 목표며 NVIDIA GB300 후속 플랫폼 공급을 노린다. 동시에 삼성은 차량용 메모리 시장에서 처음으로 글로벌 점유율 1위를 달성했다고 발표했다.</p>
+        <div class="card-kv"><span class="kv"><b>제품</b> HBM4E (첫 샘플)</span><span class="kv"><b>성능 목표</b> 대역폭 +30% vs HBM4</span><span class="kv"><b>차량 메모리</b> 글로벌 1위</span></div>
+        <a class="card-link" href="https://aboda.kr/entry/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-hbm4e" target="_blank">원문 보기 →</a>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="sec-aisw">
+    <div class="section-header">
+      <span class="section-tag tag-aisw">AI SW · 플랫폼</span>
+      <h2>Gartner: 2026년 말 기업 앱 40%에 AI 에이전트 내재화</h2>
+      <span class="section-count">1건</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-meta"><span class="card-source">Gartner</span><span class="card-date">2026-05-20</span><span class="card-badge badge-new">신규 섹션</span></div>
+        <h3>Gartner: 기업용 AI 코딩 에이전트 시장 급성장 — 2026년 말 기업 앱 40% AI 에이전트 내재화 전망</h3>
+        <p>Gartner는 2026년 말까지 엔터프라이즈 애플리케이션의 <b>40%</b>에 AI 에이전트가 내재화될 것으로 전망했다. AI 코딩 에이전트 시장이 "새로운 팽창 국면"에 진입했으며, GitHub Copilot·Cursor·Amazon Q 등 플랫폼 간 경쟁이 재편 중이다. OpenAI는 Microsoft 365와 연계한 Workspace Agents를 출시하며 엔터프라이즈 플랫폼 공략을 가속화하고 있다. Bain은 AI 에이전트 도입으로 SaaS 시장이 2028년까지 $100B 이상 재편될 것으로 예측했다.</p>
+        <div class="card-kv"><span class="kv"><b>Gartner 전망</b> 기업앱 40% 에이전트 내재화 (2026E)</span><span class="kv"><b>플랫폼</b> OpenAI Workspace Agents</span><span class="kv"><b>SaaS 재편</b> Bain $100B+ (2028E)</span></div>
+        <a class="card-link" href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-says-the-market-for-enterprise-ai-coding-agents-is-entering-a-new-phase-of-expansion-and-competitive-realignment" target="_blank">원문 보기 →</a>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="sec-ai">
+    <div class="section-header">
+      <span class="section-tag tag-ai">AI · Agentic</span>
+      <h2>Jensen Huang 한국 방문 — AI DC 협력·GPUaaS 논의</h2>
+      <span class="section-count">1건</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-meta"><span class="card-source">ZDNet Korea</span><span class="card-date">2026-05-30</span><span class="card-badge badge-weekend">주말 속보</span></div>
+        <h3>Jensen Huang NVIDIA CEO, 한국 전격 방문 — 삼성·SK하이닉스·KT와 AI 인프라 협력 논의</h3>
+        <p>NVIDIA Jensen Huang CEO가 5월 30일 한국을 방문해 삼성전자·SK하이닉스·KT 등 주요 파트너사 경영진을 잇달아 만났다. 핵심 의제는 HBM4 공급 확대·AI DC 협력·국내 GPUaaS 인프라 구축이었다. KBS '인재전쟁 2' 시즌3에도 특별 출연하며 글로벌 AI 인재 확보 전쟁을 조명했다. STT GDC는 한국 AI DC 인프라 현황 보고서에서 국내 AI 컴퓨팅 수요가 2025~2027년 연 60% 이상 증가할 것으로 전망했다.</p>
+        <div class="card-kv"><span class="kv"><b>방문</b> 삼성·SK하이닉스·KT</span><span class="kv"><b>주요 의제</b> HBM4 공급, GPUaaS</span><span class="kv"><b>국내 AI DC 성장</b> +60%/yr (2025-2027E)</span></div>
+        <a class="card-link" href="https://zdnet.co.kr/view/?no=20260530000339" target="_blank">원문 보기 →</a>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="sec-security">
+    <div class="section-header">
+      <span class="section-tag tag-security">AI 보안</span>
+      <h2>Agentic AI, 보안의 다음 맹점 — 자율 에이전트 리스크 본격화</h2>
+      <span class="section-count">1건</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-meta"><span class="card-source">The Hacker News</span><span class="card-date">2026-05-12</span><span class="card-badge badge-hot">Agent 보안</span></div>
+        <h3>"Why Agentic AI Is Security's Next Blind Spot" — 자율 에이전트의 4대 보안 취약점 분석</h3>
+        <p>The Hacker News는 Agentic AI 시스템이 기업 보안의 '다음 맹점'이 되고 있다고 경고했다. 자율 에이전트는 ① 인간 감독 없이 작동, ② 시스템 간 횡적 이동(lateral movement), ③ 권한 확대(privilege escalation), ④ 탐지 회피 능력을 갖춰 기존 보안 아키텍처로는 대응이 어렵다. CISA·NCSC 등 각국 사이버보안 기관은 에이전트 신원관리(identity)·최소권한원칙·감사로그 의무화를 핵심 대응책으로 제시했다.</p>
+        <div class="card-kv"><span class="kv"><b>취약점</b> 횡적 이동·권한 확대·탐지 회피</span><span class="kv"><b>대응</b> 신원관리·최소권한·감사로그</span><span class="kv"><b>기관</b> CISA, NCSC</span></div>
+        <a class="card-link" href="https://thehackernews.com/2026/05/why-agentic-ai-is-securitys-next-blind.html" target="_blank">원문 보기 →</a>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="sec-space">
+    <div class="section-header">
+      <span class="section-tag tag-space">우주 · 신기술</span>
+      <h2>Focused Energy $240M Series A — 레이저 핵융합 상용화 베팅</h2>
+      <span class="section-count">1건</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-meta"><span class="card-source">The Fusion Report (Substack)</span><span class="card-date">2026-05-30</span><span class="card-badge badge-weekend">주말 속보</span></div>
+        <h3>Focused Energy, $240M Series A 클로즈 — 레이저 ICF 핵융합 상용화 가속</h3>
+        <p>독일계 핵융합 스타트업 <b>Focused Energy</b>가 $240M 규모 Series A 펀딩을 클로즈했다. 레이저 관성 봉폐(ICF) 방식으로 AI DC의 막대한 전력 수요를 해결할 "무한 청정에너지"를 목표로 한다. NRC(미국 원자력규제위원회)는 상업용 핵융합로에 대한 새 규제 프레임워크 최종안을 발표했다. 영국은 Wylfa 부지에 SMR(소형 모듈 원자로) 건설을 최종 승인했다. 2026년 핵융합·SMR 투자는 전년 대비 약 3배 급증한 $6B+에 달할 전망이다.</p>
+        <div class="card-kv"><span class="kv"><b>투자</b> Focused Energy $240M Series A</span><span class="kv"><b>규제</b> NRC 상업 핵융합 프레임워크 확정</span><span class="kv"><b>SMR</b> 영국 Wylfa 최종 승인</span><span class="kv"><b>투자 총합</b> $6B+ (2026E, +3x YoY)</span></div>
+        <a class="card-link" href="https://thefusionreport.substack.com/p/this-weeks-fusion-news-may-30-2026" target="_blank">원문 보기 →</a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>뉴스 인텔리전스 브리핑 · 전략기획 AI 어시스턴트 · 2026-06-01 &nbsp;|&nbsp; 주말 특집 5/30–5/31 &nbsp;|&nbsp; <a href="consulting.html" style="color:var(--accent2);text-decoration:none;">컨설팅 리포트 보기 →</a></footer>
+</body>
+</html>
