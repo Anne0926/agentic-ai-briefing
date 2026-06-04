@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulting Intelligence Briefing — 2026-06-04</title>
+<style>
+:root {
+  --bg-primary:#0d1117; --bg-secondary:#161b22; --bg-card:#1c2128;
+  --bg-card-hover:#21262d; --border:#30363d; --accent:#58a6ff;
+  --text-primary:#e6edf3; --text-secondary:#8b949e; --text-muted:#656d76;
+  --tag-aidc:#1f6feb; --tag-ai:#388bfd; --tag-semi:#7c3aed;
+  --tag-space:#da3633; --tag-security:#d29922; --tag-aisw:#0ea5a0;
+  --success:#3fb950; --warning:#d29922;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg-primary); color:var(--text-primary); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:14px; line-height:1.6; }
+.header { background:var(--bg-secondary); border-bottom:1px solid var(--border); padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+.header h1 { font-size:18px; font-weight:600; color:var(--accent); }
+.header .meta { font-size:12px; color:var(--text-muted); }
+.archive-nav { background:var(--bg-secondary); border-bottom:1px solid var(--border); padding:8px 24px; display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.archive-nav span { font-size:11px; color:var(--text-muted); margin-right:4px; }
+.archive-date { font-size:11px; color:var(--text-secondary); text-decoration:none; padding:2px 8px; border:1px solid var(--border); border-radius:4px; }
+.archive-date:hover { border-color:var(--accent); color:var(--accent); }
+.archive-date.today { background:var(--accent); color:#000; font-weight:700; border-color:var(--accent); }
+.stats-row { background:var(--bg-secondary); padding:8px 24px; display:flex; gap:16px; flex-wrap:wrap; border-bottom:1px solid var(--border); }
+.stats-row .stat { font-size:11px; color:var(--text-muted); }
+.stats-row .stat strong { color:var(--accent); }
+.container { max-width:900px; margin:0 auto; padding:24px 16px; }
+.section { margin-bottom:28px; }
+.section-label { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--text-muted); margin-bottom:12px; padding-left:4px; }
+.card { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:18px 20px; margin-bottom:14px; transition:background .15s; }
+.card:hover { background:var(--bg-card-hover); }
+.card-meta { display:flex; align-items:center; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
+.meta-source { font-size:12px; font-weight:600; color:var(--accent); }
+.meta-date { font-size:11px; color:var(--text-muted); }
+.meta-badge { font-size:10px; font-weight:700; border-radius:3px; padding:1px 6px; }
+.badge-gmail { background:#ea4335; color:#fff; }
+.badge-drive { background:#4285f4; color:#fff; }
+.badge-restricted { background:#d29922; color:#000; }
+.fresh-today { background:var(--success); color:#000; font-size:10px; font-weight:700; border-radius:3px; padding:1px 6px; }
+.fresh-yesterday { background:var(--warning); color:#000; font-size:10px; font-weight:700; border-radius:3px; padding:1px 6px; }
+.fresh-recent { background:var(--tag-aidc); color:#fff; font-size:10px; font-weight:700; border-radius:3px; padding:1px 6px; }
+.card-title { font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:10px; }
+.summary-block { margin-bottom:12px; }
+.block-label { font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--text-muted); margin-bottom:5px; }
+.exec-summary { font-size:13px; color:var(--text-secondary); line-height:1.7; }
+.exec-summary strong { color:var(--text-primary); }
+.implication-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+@media(max-width:600px){ .implication-grid { grid-template-columns:1fr; } }
+.impl-card { background:var(--bg-secondary); border:1px solid var(--border); border-radius:6px; padding:10px 12px; }
+.impl-number { font-size:10px; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px; }
+.impl-text { font-size:12px; color:var(--text-secondary); line-height:1.6; }
+.impl-text strong { color:var(--text-primary); }
+.card-footer { margin-top:12px; display:flex; align-items:center; gap:10px; }
+.source-link { font-size:12px; color:var(--accent); text-decoration:none; border:1px solid var(--border); border-radius:4px; padding:3px 10px; }
+.source-link:hover { border-color:var(--accent); background:rgba(88,166,255,.08); }
+.footer { text-align:center; padding:20px; color:var(--text-muted); font-size:11px; border-top:1px solid var(--border); margin-top:12px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📊 SK Intelligence | Consulting</h1>
+  <div class="meta">2026-06-04 · AI DC 자본지출 · Physical AI · Agentic SW · AI ROI · 양자</div>
+</div>
+
+<div class="archive-nav">
+  <span>아카이브:</span>
+  <a class="archive-date today" href="consulting.html">06-04</a>
+  <a class="archive-date" href="consulting-20260601.html">06-01</a>
+  <a class="archive-date" href="consulting-20260529.html">05-29</a>
+  <a class="archive-date" href="consulting-20260527.html">05-27</a>
+</div>
+
+<div class="stats-row">
+  <div class="stat">총 <strong>6건</strong></div>
+  <div class="stat">📧 Gmail <strong>3건</strong> 포함</div>
+  <div class="stat">기간: <strong>6/2–6/4</strong></div>
+  <div class="stat">검증: <strong>WebFetch / 원문 확인</strong></div>
+</div>
+
+<div class="container">
+
+<div class="section" id="sec-aidc">
+  <div class="section-label">🏗 AI DC · 전력·냉각 · 자본지출(CapEx)</div>
+  <div class="card">
+    <div class="card-meta">
+      <span class="meta-source">McKinsey &amp; Company</span>
+      <span class="meta-date">2026-06 (업데이트)</span>
+      <span class="fresh-recent">FRESH</span>
+    </div>
+    <h3 class="card-title">The Cost of Compute — 2030년까지 $6.7조 데이터센터 투자 경쟁, AI DC 단독 $5.2조</h3>
+    <div class="summary-block">
+      <div class="block-label">Executive Summary</div>
+      <div class="exec-summary">
+        McKinsey는 AI 수요가 데이터센터 인프라를 전례 없는 규모의 자본지출 경쟁으로 몰아넣고 있다고 진단하며, 2030년까지 전 세계 데이터센터에 <strong>$6.7조(6.7 trillion)</strong>의 투자가 필요하다고 추산했다. 이 가운데 AI 워크로드 전용 데이터센터에만 <strong>$5.2조</strong>가, 전통적 IT용에 $1.5조가 투입될 전망이다. AI용 $5.2조의 자본은 ① 토지·건설·부지개발(builders)에 약 15%인 <strong>$8,000억</strong> ② 발전·송전·냉각·전력설비(energy)에 25%인 <strong>$1.3조</strong> ③ 칩·컴퓨팅 하드웨어를 만드는 기술 개발·설계(tech)에 60%인 <strong>$3.1조</strong>로 배분된다. McKinsey의 시나리오 밴드는 수요에 따라 $3.7조(저)에서 $7.9조(고)까지 벌어지며, 2026년 한 해만 글로벌 AI DC 자본지출이 <strong>$4,000~4,500억</strong>, 빅5 하이퍼스케일러(Amazon·Alphabet·Meta·Microsoft·Oracle)가 약 <strong>$7,250억</strong>을 집행할 것으로 추정된다. 핵심 병목은 더 이상 자본이 아니라 전력 가용성·송전 인프라·전기 엔지니어링 인력이며, 이 셋이 투자 집행의 실제 속도를 결정한다. McKinsey는 이 build-out에서 산업재·전력·EPC 기업이 차지할 수 있는 몫이 가장 빠르게 커지는 영역임을 강조한다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">Strategic Implication — C-Suite 관점</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 01 · 전력·냉각 $1.3조 시장</div>
+          <div class="impl-text">$5.2조 중 <strong>25%($1.3조)</strong>가 발전·송전·냉각·전력설비로 향한다. SK에코플랜트·SK가스·SK E&S의 전력·MEP·냉각 역량을 AI DC build-out 공급망에 연결하는 사업 모델이 가장 큰 성장 풀이다. 자본보다 <strong>전력 확보·송전 권리</strong>가 병목이므로 '입지+전력' 패키지 선점이 핵심 경쟁 변수다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 02 · 칩·하드웨어 $3.1조 집중</div>
+          <div class="impl-text">투자의 <strong>60%($3.1조)</strong>가 칩·컴퓨팅 하드웨어에 집중된다는 점은 SK하이닉스 HBM·메모리 수요의 구조적 장기 지속을 의미한다. 다만 2026년 하이퍼스케일러 $7,250억 CapEx의 변동성(금리·수요 조정)이 메모리 사이클 리스크이므로, 장기공급계약(LTA) 비중과 가격 헤지 전략을 병행해야 한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-cost-of-compute-a-7-trillion-dollar-race-to-scale-data-centers" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-semi">
+  <div class="section-label">🔬 반도체 · 컴퓨팅 파워 · 칩 수요</div>
+  <div class="card">
+    <div class="card-meta">
+      <span class="meta-source">Deloitte (TMT Predictions 2026)</span>
+      <span class="meta-date">2026-06 (업데이트)</span>
+      <span class="fresh-recent">FRESH</span>
+    </div>
+    <h3 class="card-title">Why AI's Next Phase Demands More Compute, Not Less — 추론(Inference) 시대의 칩 수요 재가속</h3>
+    <div class="summary-block">
+      <div class="block-label">Executive Summary</div>
+      <div class="exec-summary">
+        Deloitte는 "추론 비용이 떨어지면 칩 수요도 줄 것"이라는 통념을 반박하며, AI의 다음 국면은 오히려 <strong>더 많은 연산(compute)</strong>을 요구할 것이라고 전망한다. 추론 단가 하락은 수요 위축이 아니라 <strong>제번스 역설(Jevons Paradox)</strong>처럼 사용량 폭증을 유발하며, 에이전틱 AI·추론형(reasoning) 모델·멀티모달이 토큰 소비를 기하급수적으로 끌어올린다는 것이 핵심 논거다. 단일 질의에 대해 추론형 모델은 기존 대비 수십 배의 토큰을 생성하므로, GPU·AI 가속기·HBM·고성능 NAND 수요가 학습(training)에서 추론(inference)으로 무게중심을 옮기며 재가속된다. Deloitte는 2026년 AI 반도체가 데이터센터 칩 지출의 절반 이상을 차지하고, 추론 워크로드 비중이 학습을 추월하는 변곡점이 도래한다고 본다. 이는 메모리·패키징·전력반도체(PMIC)·네트워킹 칩까지 수요 저변을 넓히며, 엣지 추론(on-device inference)용 NPU 시장도 동반 확대된다. 결국 '효율화가 수요를 줄인다'는 가정에 기반한 보수적 CAPEX 계획은 공급 부족 리스크에 노출될 수 있다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">Strategic Implication — C-Suite 관점</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 01 · 추론 수요로 HBM 저변 확대</div>
+          <div class="impl-text">추론 비중이 학습을 추월하면 <strong>대용량·저전력 메모리</strong> 수요가 구조적으로 확대된다. SK하이닉스는 HBM 외에 추론 최적화 LPDDR·고용량 서버 D램·eSSD 포트폴리오를 추론 시장 비중에 맞춰 재배분해야 하며, 단가 하락이 곧 물량 폭증임을 전제로 증설 타이밍을 앞당길 필요가 있다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 02 · 엣지 추론 NPU 신시장</div>
+          <div class="impl-text">온디바이스 추론 확산은 <strong>엣지 NPU·전력반도체</strong>라는 인접 신시장을 연다. Physical AI·로봇·차량용 추론 칩 수요와 연결되므로, 차량용 메모리 1위 역량을 엣지 추론 반도체로 확장하는 R&D 로드맵을 2026년 내 구체화해야 한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/compute-power-ai.html" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-ai">
+  <div class="section-label">🤖 AI · Physical AI · 로보틱스</div>
+  <div class="card">
+    <div class="card-meta">
+      <span class="meta-source">McKinsey &amp; Company</span>
+      <span class="meta-date">2026-06-03</span>
+      <span class="meta-badge badge-gmail">📧 Gmail</span>
+      <span class="fresh-today">TODAY</span>
+    </div>
+    <h3 class="card-title">Japan's $100B Opportunity in General-Purpose Robotics — 범용 로봇, 2040년 $3,700억 시장으로</h3>
+    <div class="summary-block">
+      <div class="block-label">Executive Summary</div>
+      <div class="exec-summary">
+        McKinsey는 범용 로봇(general-purpose robotics) 시장이 2025년 <strong>$10억 미만</strong>에서 2040년 <strong>$3,700억(370 billion)</strong> 규모로 폭증할 것으로 전망하며, 일본을 이 전환의 핵심 무대로 지목했다. 인구 감소로 일본의 가용 노동인구는 향후 20년간 <strong>1,500만 명</strong> 줄어들 것으로 예상되며, 이 노동력 공백이 간병·요식·농업 등 비전통적 로봇 활용을 가속한다. 특히 고령자 돌봄 시장은 2023년 약 <strong>$6,500억</strong>에서 2040년 <strong>$7,800억</strong>으로 성장하며 돌봄 인력 부족을 심화시킨다. 다만 일본은 로봇 펀딩 급증 국면에서 차지하는 몫이 작고, 부품 생산·특허 활동 등 핵심 지표에서 중국·미국에 뒤처져 있다. 중국은 한때 군소 플레이어에서 다수 핵심 부품의 선도 공급자로 부상하며 로봇 R&D를 가속하고 있다. McKinsey는 일본 OEM·부품사가 품질·안전·현장 배치 효율이 중요한 헬스케어·간병 등에서 틈새 우위를 확보할 수 있다고 제언한다. Physical AI 하드웨어·소프트웨어 스택의 동시 성숙이 임박한 가운데, 한국 제조·물류·돌봄 산업에도 동일한 구조적 기회와 위협이 적용된다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">Strategic Implication — C-Suite 관점</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 01 · 고령화-로봇 수요 직결</div>
+          <div class="impl-text">일본의 노동인구 <strong>-1,500만</strong>, 돌봄시장 <strong>$7,800억(2040)</strong> 구조는 동일 고령화 경로의 한국에 선행 지표다. 돌봄·물류 로봇은 비용절감이 아닌 '인력 대체 불가' 영역의 필수재로 재정의되며, 관련 부품·통합 솔루션 사업 진입 타이밍을 2026~2027년으로 앞당겨야 한다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 02 · 부품·공급망 선점 경쟁</div>
+          <div class="impl-text">중국이 로봇 핵심 부품 공급을 장악하는 가운데, <strong>2040년 $3,700억</strong> 시장의 부품·센서·액추에이터 공급망에서의 포지셔닝이 장기 승패를 가른다. 반도체·배터리·정밀부품 역량을 범용 로봇 BOM으로 연결하는 수직 진입 전략 검토가 필요하다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.mckinsey.com/industries/industrials/our-insights/japans-100-billion-opportunity-in-general-purpose-robotics" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-aisw">
+  <div class="section-label">💡 AI SW · Agentic Platform — 소프트웨어 전달 모델 전환</div>
+  <div class="card">
+    <div class="card-meta">
+      <span class="meta-source">McKinsey &amp; Company</span>
+      <span class="meta-date">2026-06-03</span>
+      <span class="meta-badge badge-gmail">📧 Gmail</span>
+      <span class="fresh-today">TODAY</span>
+    </div>
+    <h3 class="card-title">Rewiring Software Delivery for the Agentic Era — 24시간 인간+에이전트 협업으로 생산성 3~5배</h3>
+    <div class="summary-block">
+      <div class="block-label">Executive Summary</div>
+      <div class="exec-summary">
+        McKinsey는 소프트웨어 개발에서 에이전틱 AI 활용 방식이 전체 전달 모델(delivery model)의 더 큰 변화를 예고하는 선행 지표라고 진단한다. 운영 모델을 인간과 에이전트가 <strong>하루 24시간</strong> 협업하도록 재설계한 선도 기업들은 이미 <strong>생산성 3~5배</strong> 향상을 경험하고 있다. 핵심은 통상 <strong>2주(two-week sprint)</strong> 단위였던 개발 주기를, 인간의 판단과 야간 에이전트 실행을 결합한 <strong>'일일 스프린트(daily sprint)'</strong> 모델로 단축하는 것이다. 주간에는 인간이 산출물 검토, 모호성 해소, 아키텍처 가드레일 강화, 이해관계자 정렬에 집중하고, 야간에는 에이전트가 요구사항 보강·아키텍처 검증·코드 생성 및 테스트·검토용 패키징 등 구조화된 작업을 대규모로 실행한다. 이를 위해서는 ① 무엇을 만들지에 대한 명확한 비전 ② 공통 프레임워크·모듈형 아키텍처를 쓰는 표준화된 기술 환경 ③ 요구사항→코드까지의 표준 구조(에이전트가 입력을 신뢰성 있게 해석) ④ 가치 흐름 전반의 일관된 이해관계자 참여가 전제된다. 인간의 역할은 산출물을 '직접 생산'하는 것에서 '산출물을 만들어내는 시스템을 감독·개선'하는 것으로 이동한다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">Strategic Implication — C-Suite 관점</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 01 · 개발 운영모델 재설계</div>
+          <div class="impl-text">2주 스프린트 → <strong>일일 스프린트</strong> 전환은 단순 도구 도입이 아닌 조직·프로세스 재설계다. SK 계열 SW 개발조직에 야간 에이전트 실행 파이프라인을 파일럿하되, 표준 아키텍처·코드 컨벤션 정비가 선결 조건이며 이를 갖추지 못하면 <strong>3~5배</strong> 효과는 실현되지 않는다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 02 · 인력 역할 재정의</div>
+          <div class="impl-text">엔지니어의 가치가 '코드 생산'에서 <strong>'시스템 감독·아키텍처 가드레일'</strong>로 이동한다. 채용·평가·승진 기준을 산출물 양이 아닌 시스템 설계·검증 역량 중심으로 재편하고, 시니어 비중을 높이는 인력 포트폴리오 전환을 검토해야 한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/rewiring-software-delivery-for-the-agentic-era" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-investment">
+  <div class="section-label">💰 AI 투자 · ROI · 자본배분</div>
+  <div class="card">
+    <div class="card-meta">
+      <span class="meta-source">Bain &amp; Company (via Reuters)</span>
+      <span class="meta-date">2026-06-01</span>
+      <span class="meta-badge badge-restricted">⚠️ 원문 일부 제한</span>
+      <span class="fresh-recent">FRESH</span>
+    </div>
+    <h3 class="card-title">AI Savings Misses "Should Be Making Executives Uncomfortable" — 약속한 절감은 오지 않았다</h3>
+    <div class="summary-block">
+      <div class="block-label">Executive Summary</div>
+      <div class="exec-summary">
+        Bain의 대기업 대상 글로벌 서베이는 자동화·AI의 비용 절감 효과가 광범위하게 목표에 미달하고 있으며, 이 미달이 <strong>"경영진을 불편하게 만들어야 한다"</strong>고 경고한다. 응답 기업의 <strong>37%</strong>가 11~20%의 비용 절감을 목표했으나, 실제 성과를 측정한 기업의 <strong>약 40%</strong>는 0~10% 구간에 그쳤다. 더 우려스러운 점은, 그럼에도 이들 기업의 <strong>90%</strong>가 더 자율적·복잡·고위험인 AI 에이전트에 대해 예산을 다시 늘리고 있다는 것이다. Bain은 "절감 풀(savings pool)이 가정보다 작으며, 현재 투자의 정당화 근거가 실측치가 아닌 전망치에 맞춰 산정됐다"고 진단한다. 과거 수익으로 다음 물결을 자체 조달한다는 논리는 "규율처럼 들리지만 실제로는 구조적 누수를 가진 순환 베팅"이라는 강한 표현으로 비판한다. 핵심 메시지는, 위험은 '너무 느리게 움직이는 것'이 아니라 <strong>'관점 없이 움직여 어제의 업무를 자동화하는 것'</strong>이라는 점이다. 실행이 AI로 가속될수록 제약은 처리량(capacity)이 아니라 방향의 명확성과 의사결정의 질로 이동한다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">Strategic Implication — C-Suite 관점</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 01 · AI 예산 근거 재검증</div>
+          <div class="impl-text">목표 대비 실측 절감이 <strong>37% 목표 → 40%가 0~10% 실현</strong>으로 어긋난 상황은, 그룹 AI 투자 승인 기준을 '전망 절감'이 아닌 '검증된 실측 ROI'로 전환할 것을 요구한다. 차기 에이전트 예산은 파일럿 실측치 게이트를 통과한 항목만 증액하는 stage-gate 규율이 필요하다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 02 · 자동화 대상 재설계</div>
+          <div class="impl-text">'어제의 업무 자동화'를 피하려면 프로세스 재설계가 선행돼야 한다. 절감 미달의 90%가 재투자로 이어지는 <strong>순환 누수</strong>를 끊기 위해, 자동화 후보를 '현행 업무'가 아닌 '재설계된 미래 업무' 기준으로 선별하는 거버넌스를 도입해야 한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.insurancejournal.com/news/national/2026/06/01/871951.htm" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-space">
+  <div class="section-label">🚀 우주 · 신기술 · 양자컴퓨팅</div>
+  <div class="card">
+    <div class="card-meta">
+      <span class="meta-source">McKinsey &amp; Company</span>
+      <span class="meta-date">2026-06-01</span>
+      <span class="meta-badge badge-gmail">📧 Gmail</span>
+      <span class="fresh-recent">FRESH</span>
+    </div>
+    <h3 class="card-title">A Leader's Guide to Quantum Computing — 2026, 약속에서 '전략 경영 이슈'로</h3>
+    <div class="summary-block">
+      <div class="block-label">Executive Summary</div>
+      <div class="exec-summary">
+        McKinsey는 다섯 번째 연례 Quantum Technology Monitor를 통해 양자컴퓨팅이 <strong>"상업적 변곡점(commercial tipping point)"</strong>에 도달했다고 선언하며, 2026년을 양자가 '단순 가능성'에서 '전략 경영 이슈'로 넘어가는 해로 규정한다. 2025년 양자 기술 투자는 <strong>$126억(12.6 billion)</strong>으로 전년 대비 <strong>6.3배</strong> 급증했고, 전 세계 <strong>300개 이상</strong> 기업이 양자 기술사와 적극 협업 중이다. McKinsey의 핵심 메시지는 "양자가 준비되기를 기다리는 것은 전략적 오류"이며, 리더는 양자가 자사 및 인접 산업을 어떻게 바꿀지 선제적으로 예측하고 선도자(forerunner)가 될 기회를 잡아야 한다는 것이다. 권고 방향은 초기 탐색에서 핵심 도메인 중심의 <strong>규모화된 가치 창출(scaled value capture)</strong>로 전환하는 것으로, 선도 양자 기업과의 공동개발(co-development) 또는 양자 서비스형(QaaS)을 통한 조기 응용 채택이 제시된다. 동시에 McKinsey는 양자가 가져올 암호 위협(Q-Day)에 대비한 양자내성암호(PQC) 전환을 보안 어젠다로 강조한다.
+      </div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">Strategic Implication — C-Suite 관점</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 01 · QaaS 조기 채택</div>
+          <div class="impl-text">투자 <strong>$126억(+6.3배)</strong>·300+ 기업 참여는 양자가 R&D 호기심을 넘어 경쟁 변수로 진입했음을 의미한다. 소재·배터리·물류 최적화 등 SK가 강한 도메인에서 <strong>QaaS 파일럿</strong>을 통해 조기 학습 곡선을 확보하는 것이 합리적 진입 전략이다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">IMPLICATION 02 · PQC 전환 선제 대응</div>
+          <div class="impl-text">양자 상용화 가속은 <strong>Q-Day 암호 위협</strong>을 앞당긴다. 그룹 핵심 시스템·통신·인증 인프라의 양자내성암호(PQC) 마이그레이션 로드맵을 보안 거버넌스 의제로 즉시 상정해야 한다. '수확 후 복호화(harvest-now-decrypt-later)' 리스크는 이미 현재진행형이다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/quantums-bold-promise-what-business-leaders-need-to-know" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="footer">SK Intelligence Consulting Briefing · 2026-06-04 · Powered by Cowork AI · 기간 6/2–6/4 · 검증: WebFetch / 원문 확인 기준</div>
+</body>
+</html>
