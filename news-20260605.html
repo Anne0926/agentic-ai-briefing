@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK Intelligence | News — 2026.06.05</title>
+<style>
+:root{
+--bg-primary:#0d1117;--bg-secondary:#161b22;--bg-card:#1c2128;
+--bg-card-hover:#21262d;--border:#30363d;--accent:#3fb950;
+--text-primary:#e6edf3;--text-secondary:#8b949e;--text-muted:#656d76;
+--tag-aidc:#1f6feb;--tag-ai:#388bfd;--tag-semi:#7c3aed;--tag-space:#da3633;--tag-inv:#3fb950;
+--success:#3fb950;--warning:#d29922;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.hero{background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);border-bottom:1px solid var(--border);padding:36px 0 28px}
+.logo{font-size:20px;font-weight:800;letter-spacing:-.02em}
+.logo .bar{color:var(--accent)}
+.hero h1{font-size:30px;font-weight:800;margin:14px 0 6px;letter-spacing:-.03em}
+.hero .date{color:var(--text-secondary);font-size:15px}
+.nav-top{display:flex;gap:10px;margin-top:18px}
+.nav-top a{font-size:13px;color:var(--text-secondary);text-decoration:none;padding:6px 14px;border:1px solid var(--border);border-radius:20px;transition:.15s}
+.nav-top a:hover{background:var(--bg-card-hover);color:var(--text-primary)}
+.nav-top a.active{background:var(--accent);color:#0d1117;border-color:var(--accent);font-weight:700}
+.archive{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px;align-items:center}
+.archive .lbl{font-size:12px;color:var(--text-muted);margin-right:4px}
+.archive-date{font-size:12px;color:var(--text-secondary);text-decoration:none;padding:4px 10px;border:1px solid var(--border);border-radius:6px}
+.archive-date:hover{background:var(--bg-card-hover)}
+.archive-date.today{background:var(--accent);color:#0d1117;font-weight:700;border-color:var(--accent)}
+.stats-row{display:flex;gap:24px;margin:22px 0 10px;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column}
+.stat .num{font-size:24px;font-weight:800;color:var(--accent)}
+.stat .lbl{font-size:12px;color:var(--text-muted)}
+.section{margin:40px 0 0}
+.section-head{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+.section-head .dot{width:10px;height:10px;border-radius:50%}
+.section-head h2{font-size:19px;font-weight:800;letter-spacing:-.02em}
+.section-head .cnt{font-size:12px;color:var(--text-muted);margin-left:auto}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:22px 24px;margin-bottom:18px;transition:.15s}
+.card:hover{background:var(--bg-card-hover);border-color:#3d4450}
+.card-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.meta-source{font-size:13px;font-weight:700;color:var(--accent)}
+.meta-date{font-size:12px;color:var(--text-muted)}
+.meta-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px}
+.badge-gmail{background:rgba(63,185,80,.15);color:var(--success)}
+.badge-drive{background:rgba(88,166,255,.15);color:var(--accent)}
+.badge-restricted{background:rgba(210,153,34,.15);color:var(--warning)}
+.fresh-today{font-size:11px;font-weight:800;color:var(--success);margin-left:auto}
+.fresh-yesterday{font-size:11px;font-weight:800;color:#58a6ff;margin-left:auto}
+.fresh-recent{font-size:11px;font-weight:800;color:var(--text-muted);margin-left:auto}
+.card-title{font-size:17px;font-weight:800;margin:4px 0 14px;letter-spacing:-.02em;line-height:1.35}
+.summary-block{margin-bottom:14px}
+.block-label{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
+.exec-summary{font-size:14px;color:var(--text-primary);line-height:1.75}
+.implication-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.impl-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;padding:13px 15px}
+.impl-number{font-size:11px;font-weight:800;color:var(--accent);margin-bottom:6px;letter-spacing:.02em}
+.impl-text{font-size:13px;color:var(--text-secondary);line-height:1.65}
+.card-footer{margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+.source-link{font-size:13px;font-weight:700;color:var(--accent);text-decoration:none}
+.source-link:hover{text-decoration:underline}
+.footer{margin:50px 0 30px;padding-top:20px;border-top:1px solid var(--border);color:var(--text-muted);font-size:12px;text-align:center}
+@media(max-width:680px){.implication-grid{grid-template-columns:1fr}.hero h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <div class="logo">📰 SK Intelligence <span class="bar">| News</span></div>
+    <h1>Daily News Scrap</h1>
+    <div class="date">2026년 6월 5일 (금) · 당일·전일 중심</div>
+    <div class="nav-top">
+      <a href="consulting.html">📊 Consulting</a>
+      <a href="news.html" class="active">📰 News</a>
+    </div>
+    <div class="archive">
+      <span class="lbl">아카이브</span>
+      <a href="news.html" class="archive-date today">06.05</a>
+      <a href="news-20260604.html" class="archive-date">06.04</a>
+      <a href="news-20260601.html" class="archive-date">06.01</a>
+      <a href="news-20260529.html" class="archive-date">05.29</a>
+      <a href="news-20260527.html" class="archive-date">05.27</a>
+      <a href="news-20260526.html" class="archive-date">05.26</a>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><span class="num">5</span><span class="lbl">총 뉴스</span></div>
+      <div class="stat"><span class="num">2</span><span class="lbl">💼 M&amp;A·투자</span></div>
+      <div class="stat"><span class="num">당일·전일</span><span class="lbl">커버리지</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<div class="section" id="sec-investment">
+  <div class="section-head"><span class="dot" style="background:var(--tag-inv)"></span><h2>투자 · M&amp;A (PE·VC·전략적 인수)</h2><span class="cnt">2건</span></div>
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">the bell / 전자신문</span>
+      <span class="meta-date">2026.06 종합</span>
+      <span class="fresh-recent">대표 성공 사례</span>
+    </div>
+    <h3 class="card-title">국내 PE 대표 성공 사례 — '과감히 사고 유연히 판' 한앤컴퍼니·센트로이드</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="exec-summary">국내 사모펀드(PE) 시장에서 '잘된 M&amp;A'의 공통점은 산업 1위 자산을 사들여 단기간에 가치를 키워 되파는 'Buy &amp; Build' 회전율에 있다. 대표 주자인 한앤컴퍼니는 2025년 SK로부터 특수가스 글로벌 1위 SK스페셜티 지분 85%를 약 2조 6,000억 원에 인수했고, 같은 해 4월 SK엔펄스 CMP패드 사업부를 약 3,300억 원에 사들이며 반도체 소재로 포트폴리오를 확장했다. 회수(엑시트)에서도 성과가 두드러져, 2025년 10월 반도체 부품사 솔믹스를 TKG태광에 약 5,400억 원에 매각하며 PE 업계에서 보기 드문 '초단기 엑시트'를 성사시켰고, 2015년 투자한 한온시스템은 약 10년 만에 1조 2,000억 원 규모로 투자금을 회수했다. 한편 센트로이드인베스트먼트는 골프용품 1위 테일러메이드 지분 100% 매각을 추진해 본입찰 최고가가 약 4조 4,000억 원에 달했으며(우선매수권 보유한 F&amp;F의 인수 여부가 관전 포인트), 이는 2021년 인수가 대비 큰 폭의 밸류업을 의미한다. 2025년 국내 M&amp;A 시장은 4년 만에 최대인 690건·약 88조 9,000억 원 규모로, 1조 원 이상 빅딜만 18건에 달했다. 정부가 5년간 150조 원을 투입하는 국민성장펀드가 '시중 유동성 시그널'로 작용하며 2026년 M&amp;A 시장에 훈풍이 예상되나, 통신·정유 등 규제산업 대형 빅딜은 큰손의 참여 여부가 변수로 남아 있다.</div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">시장·경쟁 관점 · PE 회전율</div>
+          <div class="impl-text">한앤컴퍼니의 SK스페셜티(2.6조)·솔믹스(5,400억 초단기 엑시트) 사례는 '산업 1위 + 단기 밸류업 + 신속 매각'이 성공 공식임을 보여준다. SK 입장에선 비핵심 자산의 PE 매각이 캐시 확보·구조조정의 유효한 카드다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">기술·전략 관점 · 소재 수직화</div>
+          <div class="impl-text">특수가스(SK스페셜티)·CMP패드·반도체 부품(솔믹스)으로 이어지는 PE의 소재 포트폴리오 집중은 AI 반도체 슈퍼사이클의 후방 수혜 베팅이다. 전략적 인수자(SI)는 PE보다 높은 시너지 프리미엄으로 경쟁해야 한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.thebell.co.kr/front/newsview.asp?key=202512091607533800107121" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">CNBC / TechCrunch</span>
+      <span class="meta-date">2026.06.04</span>
+      <span class="fresh-yesterday">YESTERDAY</span>
+    </div>
+    <h3 class="card-title">글로벌 AI 펀딩 — 바이브코딩 열풍에 Supabase 10.5조·Cognition 25조 밸류</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="exec-summary">AI 스타트업 펀딩이 'AI로 코드를 만드는' 바이브코딩(vibe-coding) 영역을 중심으로 다시 과열되고 있다. 6월 4일 데이터베이스 스타트업 Supabase는 GIC 주도(Accel·Y Combinator·Coatue·Stripe 등 참여)로 5억 달러를 조달하며 기업가치 105억 달러(약 14조 원)를 인정받았는데, 이는 직전 라운드(2025년 10월) 대비 약 두 배로, 비개발자도 텍스트 프롬프트로 앱을 만드는 AI 코딩 수요가 직접적 동력이다. AI 코딩 스타트업 Cognition은 250억 달러 프리머니 밸류로 10억 달러를 유치해, 불과 9개월 전(2025년 9월) 102억 달러에서 두 배 이상 점프했다. 같은 흐름에서 Anthropic은 9,650억 달러 포스트머니 밸류로 650억 달러를 조달하며 IPO 직전 마지막 사모 라운드를 마쳤고, Cursor도 500억 달러 이상 밸류로 20억 달러 라운드를 논의 중이다. 반대로 CNBC는 'ChatGPT 이전(pre-ChatGPT)' 세대 스타트업의 밸류에이션이 AI 물결에 짓눌리고 있다고 지적해, 자본이 AI 네이티브로 급격히 쏠리는 양극화가 뚜렷하다. 2026년 1분기 스타트업 펀딩은 역대 최고치를 경신했으며, AI 코딩·인프라가 그 중심에 있다.</div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">시장·경쟁 관점 · 자본 양극화</div>
+          <div class="impl-text">Supabase(2배)·Cognition(2배+) 밸류 점프는 자본이 AI 코딩·인프라로 집중됨을 의미한다. pre-ChatGPT 세대가 눌리는 양극화 속에서, CVC·전략투자는 'AI 네이티브 워크플로우'에 선별 베팅해야 한다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">기술·전략 관점 · 바이브코딩</div>
+          <div class="impl-text">비개발자의 앱 제작(바이브코딩)이 DB·인프라 수요를 견인한다. 사내 SW 개발 생산성 전략에 코딩 에이전트 도입을 검토하되, Bain의 '복잡성의 함정' 경고대로 모듈러·API 우선 아키텍처를 전제로 해야 한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.cnbc.com/2026/06/04/database-startup-supabase-raises-500-million-10point5-billion-valuation.html" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+</div>
+
+<div class="section" id="sec-semi">
+  <div class="section-head"><span class="dot" style="background:var(--tag-semi)"></span><h2>반도체 · 메모리</h2><span class="cnt">1건</span></div>
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">Tom's Hardware (Bloomberg 인용)</span>
+      <span class="meta-date">2026.06.02</span>
+      <span class="fresh-recent">FRESH</span>
+    </div>
+    <h3 class="card-title">SK하이닉스, 5년 내 메모리 웨이퍼 캐파 2배 — "AI發 부족 2030년까지 지속"</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="exec-summary">최태원 SK그룹 회장은 6월 2일 대만 컴퓨텍스(Computex)에서 SK하이닉스가 향후 5년 내 메모리 웨이퍼 생산능력을 두 배로 늘리겠다고 밝히며, AI發 메모리 부족이 2030년까지 이어질 것이라는 전망을 재확인했다. 2026년 설비투자(CapEx)는 2025년의 30조 2,000억 원(약 200억 달러)을 크게 웃돌 전망이며, 회사는 올해 뉴욕 증시 ADR 상장도 신청했다. 다만 신규 그린필드 팹의 리드타임이 5년 이상이라 증설 효과는 부족 사이클의 끝자락에야 나타나, 단기 공급난 완화에는 한계가 있다. 부족의 본질은 HBM으로, HBM은 비트당 웨이퍼 소모가 표준 DRAM보다 훨씬 많고 마진이 가장 높아 캐파가 계속 HBM으로 쏠린다. SK하이닉스는 HBM 시장 약 57%, 글로벌 DRAM 약 32%를 점유하며 엔비디아 베라루빈(Vera Rubin)용 핵심 HBM 공급사를 노리고 TSMC 외 대만 내 추가 파트너십도 모색 중이다. 가격 측면에서 트렌드포스는 2분기 DRAM 계약가가 1분기 약 95% 급등에 이어 63% 추가 상승할 것으로 전망했고, 일부 고객은 SK하이닉스의 EUV 장비를 사주고 팹 라인을 선(先)자금 지원하겠다고 제안할 만큼 가용 캐파가 제로에 근접했다.</div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">시장·경쟁 관점 · 슈퍼사이클</div>
+          <div class="impl-text">DRAM 계약가 1Q +95%·2Q +63%, 캐파 제로 근접은 SK하이닉스에 사상 최대 가격결정력을 부여한다. ADR 상장·CapEx 30조+는 슈퍼사이클을 자본시장이 가치로 인정한다는 신호다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">기술·전략 관점 · HBM 집중</div>
+          <div class="impl-text">HBM 57%·DRAM 32% 점유에서 베라루빈 공급권을 확보하면 락인 효과가 크다. 단 그린필드 팹 5년 리드타임을 감안해, 고객 선자금·장비 공동투자 등 'CapEx 리스크 분담' 구조를 협상 카드로 활용해야 한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.tomshardware.com/pc-components/dram/sk-hynix-to-double-memory-wafer-capacity-over-five-years" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+</div>
+
+<div class="section" id="sec-aisw">
+  <div class="section-head"><span class="dot" style="background:var(--tag-ai)"></span><h2>AI SW · 코딩 플랫폼</h2><span class="cnt">1건</span></div>
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">CNBC</span>
+      <span class="meta-date">2026.06.04</span>
+      <span class="fresh-yesterday">YESTERDAY</span>
+    </div>
+    <h3 class="card-title">바이브코딩이 끌어올린 SW 인프라 — Supabase, 1년 만에 밸류 2배</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="exec-summary">오픈소스 기반 백엔드·데이터베이스 플랫폼 Supabase가 5억 달러를 추가 조달하며 기업가치 105억 달러를 인정받아, 2025년 10월 직전 라운드 이후 약 8개월 만에 밸류가 두 배로 뛰었다. 이번 라운드는 싱가포르 국부펀드 GIC가 주도했고 Accel·Y Combinator·Craft·Felicis·Coatue·Stripe가 참여했다. 성장 동력은 명확히 '바이브코딩'으로, 개발자뿐 아니라 기술이 없는 일반 사용자도 텍스트 프롬프트만으로 앱·프로그램을 빠르게 만드는 흐름이 데이터베이스·백엔드 수요를 폭발시키고 있다. 이는 AI 코딩 도구(Cursor·Cognition 등)와 그 하부 인프라(DB·인증·스토리지)가 동반 성장하는 구조를 보여준다. CNBC는 2026년 들어 AI 코딩 스택 전반에 자본이 집중되며, 인프라 계층이 '제2의 클라우드'로 부상하고 있다고 분석한다. 결국 AI SW의 가치사슬은 '에이전트 → 개발도구 → 백엔드 인프라'로 분화되며, 각 계층에서 표준을 쥐는 플레이어가 장기 수혜를 가져간다.</div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">시장·경쟁 관점 · 인프라 계층</div>
+          <div class="impl-text">AI 코딩 열풍의 수혜가 도구(Cursor)뿐 아니라 백엔드 인프라(Supabase 10.5조)로 확산된다. SW 투자·제휴 시 '에이전트-도구-인프라' 3계층 중 어디에 베팅할지 명확히 구분해야 한다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">기술·전략 관점 · 사내 도입</div>
+          <div class="impl-text">비개발자의 앱 제작이 현실화되며 사내 시민개발(citizen development) 수요가 커진다. 다만 데이터 거버넌스·접근통제를 전제로 한 표준 백엔드 채택이 보안 리스크를 막는 선결 조건이다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.cnbc.com/2026/06/04/database-startup-supabase-raises-500-million-10point5-billion-valuation.html" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+</div>
+
+<div class="section" id="sec-ai">
+  <div class="section-head"><span class="dot" style="background:var(--tag-ai)"></span><h2>AI · 시장 동향</h2><span class="cnt">1건</span></div>
+  <article class="card">
+    <div class="card-meta">
+      <span class="meta-source">CNBC</span>
+      <span class="meta-date">2026.06.01</span>
+      <span class="fresh-recent">FRESH</span>
+    </div>
+    <h3 class="card-title">"AI가 pre-ChatGPT 스타트업 밸류를 짓누른다" — 자본 양극화 심화</h3>
+    <div class="summary-block">
+      <div class="block-label">Key Takeaway</div>
+      <div class="exec-summary">CNBC는 AI 물결이 ChatGPT 등장(2022년 말) 이전에 창업한 'pre-ChatGPT' 세대 스타트업의 밸류에이션을 구조적으로 끌어내리고 있다고 진단한다. AI 네이티브 기업(Anthropic 9,650억 달러, Cognition 250억 달러, Supabase 105억 달러)으로 자본·인재·고객이 급격히 쏠리는 사이, AI를 후행적으로 접목해야 하는 구세대 SaaS·플랫폼은 성장 둔화와 멀티플 압축에 직면했다. 투자자들은 'AI가 핵심 제품에 내재화되어 있는가'를 밸류에이션의 1차 기준으로 삼기 시작했고, 이로 인해 동일 매출이라도 AI 네이티브 여부에 따라 가치가 수 배 갈리는 현상이 나타난다. 2026년 1분기 스타트업 펀딩이 역대 최고치를 경신한 것도 이 자본이 소수의 AI 선두 기업에 집중된 결과다. 결국 시장은 'AI를 쓰는 회사'가 아니라 'AI로 재설계된 회사'에만 프리미엄을 부여하고 있으며, 기존 기업도 핵심 워크플로우의 AI 재설계 없이는 밸류 디스카운트를 피하기 어렵다.</div>
+    </div>
+    <div class="summary-block">
+      <div class="block-label">So What</div>
+      <div class="implication-grid">
+        <div class="impl-card">
+          <div class="impl-number">시장·경쟁 관점 · 멀티플 압축</div>
+          <div class="impl-text">동일 매출도 'AI 네이티브 여부'로 밸류가 수 배 갈린다. 보유·투자 포트폴리오를 'AI 내재화 정도'로 재평가하고, pre-ChatGPT 자산은 AI 재설계 또는 매각을 조기 검토해야 한다.</div>
+        </div>
+        <div class="impl-card">
+          <div class="impl-number">기술·전략 관점 · 핵심 재설계</div>
+          <div class="impl-text">'AI를 쓰는' 수준으로는 프리미엄을 못 받는다. 핵심 제품·워크플로우 자체를 AI로 재설계(re-architect)하는 것이 밸류 방어의 전제이며, 이는 부분 도입이 아닌 구조 개편을 요구한다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="https://www.cnbc.com/2026/06/01/ai-startup-valuations-pre-chatgpt.html" target="_blank" rel="noopener" class="source-link">원문 보기 →</a>
+    </div>
+  </article>
+</div>
+
+<div class="footer">
+  SK Intelligence · In-House Daily News Scrap · 2026.06.05<br>
+  출처: the bell, 전자신문, 엠투뉴스, CNBC, TechCrunch, Tom's Hardware · WebFetch 검증 기반
+</div>
+
+</div>
+</body>
+</html>
