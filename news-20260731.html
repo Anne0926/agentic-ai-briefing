@@ -39,6 +39,13 @@
   .num { font-family:'IBM Plex Mono',monospace; font-size:13px; color:#B3ADA0; }
   .meta-source { font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A8578; }
   .archive a { font-family:'IBM Plex Mono',monospace; font-size:12px; padding:6px 10px; border:1px solid #DCD8CE; background:#FFFDF9; color:#4A4741; }
+  .plain { margin:18px 0 0; font-size:16px; line-height:1.65; color:#16181D; background:#F6F1E4; border-left:3px solid #C08A22; padding:14px 18px; max-width:78ch; }
+  .plain b { font-weight:700; color:#8A5A12; }
+  table.tbl { width:100%; border-collapse:collapse; margin:22px 0 0; font-size:15px; }
+  table.tbl th { background:#F0EBE0; text-align:left; padding:11px 14px; font-size:13px; letter-spacing:0.02em; color:#4A4741; border:1px solid #DCD8CE; font-weight:700; }
+  table.tbl td { padding:12px 14px; border:1px solid #EAE6DD; vertical-align:top; line-height:1.55; }
+  table.tbl td.co { font-weight:600; white-space:nowrap; }
+  table.tbl tr:nth-child(even) td { background:#FBF8F1; }
   .archive a.today { background:#16181D; color:#F3F1EC; border-color:#16181D; }
 </style>
 </head>
@@ -48,28 +55,29 @@
   <header style="max-width:1160px; margin:0 auto; padding:48px 0 28px; display:flex; flex-direction:column; gap:22px;">
     <div style="display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;">
       <span class="mono" style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#0E6D8C; font-weight:500;">SK Intelligence · Daily News</span>
-      <span class="mono" style="font-size:12px; color:#8A8578;">2026.07.31 · 9건 · 전 카드 원문 검증</span>
+      <span class="mono" style="font-size:12px; color:#8A8578;">2026.07.31 · 빅테크 실적 총정리 + 9건 · 전 카드 원문 검증</span>
       <a href="https://anne0926.github.io/agentic-ai-briefing/consulting.html" class="mono" style="font-size:12px;">Consulting 브리핑 →</a>
     </div>
     <h1 style="margin:0; font-size:46px; line-height:1.1; font-weight:600; letter-spacing:-0.02em; max-width:20ch;">오늘, 세 가지만 기억하면 됩니다</h1>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1px; background:#DCD8CE; border:1px solid #DCD8CE;">
       <div style="background:#FFFDF9; padding:20px 22px; display:flex; flex-direction:column; gap:10px;">
-        <span class="mono" style="font-size:11px; color:#0E6D8C; letter-spacing:0.1em;">01 / 실적</span>
-        <p style="margin:0; font-size:17px; line-height:1.5; font-weight:500;">삼성전자 2분기 영업익 89.5조(+1,814%) — 달러 기준 엔비디아·애플을 제치고 글로벌 테크 1위. DS 영업이익률 70%.</p>
-        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">해석 — 빅테크 5곳과 LTA를 맺고 캐파의 70%를 배정했다. 메모리가 장기계약 산업으로 구조 전환 중이며, "내년 부족이 올해보다 심하다"는 컨콜 발언이 사이클 연장의 핵심 신호다.</strong></p>
+        <span class="mono" style="font-size:11px; color:#0E6D8C; letter-spacing:0.1em;">01 / 빅테크 실적</span>
+        <p style="margin:0; font-size:17px; line-height:1.5; font-weight:500;">구글·아마존·MS·메타 모두 클라우드가 예상을 넘겼고, 내년 투자 계획도 모두 늘렸습니다. 아마존은 "메모리 값이 올라서" 2,000억 → 2,200억 달러로 올렸습니다.</p>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">쉽게 말하면 — 부품값이 올라도 사겠다는 뜻입니다. AI 투자가 가격에 잘 흔들리지 않는다는 가장 직접적인 증거이고, 메모리 협상력이 당분간 공급자 쪽에 남는다는 의미입니다.</strong></p>
       </div>
       <div style="background:#FFFDF9; padding:20px 22px; display:flex; flex-direction:column; gap:10px;">
-        <span class="mono" style="font-size:11px; color:#0E6D8C; letter-spacing:0.1em;">02 / 자본</span>
-        <p style="margin:0; font-size:17px; line-height:1.5; font-weight:500;">마이크로소프트 FY26 캐펙스 $1,453억 집행, FY27 가이던스 $1,750억 — 데이터센터 88개 가동, "2년 내 용량 2배".</p>
-        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">해석 — AI 수요 둔화 신호를 찾던 시장에 대한 가장 강한 반증이다. 전력기기·냉각·메모리 등 국내 밸류체인의 수요 가시성이 최소 FY27까지 연장됐다.</strong></p>
+        <span class="mono" style="font-size:11px; color:#0E6D8C; letter-spacing:0.1em;">02 / 국내 실적</span>
+        <p style="margin:0; font-size:17px; line-height:1.5; font-weight:500;">삼성전자 2분기 영업익 89.5조원 — 달러로 환산하면 엔비디아·애플을 넘어 글로벌 테크 1위. 반도체가 이익의 99.7%.</p>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">쉽게 말하면 — 앞으로 만들 메모리의 70%를 빅테크 5곳에 장기계약으로 미리 넘겼고, "내년이 올해보다 더 부족하다"고 했습니다. 스마트폰 부문은 반대로 칩값 때문에 첫 적자를 냈습니다.</strong></p>
       </div>
       <div style="background:#FFFDF9; padding:20px 22px; display:flex; flex-direction:column; gap:10px;">
         <span class="mono" style="font-size:11px; color:#0E6D8C; letter-spacing:0.1em;">03 / 전력</span>
         <p style="margin:0; font-size:17px; line-height:1.5; font-weight:500;">크루소·알로, 세계 첫 원자력 직결 AI 데이터센터 2027년 실증 — 같은 날 이니오는 미 DC 개발사에서 1.1GW 가스엔진 수주.</p>
-        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">해석 — 계통 접속 대기를 우회하는 온사이트 전원이 AIDC의 표준 설계로 굳어지고 있다. 다음 병목은 그리드가 아니라 발전 기자재의 수주 잔고다.</strong></p>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">쉽게 말하면 — 전력망 순서를 기다리지 않고 발전소를 옆에 직접 짓는 방식이 표준이 됐습니다. 다음 병목은 전기가 아니라 발전기를 만드는 공장입니다.</strong></p>
       </div>
     </div>
     <nav style="display:flex; gap:8px; flex-wrap:wrap; padding-top:4px;">
+      <a href="#sec-earnings" style="font-size:13px; padding:7px 13px; border:1px solid #16181D; background:#16181D; color:#F3F1EC;">빅테크 실적 총정리</a>
       <a href="#sec-invest" style="font-size:13px; padding:7px 13px; border:1px solid #DCD8CE; background:#FFFDF9; color:#4A4741;">투자·M&amp;A</a>
       <a href="#sec-aidc" style="font-size:13px; padding:7px 13px; border:1px solid #DCD8CE; background:#FFFDF9; color:#4A4741;">AI DC·전력</a>
       <a href="#sec-semi" style="font-size:13px; padding:7px 13px; border:1px solid #DCD8CE; background:#FFFDF9; color:#4A4741;">반도체</a>
@@ -90,6 +98,67 @@
 
   <main style="max-width:1160px; margin:0 auto; display:flex; flex-direction:column; gap:28px;">
 
+
+  <section id="sec-earnings" style="display:flex; flex-direction:column; gap:28px;">
+    <article class="card">
+      <div class="card-head">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span class="num">00</span>
+          <span class="badge-cat">빅테크 2Q26 실적 총정리</span>
+          <span class="badge-fresh">TODAY</span>
+        </div>
+        <span class="meta-source">각사 실적발표 · 삼성증권 이영진 정리 · 2026.07.31</span>
+      </div>
+      <div style="padding:26px 28px 8px;">
+        <h2 class="card-title">빅테크 4사 실적 한눈에 보기 — 클라우드는 모두 기대를 넘겼고, 내년에 쓸 돈은 모두 늘렸다</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 이번 주 구글·아마존·마이크로소프트·메타가 모두 실적을 냈습니다. 결론은 두 줄입니다. ① 클라우드 매출은 네 곳 다 시장 예상을 넘겼고, ② 내년에 데이터센터에 쓸 돈은 네 곳 다 늘리거나 그대로 뒀습니다. 특히 아마존은 "메모리 값이 올라서" 투자액을 200억 달러 더 올렸습니다. 부품값이 올라도 사겠다는 뜻이고, 이것이 우리 메모리 업계에 가장 중요한 대목입니다.</p>
+        <table class="tbl">
+          <tr>
+            <th style="width:11%;">기업</th>
+            <th style="width:23%;">클라우드 성적 (2분기)</th>
+            <th style="width:20%;">분기 투자액(CapEx)</th>
+            <th style="width:21%;">2026년 투자 계획</th>
+            <th style="width:25%;">읽어야 할 대목</th>
+          </tr>
+          <tr>
+            <td class="co">알파벳<br><span style="font-size:13px; color:#8A8578; font-weight:400;">(구글)</span></td>
+            <td>구글 클라우드 <strong>247.7억 달러 · +81.8%</strong><br><span style="color:#8A8578;">예상 222.6억 달러 → 크게 상회</span></td>
+            <td>449.2억 달러<br><span style="color:#8A8578;">예상 449.9억 달러 수준</span></td>
+            <td><strong>1,950~2,050억 달러</strong><br><span style="color:#8A8578;">기존 1,800~1,900억에서 상향</span></td>
+            <td>성장률이 1년 만에 28%→82%로 뛰었다. 투자를 늘린 이유는 "수요를 맞추려고 공급 시점을 앞당기는 것"이며, 2027년에도 상당한 증액을 예고했다.</td>
+          </tr>
+          <tr>
+            <td class="co">아마존</td>
+            <td>AWS <strong>422.3억 달러 · +36.8%</strong><br><span style="color:#8A8578;">예상 405.4억 달러 상회. 성장률 23.6%→28.4%→36.8%로 가속</span></td>
+            <td><strong>530.1억 달러</strong><br><span style="color:#8A8578;">예상 493.5억 달러 상회</span></td>
+            <td><strong>2,200억 달러</strong><br><span style="color:#8A8578;">기존 2,000억에서 상향 — 이유는 <strong>메모리 등 부품 가격 상승</strong></span></td>
+            <td>이번 실적에서 메모리 업계에 가장 중요한 문장. 값이 올라서 물량을 줄이는 게 아니라 예산을 늘렸다. AI 매출은 연 환산 250억 달러(1분기 150억), 자체 칩(Trainium·Graviton)도 연 환산 250억 달러를 넘었다.</td>
+          </tr>
+          <tr>
+            <td class="co">마이크로<br>소프트</td>
+            <td>Azure <strong>+43%</strong><br><span style="color:#8A8578;">예상 +40.4%, 회사 가이던스 +39~40% 모두 상회. 다음 분기 +45% 제시</span></td>
+            <td>358억 달러(리스 제외)<br>410억 달러(리스 포함)</td>
+            <td><strong>다음 분기 500억 달러 이상</strong><br><span style="color:#8A8578;">FY27 연간도 전년 대비 증가</span></td>
+            <td>하반기에 성장이 더 빨라진다고 봤다. 다만 데이터센터 감가상각 기간을 15년에서 25년으로 늘려, 회계상 비용이 줄어 보이는 효과가 있다는 점은 감안해야 한다.</td>
+          </tr>
+          <tr>
+            <td class="co">메타</td>
+            <td><span style="color:#8A8578;">외부 클라우드 사업 없음</span></td>
+            <td>310.8억 달러<br><span style="color:#8A8578;">예상 333.5억 달러 하회 — 4사 중 유일</span></td>
+            <td>1,300~1,450억 달러<br><span style="color:#8A8578;">기존 범위 유지(하단만 상향)</span></td>
+            <td>2026~27년은 GPU와 데이터센터 확보가 최우선, 2028년부터는 건물·전력 같은 기반 인프라를 먼저 지어놓고 GPU는 유연하게 넣겠다는 전략이다.</td>
+          </tr>
+        </table>
+        <p style="margin:20px 0 0; font-size:15px; line-height:1.7; color:#4A4741; max-width:88ch;"><strong>합산하면</strong> — 알파벳·아마존·메타 3사의 2026년 투자 계획만 5,450~5,700억 달러이고, 마이크로소프트(FY27 약 1,750억 달러)를 더하면 <strong>7,200~7,450억 달러</strong> 규모입니다. 원화로 1,000조원이 넘습니다. 같은 주에 발표된 <strong>삼성전자 영업이익 89.5조원</strong>, <strong>SK하이닉스 60.5조원</strong>은 결국 이 돈이 흘러온 결과이고, 양사가 캐파의 70%를 장기계약에 묶은 것도 이 지출이 몇 년은 이어진다고 봤기 때문입니다.</p>
+      </div>
+      <div class="context">
+        <h3 class="h-bg">이 표를 어떻게 볼 것인가</h3>
+        <p class="exec-summary">실적 시즌마다 시장이 확인하는 것은 딱 두 가지입니다. 클라우드가 예상만큼 컸는가, 그리고 내년에 돈을 더 쓸 것인가. 이번 분기는 둘 다 '예'였고, 특히 아마존이 부품값 상승을 이유로 투자액을 올린 것은 AI 투자 수요가 가격에 크게 흔들리지 않는다는 신호로 읽힙니다. 반대로 경계할 부분도 있습니다. 메타는 유일하게 분기 투자액이 예상을 밑돌았고, 마이크로소프트의 감가상각 기간 연장은 실제 현금 지출보다 장부상 부담을 가볍게 보이게 합니다. 숫자 자체보다 '왜 늘렸는지'를 같이 읽어야 하는 이유입니다.</p>
+        <a class="source-link" href="https://t.me/Samsung_Global_AI_SW" target="_blank" rel="noopener">원문 보기 · 삼성증권 이영진 텔레그램(2026/7/31 공표자료) →</a>
+      </div>
+    </article>
+  </section>
+
   <section id="sec-invest" style="display:flex; flex-direction:column; gap:28px;">
     <article class="card">
       <div class="card-head">
@@ -102,6 +171,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">마이크로소프트 FY26 캐펙스 $1,453억·데이터센터 88개 가동 — FY27 가이던스 $1,750억, "2년 내 용량 2배"</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 마이크로소프트가 내년에 데이터센터에 쓸 돈을 또 늘렸습니다. 올해 1,453억 달러를 썼는데 내년엔 1,750억 달러를 쓰겠다고 했습니다. AI 수요가 꺾인다는 이야기가 시장에 돌지만, 정작 돈을 쓰는 쪽은 더 세게 밟고 있다는 뜻입니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -139,6 +209,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">옥타, AI 신원보안 스타트업 퍼미소 약 $2억에 인수 — '로그인 검증'에서 '에이전트 행동 감시'로 축이 이동한다</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 지금까지 보안은 '누가 로그인했는지' 확인하는 일이었습니다. 그런데 AI 에이전트가 사람 대신 시스템에 들어가기 시작하면서, '들어온 뒤에 무엇을 하는지'를 계속 지켜보는 기술이 필요해졌습니다. 옥타가 그 기술을 약 2,900억원에 사들였습니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -178,6 +249,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">크루소·알로, '세계 첫 원자력 직결 AI 데이터센터' — 2027년 아이다호 국립연구소에서 실증한다</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 데이터센터에 전기를 끌어오려면 보통 몇 년씩 전력망 접속 순서를 기다려야 합니다. 그래서 아예 옆에 소형 원자로를 붙여버리는 실험이 내년에 시작됩니다. 물을 쓰지 않는 방식이라 강가가 아닌 곳에도 지을 수 있습니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -215,6 +287,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">독일 이니오, 미국 DC 개발사에서 1.1GW 가스엔진 수주 — 계통 접속 대기가 '온사이트 발전'을 표준으로 만들고 있다</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 미국의 한 데이터센터 개발사가 원전 1기 규모(1.1GW)의 가스 발전기를 통째로 주문했습니다. 전력망을 기다리는 대신 발전소를 직접 짓겠다는 것이고, 그래서 다음 병목은 전기가 아니라 발전기를 만드는 공장 쪽으로 넘어갑니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -254,6 +327,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">삼성전자 2분기 영업익 89.5조(+1,814%) — DS가 이익의 99.7%, 세트는 '칩플레이션'에 첫 적자</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 반도체가 벌어들인 돈이 회사 전체 이익의 99.7%입니다. 반대로 스마트폰·가전은 메모리 값이 너무 올라 원가를 감당하지 못하고 처음으로 적자를 냈습니다. 메모리 호황의 수혜와 피해가 한 회사 안에서 동시에 나타난 분기입니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -291,6 +365,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">삼성 "3분기 HBM4 매출 3배, 내년 메모리 부족 더 심화" — 빅테크 5곳과 LTA, 캐파 70% 배정. 영업익은 엔비디아·애플 추월</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 삼성이 앞으로 만들 메모리의 최대 70%를 아마존·메타 같은 대형 고객에게 장기계약으로 미리 배정했습니다. 그리고 '내년 부족이 올해보다 심하다'고 했습니다. 메모리는 이제 줄을 서서 선금을 내야 살 수 있는 시장이 됐다는 뜻입니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -330,6 +405,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">폴리AI, 응답 지연 280ms 실시간 음성대화 모델 공개 — GPT 리얼타임보다 3~6배 빠른 '사람 같은 통화'</h2>
+        <p class="plain"><b>쉽게 말하면</b> — AI와 전화 통화가 어색한 이유는 답이 틀려서가 아니라 반응이 느려서입니다. 이 회사는 0.3초 안에 대답하는 모델을 만들어 사람끼리 대화하는 속도(0.2~0.3초)에 맞췄습니다. 콜센터 자동화의 기준이 '똑똑함'에서 '빠름'으로 옮겨가고 있습니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -369,6 +445,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">업윈드, AI 에이전트 '행동 전 컨텍스트 검사' 출시 — 에이전트 보안이 인벤토리에서 런타임으로 넘어간다</h2>
+        <p class="plain"><b>쉽게 말하면</b> — AI 에이전트는 외부에서 슬쩍 끼워 넣은 지시문에 속아 엉뚱한 일을 할 수 있습니다. 이 제품은 에이전트가 움직이기 전에 '어떤 지시를 받았는지'를 먼저 검사하고, 평소와 다른 행동을 하면 실시간으로 잡아냅니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -408,6 +485,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">구글이 미는 핵융합 CFS, $10억 추가 조달 — 누적 $40억으로 섹터 전체의 30%, 2027년 SPARC 첫 플라즈마 목표</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 아직 짓지도 않은 핵융합 발전소의 전기를 구글이 미리 사주기로 했고, 그 계약을 담보 삼아 1조 4천억원이 추가로 들어왔습니다. AI 전력난이 먼 미래 기술로 여겨지던 핵융합의 자금줄을 앞당기고 있습니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">

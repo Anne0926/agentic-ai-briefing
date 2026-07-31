@@ -39,6 +39,13 @@
   .num { font-family:'IBM Plex Mono',monospace; font-size:13px; color:#B3ADA0; }
   .meta-source { font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A8578; }
   .archive a { font-family:'IBM Plex Mono',monospace; font-size:12px; padding:6px 10px; border:1px solid #DCD8CE; background:#FFFDF9; color:#4A4741; }
+  .plain { margin:18px 0 0; font-size:16px; line-height:1.65; color:#16181D; background:#F6F1E4; border-left:3px solid #C08A22; padding:14px 18px; max-width:78ch; }
+  .plain b { font-weight:700; color:#8A5A12; }
+  table.tbl { width:100%; border-collapse:collapse; margin:22px 0 0; font-size:15px; }
+  table.tbl th { background:#F0EBE0; text-align:left; padding:11px 14px; font-size:13px; letter-spacing:0.02em; color:#4A4741; border:1px solid #DCD8CE; font-weight:700; }
+  table.tbl td { padding:12px 14px; border:1px solid #EAE6DD; vertical-align:top; line-height:1.55; }
+  table.tbl td.co { font-weight:600; white-space:nowrap; }
+  table.tbl tr:nth-child(even) td { background:#FBF8F1; }
   .archive a.today { background:#16181D; color:#F3F1EC; border-color:#16181D; }
 </style>
 </head>
@@ -56,17 +63,17 @@
       <div style="background:#FFFDF9; padding:20px 22px; display:flex; flex-direction:column; gap:10px;">
         <span class="mono" style="font-size:11px; color:#0E6D8C; letter-spacing:0.1em;">01 / 비용</span>
         <p style="margin:0; font-size:17px; line-height:1.5; font-weight:500;">McKinsey — 기업 93%가 AI 예산 초과, 지출의 20~30%는 어디에 쓰였는지도 모른다. '토크노믹스'로 20~30%를 되찾을 수 있다.</p>
-        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">해석 — AI 비용관리(FinOps)가 CIO의 신규 어젠다로 공식화됐다. 에이전트가 모델 호출을 곱셈으로 늘리기 전에, 태스크당 원가를 보는 'AI 컨트롤 플레인'부터 세우는 게 순서다.</strong></p>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">쉽게 말하면 — AI에 쓰는 돈을 세는 체계가 없습니다. 에이전트가 붙으면 호출 수가 몇 배로 뛰기 때문에, 지금 "일 하나에 얼마 드는지"를 보는 장치를 먼저 만들어야 합니다.</strong></p>
       </div>
       <div style="background:#FFFDF9; padding:20px 22px; display:flex; flex-direction:column; gap:10px;">
         <span class="mono" style="font-size:11px; color:#0E6D8C; letter-spacing:0.1em;">02 / 공급망</span>
         <p style="margin:0; font-size:17px; line-height:1.5; font-weight:500;">McKinsey — Agentic AI로 매출원가 4~7% 절감, 주문 처리 120분→2분. 그런데 도입한 조직 90% 중 스케일에 성공한 곳은 7%뿐.</p>
-        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">해석 — 병목은 기술이 아니라 '유스케이스 사고'다. 태스크 단위 파일럿을 쌓지 말고 주문·계획·품질 같은 도메인 단위로 엔드투엔드를 다시 설계해야 값이 나온다.</strong></p>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">쉽게 말하면 — 파일럿을 아무리 많이 해도 값이 안 나옵니다. 작은 업무 하나씩 붙이지 말고 주문·생산계획처럼 업무 흐름 전체를 다시 짜야 효과가 납니다.</strong></p>
       </div>
       <div style="background:#FFFDF9; padding:20px 22px; display:flex; flex-direction:column; gap:10px;">
         <span class="mono" style="font-size:11px; color:#0E6D8C; letter-spacing:0.1em;">03 / 산업</span>
         <p style="margin:0; font-size:17px; line-height:1.5; font-weight:500;">인도삿 텔코는 AI 전환 1년 만에 EBITDA 기여 플러스, 보험은 AI 리더의 주주수익률이 후발주자의 6.1배.</p>
-        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">해석 — AI가 P&amp;L로 증명되는 산업 사례가 쌓이기 시작했다. 두 리포트의 공통 결론은 같다 — "중간지대와 관망은 방어되지 않는다."</strong></p>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:#3D3526;"><strong style="font-weight:700;">쉽게 말하면 — AI가 실제 손익으로 증명된 사례가 나오기 시작했습니다. 두 리포트의 결론은 같습니다 — 어중간하게 걸치거나 지켜보는 선택지는 이제 없습니다.</strong></p>
       </div>
     </div>
     <nav style="display:flex; gap:8px; flex-wrap:wrap; padding-top:4px;">
@@ -102,6 +109,9 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">IDC — 1분기 AI 인프라 지출 $897억, 올해 전망 $4,970억으로 상향. ARM 랙스케일이 x86을 처음 추월했다</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 기업 10곳 중 9곳이 AI에 잡아둔 예산을 넘겨 쓰고 있고, 그중 20~30%는 어디에 썼는지도 모릅니다. 똑같은 일을 시켜도 소모되는 비용이 최대 30배까지 차이 납니다. 쓰는 양을 관리하는 것만으로 비용의 20~30%가 줄어듭니다.</p>
+        <p class="plain"><b>쉽게 말하면</b> — AI 에이전트를 공급망에 제대로 붙이면 원가가 4~7% 줄고 주문 처리가 2시간에서 2분으로 짧아집니다. 문제는 대부분의 회사가 '업무 하나'에만 붙여서 효과가 안 난다는 것입니다. 주문이나 생산계획처럼 업무 전체를 통째로 다시 짜야 돈이 됩니다.</p>
+        <p class="plain"><b>쉽게 말하면</b> — 전 세계가 올해 AI 서버·인프라에 쓸 돈이 4,970억 달러로 또 올라갔습니다(작년 3,180억 달러). 더 중요한 건 발목을 잡는 것이 바뀌었다는 점입니다. 예전엔 칩을 못 구해서 못 지었는데, 이제는 전기가 없어서 못 켭니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -141,6 +151,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">SK하이닉스 컨센서스 하회의 이유는 'LTA 보수적 가격' — 장기계약 10건·캐펙스 40조원대 후반, 메모리 산업의 문법이 바뀐다</h2>
+        <p class="plain"><b>쉽게 말하면</b> — SK하이닉스가 사상 최대 실적을 내고도 시장 기대엔 못 미쳤습니다. 이유는 장기계약을 맺은 고객들에게 가격을 덜 올려줬기 때문입니다. 당장은 손해로 보이지만, 값이 꺾일 때 버텨주는 안전장치이기도 합니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -219,6 +230,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">'AI 네이티브 텔코'의 실물 증거 — 인도삿, 전환 1년 만에 EBITDA 플러스. 캠페인 월 400개를 증원 없이 돌린다</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 인도네시아 2위 통신사가 AI 전환을 시작한 지 1년 만에 실제 영업이익을 늘렸습니다. 비결은 기술보다 사람이었습니다. 직원 4명 중 3명에게 AI 자격증을 따게 했고, CEO는 '이 일의 70%는 사람 문제, 기술은 10%'라고 말합니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -257,6 +269,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">McKinsey — 20년 제자리걸음 보험업의 손익 구조를 AI가 바꾼다. AI 리더의 주주수익률은 후발주자의 6.1배</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 보험사는 20년 동안 보험료 수입은 늘었는데 이익은 그만큼 늘지 못했습니다. 돈의 상당 부분이 설계사·대리점 수수료로 빠져나가기 때문입니다(생명보험은 첫해 보험료의 최대 80%). AI를 먼저 도입한 회사는 5년 주주수익률이 6배 높았습니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -336,6 +349,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">PwC — 2026년 M&amp;A는 '4조 달러 · K자형'. 메가딜이 가치의 절반, AI 자본은 인수 대신 파트너십으로 이동한다</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 올해 인수합병은 금액은 늘고 건수는 줄었습니다. 초대형 딜 몇 개가 시장 전체를 끌고 간다는 뜻입니다. 그리고 대기업들은 AI 회사를 통째로 사기보다 지분 투자나 합작으로 방향을 틀었습니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
@@ -375,6 +389,7 @@
       </div>
       <div style="padding:26px 28px 8px;">
         <h2 class="card-title">IDC — 백악관 행정명령 2건으로 양자컴퓨팅이 국가 어젠다로. 연방기관 49%가 이미 파일럿, PQC 전환 시한은 2030년</h2>
+        <p class="plain"><b>쉽게 말하면</b> — 미국이 양자컴퓨터를 국가 과제로 못 박았습니다. 핵심은 시한이 붙었다는 점입니다. 2030년까지 정부와 납품 기업 모두 양자컴퓨터로도 못 푸는 암호로 갈아타야 합니다. 지금 훔쳐간 데이터를 나중에 양자컴퓨터로 푸는 공격을 막기 위해서입니다.</p>
       </div>
       <div class="grid2">
         <section class="col-key">
